@@ -16,49 +16,54 @@ const tabs = [
 ];
 export default function Studio(){
     const [isOpen, setIsOpen]=useState(false)
+    const [search, setSearch]=useState('')
     return (
-        <div className='w-full'>
+        <div>
             <Navbar />
             <div className='p-4'>
-                <div className='flex justify-between items-center'>
-                    <div className='w1/3 flex gap-8 items-center '>
+                <div className='flex justify-between flex-col md:flex-row md:items-center gap-2'>
+                    <div className='w-full md:w-1/2 flex flex-col md:flex-row md:gap-2 md:items-center'>
                        <div className='flex'>
-                           <Typography variant='h4' text='Personal' className='text-blue-500 border-b border-blue-500 cursor-pointer mx-1'  />
+                           <Typography variant='body' text='Personal' className='text-[14px] text-blue-500 border-b border-blue-500 cursor-pointer mx-1'  />
                            <div>/</div>
-                           <Typography variant='h4' text='All Projects' className='cursor-pointer mx-1 hover:text-blue-500 hover:border-b hover:border-blue-500'  />
+                           <Typography variant='body' text='All Projects' className='text-[14px] cursor-pointer mx-1 hover:text-blue-500 hover:border-b hover:border-blue-500'  />
                        </div>
-                            <SearchInput value='' onChange={()=>console.log('something')} />
+                        <div className='mt-4 md:mt-0'>
+                            <SearchInput value={search} onChange={(e)=>setSearch(e.target.value)} />
+                        </div>
                     </div>
-                    <div className='w1/3 flex'>
-                       <Tabs tabs={tabs} />
-                    </div>
-                    <div className='w1/3'>
-                        <Button text='Add Api' onClick={()=>setIsOpen(true)} icon='/icons/add.svg' />
+                    <div className='w-full md:w-1/2 flex items-center justify-between mt-4 md:mt-0'>
+                        <div className='flex'>
+                            <Tabs tabs={tabs} />
+                        </div>
+                        <div className='ml-auto'>
+                            <Button text='Add Api' onClick={()=>setIsOpen(true)} icon='/icons/add.svg' />
+                        </div>
                     </div>
                 </div>
                 <div className='flex gap-4 justify-center flex-wrap mt-4'>
-                    <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
                         <ApiCard/>
                     </Card>
-                    <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
                         <ApiCard/>
                     </Card>
-                    <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
                         <ApiCard/>
                     </Card>
-                    <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
                         <ApiCard/>
                     </Card>
-                    <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
                         <ApiCard/>
                     </Card>
-                    <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
                         <ApiCard/>
                     </Card>
                 </div>
             </div>
             <Modal isOpen={isOpen} onClose={()=>setIsOpen(false)}>
-                <AddAPI onCancel={()=>setIsOpen(false)} />
+                <AddAPI onCancel={()=>setIsOpen(false)} onApply={()=>setIsOpen(false)} />
             </Modal>
         </div>
     )

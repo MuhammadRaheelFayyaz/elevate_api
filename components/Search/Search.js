@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from "next/image";
 
-const SearchInput = ({onChange, value}) => {
+const SearchInput = ({onChange, value, placeholder='Search...'}) => {
     return (
-        <div className="flex items-center space-x-2 relative">
+        <div className="flex items-center space-x-2 relative w-full">
             <input
                 type="text"
-                className="border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500"
-                placeholder="Search..."
+                className="border border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500 w-full"
+                placeholder={placeholder}
                 value={value}
                 onChange={onChange}
             />
