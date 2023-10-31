@@ -8,11 +8,11 @@ const Button = ({ text, icon, onClick, className }) => {
             onClick={onClick}
         >
             {icon && (
-                <div className="mr-2">
+                <div className={text&& 'mr-2'}>
                     <Image src={icon} alt="Button Icon" width={24} height={24} />
                 </div>
             )}
-            {text}
+            {text &&<>{text}</>}
         </button>
     );
 };

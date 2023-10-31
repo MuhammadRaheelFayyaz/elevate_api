@@ -3,6 +3,7 @@ import SearchInput from "@/components/Search/Search";
 import {useState} from "react";
 import Table from "@/components/custom-table/table";
 import Navbar from "@/components/Navbar/Navbar";
+import HubLayout from "@/components/HubLayout/HubLayout";
 
 const usersTabs=[
     {
@@ -129,24 +130,25 @@ const data = [
 export default function Community(){
     const [search, setSearch]=useState('')
     return (
-       <div className='w-fit md:w-auto'>
-           <Navbar />
-           <div className='p-4 md:p-10'>
-               <div className='mb-4'>
-                   <Tabs tabs={usersTabs} />
-               </div>
-               <div className='mb-4 flex flex-col md:flex-row justify-between'>
-                   <div className='mb-4'>
-                       <Tabs tabs={usersTypes} />
-                   </div>
-                   <div >
-                       <SearchInput placeholder='Search username' value={search} onChange={setSearch} />
-                   </div>
-               </div>
-               <div className='w-[100vw] md:w-full overflow-scroll'>
-                   <Table columns={columns} data={data}/>
-               </div>
-           </div>
-       </div>
+      <HubLayout>
+          <div className='w-fit md:w-auto'>
+              <div className='p-4 md:p-10'>
+                  <div className='mb-4'>
+                      <Tabs tabs={usersTabs} />
+                  </div>
+                  <div className='mb-4 flex flex-col md:flex-row justify-between'>
+                      <div className='mb-4'>
+                          <Tabs tabs={usersTypes} />
+                      </div>
+                      <div >
+                          <SearchInput placeholder='Search username' value={search} onChange={setSearch} />
+                      </div>
+                  </div>
+                  <div className='w-[100vw] md:w-full overflow-scroll'>
+                      <Table columns={columns} data={data}/>
+                  </div>
+              </div>
+          </div>
+      </HubLayout>
     )
 }

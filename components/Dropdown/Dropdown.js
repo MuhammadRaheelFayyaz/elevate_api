@@ -1,7 +1,7 @@
 // components/Dropdown.js
 import React, { useState } from 'react';
 
-const Dropdown = ({ options, onSelect, placeholder, label }) => {
+const Dropdown = ({ options, onSelect, placeholder, label, className }) => {
     const [open, setOpen]=useState(false)
     const [selectedOption, setSelectedOption] = useState('');
 
@@ -12,9 +12,8 @@ const Dropdown = ({ options, onSelect, placeholder, label }) => {
     };
 
     return (
-        <div className="relative inline-block text-left w-full mb-4">
+        <div className={`relative inline-block text-left w-full mb-4 ${className}`}>
             {label && <label className="block text-gray-700 mb-2">{label}</label>}
-
             <div>
                 <button
                     type="button"

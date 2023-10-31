@@ -29,7 +29,6 @@ export default function AddAPI({onCancel,onApply}) {
 
     return (
         <>
-
             <Typography variant='h1' text='Add Api' className='text-center mb-4'/>
             <Input label='Name' placeholder='custom input'/>
             <Input label='Description' placeholder='custom input'/>

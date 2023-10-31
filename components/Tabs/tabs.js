@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
 
-const Tabs = ({tabs}) => {
+const Tabs = ({tabs, onTabSelect=(value)=>{}}) => {
     const [activeTab, setActiveTab] = useState(0);
 
     const handleTabClick = (index) => {
         setActiveTab(index);
+        if(onTabSelect){
+            onTabSelect(index)
+        }
+
     };
 
     return (
