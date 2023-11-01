@@ -3,13 +3,13 @@ import RadioButton from "@/components/Radio/RadioButton";
 import {useState} from "react";
 import SearchInput from "@/components/Search/Search";
 import Button from "@/components/Button/Button";
-import HubLayout from "@/components/HubLayout/HubLayout";
+import PageLayout from "@/components/HubLayout/HubLayout";
 
 export default function Settings() {
     const [transferTo, setTransferTo] = useState('user')
     const [search, setSearch] = useState('')
     return (
-        <HubLayout>
+        <PageLayout>
             <div className='p-4'>
                 <Typography variant='h2' text='Transfer ownership' className='mb-4'/>
                 <Typography
@@ -53,6 +53,6 @@ export default function Settings() {
                 </div>
                 <Button text='Delete Api' className='bg-red-600 text-blue-100'/>
             </div>
-        </HubLayout>
+        </PageLayout>
     )
 }

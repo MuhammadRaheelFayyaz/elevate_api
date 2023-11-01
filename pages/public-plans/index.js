@@ -1,10 +1,8 @@
 import React, {useState} from "react";
-import SideBar from '@/components/Sidebar/LayoutWithSidebar'
 import Button from "@/components/Button/Button";
-// import ToggleButton from "@/components/ToggleButton/Button";
 import Typography from "@/components/Typegraphy/Typography";
 import Tabs from "@/components/Tabs/tabs";
-import HubLayout from "@/components/HubLayout/HubLayout";
+import PageLayout from "@/components/HubLayout/HubLayout";
 
 const tabs = [
     {label: 'Public plans'},
@@ -20,7 +18,7 @@ export default function Home() {
         setSelectedOption(option);
     };
     return (
-        <HubLayout>
+        <PageLayout>
             <div className="plan-wrapper mx-3 md:mx-10 mt-10">
                 <div className="flex gap-2.5 mb-2">
                     <Tabs tabs={tabs}/>
@@ -120,6 +118,6 @@ export default function Home() {
                     />
                 </div>
             </div>
-        </HubLayout>
+        </PageLayout>
     )
 }

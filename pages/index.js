@@ -4,7 +4,7 @@ import Button from "@/components/Button/Button";
 // import ToggleButton from "@/components/ToggleButton/Button";
 import Typography from "@/components/Typegraphy/Typography";
 import Tabs from "@/components/Tabs/tabs";
-import HubLayout from "@/components/HubLayout/HubLayout";
+import PageLayout from "@/components/PageLayout/PageLayout";
 const tabs=[
     {label: 'Public plans'},
     {label: 'Private plans'},
@@ -19,8 +19,8 @@ export default function Home() {
         setSelectedOption(option);
     };
     return (
-        <HubLayout>
+        <PageLayout>
             <div>Children</div>
-        </HubLayout>
+        </PageLayout>
     )
 }

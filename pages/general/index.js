@@ -8,7 +8,7 @@ import Typography from "@/components/Typegraphy/Typography";
 import Dropdown from "@/components/Dropdown/Dropdown";
 import Image from 'next/image';
 import Checkbox from "@/components/RadioButton/RadioButton";
-import HubLayout from "@/components/HubLayout/HubLayout";
+import PageLayout from "@/components/HubLayout/HubLayout";
 
 export default function Home() {
     const [selectedOption, setSelectedOption] = useState('');
@@ -18,7 +18,7 @@ export default function Home() {
         setSelectedOption(option);
     };
     return (
-        <HubLayout>
+        <PageLayout>
             <div className='mx-3 md:mx-10 md:w-[70%]  my-2 mt-8'>
                 <Typography variant='h1' text='General Information' className='mb-4 text-blue-500'/>
                 <div className='flex justify-between items-center flex-wrap my-8 max-w-2xl'>
@@ -107,6 +107,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </HubLayout>
+        </PageLayout>
     )
 }
