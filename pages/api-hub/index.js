@@ -25,6 +25,38 @@ export default function ApiHub() {
           <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
           <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
         </div>
+        <Typography variant="h2" text="Trending APIs" className="text-left font-bold" />
+        <Typography variant="body" text="Discover and connect to thousands of APIs" className="text-left" />
+        <div className="flex  justify-center gap-3	py-8">
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+        </div>
+        <Typography variant="h2" text="New APIs" className="text-left font-bold" />
+        <Typography variant="body" text="Discover and connect to thousands of APIs" className="text-left" />
+        <div className="flex  justify-center gap-3	py-8">
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+        </div>
+        <Typography variant="h2" text="Discovered APIs" className="text-left font-bold" />
+        <Typography variant="body" text="Discover and connect to thousands of APIs" className="text-left" />
+        <div className="flex  justify-center gap-3	py-8">
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+        </div>
+        <Typography variant="h2" text="Favourite APIs" className="text-left font-bold" />
+        <Typography variant="body" text="Discover and connect to thousands of APIs" className="text-left" />
+        <div className="flex  justify-center gap-3	py-8">
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+          <RecommendApiCard heading="TEST TEASED"text="EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEDDDDDDDDDD"time="23"tick="02"trend="30"/>
+        </div>
         {/* </Slider> */}
       </ApiHubLayout>
     </div>

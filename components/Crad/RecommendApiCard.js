@@ -10,7 +10,7 @@ export default function RecommendApiCard({heading,text,time,tick,trend}) {
       <div className="text-gray-700"> <Image src={'/icons/bookmark.svg'} alt="Button Icon" width={24} height={24} /></div>
     </div>
     <Typography variant="h2" text={heading} className="text-left font-bold" />
-    <Typography variant="h4" text={text} className="text-left break-words"  />
+    <Typography variant="h4" text={text} className="text-left break-words pt-2.5 pb-5"  />
     <div className="flex justify-between">
       <div className="flex items-center gap-px	">
          <Image src={'/icons/trend.svg'} alt="Button Icon" width={15} height={14} />
