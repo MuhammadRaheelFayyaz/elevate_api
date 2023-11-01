@@ -1,19 +1,14 @@
 import Typography from "@/components/Typegraphy/Typography";
 import CustomDropdown from "@/components/Custom-dropdown";
 import Tabs from "@/components/Tabs/tabs";
-import SearchInput from "@/components/Search/Search";
 import {useState} from "react";
-import Button from "@/components/Button/Button";
-import Table from "@/components/custom-table/table";
-import Navbar from "@/components/Navbar/Navbar";
 import Modal from "@/components/Modals/Modal";
 import ManageVersionOverlay from "@/components/Modals/ManageVersion";
 import AddDuplicateVersion from "@/components/Modals/AddDuplicateVersion";
 import AddNewVersion from "@/components/Modals/AddNewVersion";
 import EndPoints from "@/components/EndPoints/endPoints";
 import SecurityView from "@/components/SecurityView/securityView";
-import HubLayout from "@/components/HubLayout/HubLayout";
-
+import PageLayout from "@/components/HubLayout/HubLayout";
 
 const options = [
     {label: 'Option 1', status: 'Active', value: 'option1'},
@@ -47,7 +42,7 @@ export default function Definitions() {
     }
 
     return (
-        <HubLayout>
+        <PageLayout>
             <div className='w-full p-4 md:p-10'>
                 <div className='flex gap-1 items-center bg-blue-400 p-2 rounded mb-4'>
                     <Typography text='These changes will apply only to' variant='body'/>
@@ -86,7 +81,7 @@ export default function Definitions() {
                    className='md:w-[450px]'>
                 <AddNewVersion onClose={() => setShowAddVersionModal(false)}/>
             </Modal>
-        </HubLayout>
+        </PageLayout>
     )
 
 }

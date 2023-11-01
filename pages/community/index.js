@@ -2,8 +2,7 @@ import Tabs from "@/components/Tabs/tabs";
 import SearchInput from "@/components/Search/Search";
 import {useState} from "react";
 import Table from "@/components/custom-table/table";
-import Navbar from "@/components/Navbar/Navbar";
-import HubLayout from "@/components/HubLayout/HubLayout";
+import PageLayout from "@/components/HubLayout/HubLayout";
 
 const usersTabs=[
     {
@@ -130,7 +129,7 @@ const data = [
 export default function Community(){
     const [search, setSearch]=useState('')
     return (
-      <HubLayout>
+      <PageLayout>
           <div className='w-fit md:w-auto'>
               <div className='p-4 md:p-10'>
                   <div className='mb-4'>
@@ -149,6 +148,6 @@ export default function Community(){
                   </div>
               </div>
           </div>
-      </HubLayout>
+      </PageLayout>
     )
 }
