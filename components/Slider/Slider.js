@@ -6,19 +6,47 @@ import 'slick-carousel/slick/slick-theme.css';
 
 
 const settings = {
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: true,
-    arrows:true
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  responsive:[
+    {
+      breakpoint:1440,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint:1024,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint:768,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint:425,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+  ]
 };
 
 const CardSlider = ({children}) => {
-    return (
-        <Slider {...settings} style={{width:'100%'}} >
-            {children}
-        </Slider>
-    );
+  const slider = React.useRef(null);
+  return (
+    <>
+      <Slider ef={slider} {...settings}  >
+        {children}
+      </Slider>
+    </>
+  );
 };
 
 export default CardSlider;
