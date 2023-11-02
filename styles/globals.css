@@ -19,3 +19,45 @@
 .width-23{
     width: 24%;
 }
+.slick-slider{
+    width: 95%;
+}
+.slick-slider  .slick-prev{
+    position: absolute;
+}
+
+
+.slick-slider  .slick-prev,
+.slick-slider .slick-next {
+    z-index: 9;
+    height: 80px;
+    width: 30px;
+}
+.slick-slider button{
+    user-select:none !important;
+
+}
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
+    background-color: #345097 !important;
+
+}
+.slick-slider button::selection,
+
+.slick-slider button:active,
+.slick-slider button:after,
+.slick-slider button:before,
+.slick-slider button:hover {
+    background-color: #345097;
+}
+
+@media  screen and (max-width:768px) {
+    .slick-slider{
+        margin: auto;
+    }
+    .slick-slider .slick-prev{
+        left:-10px;
+    }
+    .slick-slider .slick-next{
+        right: -10px;
+    }
+}
