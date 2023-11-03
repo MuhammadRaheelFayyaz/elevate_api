@@ -24,12 +24,13 @@ const Tables = () => {
       </div>
 
       <div className="h-32 flex justify-center items-center">
-        <Image src={'/icons/next.svg'} alt="react logo" width={130} height={65} />
+        <Image src={'/images/box.png'} alt="react logo" width={130} height={65}   quality={100} // Set quality to 100
+                unoptimized={true}/>
       </div>
 
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-[10%]">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table class="w-full text-sm text-left text-gray-500 ">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50  ">
             <tr>
               <th scope="col" className="px-6 py-3 text-black">
                 Objects
@@ -42,7 +43,7 @@ const Tables = () => {
                 <div className="flex justify-center">
                   <button
                     type="button"
-                    className="block mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    className="block mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none "
                   >
                     Subscribe
                   </button>
@@ -56,7 +57,7 @@ const Tables = () => {
                 <div className="flex justify-center">
                   <button
                     type="button"
-                    className="block mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    className="block mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
                   >
                     Subscribe
                   </button>
@@ -70,7 +71,7 @@ const Tables = () => {
                 <div className="flex justify-center">
                   <button
                     type="button"
-                    className="block mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    className="block mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
                   >
                     Subscribe
                   </button>
@@ -84,7 +85,7 @@ const Tables = () => {
                 <div className="flex justify-center">
                   <button
                     type="button"
-                    className="block mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    className="block mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
                   >
                     Subscribe
                   </button>
@@ -93,10 +94,10 @@ const Tables = () => {
             </tr>
           </thead>
           <tbody>
-            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+            <tr class="bg-white border-b ">
               <th
                 scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
               >
                 results{" "}
                 <span className="block text-blue-500 pt-2">
@@ -120,10 +121,10 @@ const Tables = () => {
                 <span className="block font-normal">+ $0.001 each other</span>
               </td>
             </tr>
-            <tr class="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b bg-gray-50bg-gray-800 ">
               <th
                 scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
               >
                 Tiny requests{" "}
                 <span className="block text-blue-500 pt-2">
@@ -147,10 +148,10 @@ const Tables = () => {
                 <span className="block font-normal">+ $0.001 each other</span>
               </td>
             </tr>
-            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+            <tr class="bg-white border-b  ">
               <th
                 scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
               >
                 Requests{" "}
                 <span className="block text-blue-500 pt-2">
@@ -174,10 +175,10 @@ const Tables = () => {
                 <span className="block font-normal">+ $0.001 each other</span>
               </td>
             </tr>
-            <tr class="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b bg-gray-50 ">
               <th
                 scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
               >
                 Features
               </th>
@@ -187,14 +188,14 @@ const Tables = () => {
               <td class="px-6 py-4">
                 <a
                   href="https://example.com"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  class="font-medium text-blue-600  hover:underline"
                 ></a>
               </td>
             </tr>
             <tr>
               <th
                 scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
               >
                 Support
               </th>
@@ -278,7 +279,7 @@ const Tables = () => {
             <tr>
               <th
                 scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
               >
                 On-Demand API Endpoints
               </th>
