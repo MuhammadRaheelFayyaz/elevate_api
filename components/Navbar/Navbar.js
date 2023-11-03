@@ -14,7 +14,7 @@ const pages = [
   },
   {
     name: 'Apps',
-    path: '/apps'
+    path: '/developer/dashboard'
   },
   {
     name: 'My APIs',
@@ -27,14 +27,13 @@ const Navbar = () => {
   const pathname = router.pathname;
 
   return (
-    <nav className="bg-blue-500 border-b border-blue-500 p-4">
-      <div className="container mx-auto">
+    <nav className="bg-blue-500 border-b border-blue-500 p-1 md:p-2 lg:py-0 lg:px-4">
+      <div className="container ">
         <div className="flex items-center justify-between">
-          <div></div>
-          {/*<div>*/}
-          {/*  <img src={'/images/app-logo.png'} alt={'logo'}  className='w-[40px]' />*/}
-          {/*</div>*/}
-          <ul className="flex gap-4">
+          <div className='max-[320px]:hidden max-[425px]:w-[19%] w-1/4 lg:w-[10%]'>
+            <img src={'/images/app-logo.png'} alt={'logo'}   />
+          </div>
+          <ul className="flex items-end gap-4">
             {
               pages.map(((page, index) => (
                 <li
