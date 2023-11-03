@@ -30,8 +30,10 @@
 .slick-slider  .slick-prev,
 .slick-slider .slick-next {
     z-index: 9;
-    height: 80px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    padding-top: 2px;
 }
 .slick-slider button{
     user-select:none !important;

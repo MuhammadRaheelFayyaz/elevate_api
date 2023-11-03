@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Button = ({ text, icon, onClick, className }) => {
     return (
         <button
-            className={`flex items-center bg-blue-500 text-white px-3 py-2 rounded-md ${className}`}
+            className={`flex items-center bg-blue-500 text-white px-3 py-2 rounded-md min-w-fit ${className}`}
             onClick={onClick}
         >
             {icon && (

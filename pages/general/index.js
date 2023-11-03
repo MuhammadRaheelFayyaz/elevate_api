@@ -9,6 +9,7 @@ import Dropdown from "@/components/Dropdown/Dropdown";
 import Image from 'next/image';
 import Checkbox from "@/components/RadioButton/RadioButton";
 import PageLayout from "@/components/HubLayout/HubLayout";
+import GeneralNavbar from "@/components/GeneralNavbar";
 
 export default function Home() {
     const [selectedOption, setSelectedOption] = useState('');
@@ -19,6 +20,7 @@ export default function Home() {
     };
     return (
         <PageLayout>
+            <GeneralNavbar />
             <div className='mx-3 md:mx-10 md:w-[70%]  my-2 mt-8'>
                 <Typography variant='h1' text='General Information' className='mb-4 text-blue-500'/>
                 <div className='flex justify-between items-center flex-wrap my-8 max-w-2xl'>
