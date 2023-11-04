@@ -3,6 +3,7 @@ import {useRouter} from "next/router";
 import Typography from "@/components/Typegraphy/Typography";
 import Image from "next/image";
 import Link from "next/link";
+import UserDropdown from "../UserDropdown";
 
 const pages = [
   {
@@ -36,6 +37,12 @@ const pages = [
     active: false,
   },
 ]
+
+const options = [
+  { name: 'John Doe', avatar: '/images/profile.jpeg', accountType:"Personal Account" },
+  { name: 'All Projects', avatar: '/icons/team.svg' },
+];
+
 const SideBar = () => {
   const [data, setData] = useState(pages)
   const {pathname} = useRouter();
@@ -53,8 +60,11 @@ const SideBar = () => {
 
   return (
     <div className="hidden lg:block w-1/6  lg:w-1/4 xl:w-1/6 text-black min-h-screen border-r border-blue-500 ">
-      <div className='bg-blue-500 mb-4'>
+      {/* <div className='bg-blue-500 mb-4'>
         <img src={'/images/app-logo.png'} alt={'logo'} height={60} width={60} className='w-full'/>
+      </div> */}
+      <div className="p-6 border-b-[1px] border-gray-300">
+        <UserDropdown options={options} onSelect={(option) => console.log(option)} placeholder="Select a person"/>
       </div>
       <ul className="space-y-2 px-2">
         {

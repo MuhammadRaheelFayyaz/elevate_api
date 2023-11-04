@@ -1,13 +1,16 @@
 import React from "react";
-// import reactLogo from "../../logo.svg";
-// import logo from '../../public/icons/next.svg'
-import Image from "next/image";
 import Typography from "../Typegraphy/Typography";
+import UserDropdown from "../UserDropdown";
+
+const options = [
+  { name: 'John Doe', avatar: '/images/profile.jpeg', accountType:"Personal Account" },
+];
 
 const Tables = () => {
+  
   return (
     <div>
-      <div className="flex flex-col justify-center items-center h-32 mb-6">
+      <div className="mb-6 w-full px-4 pt-4 sm:w-2/4 mx-auto">
       <Typography
             variant="h1"
             text=" Choose the Right Plan For You"
@@ -19,25 +22,23 @@ const Tables = () => {
             text="RapidAPI performs directly with API providers to give you no-fuss,
             transparent pricing. Find a plan that best matches the scale you need
             for your application."
-            className="text-black text-center w-2/4 sm:text-xs md:text-lg"
+            className="text-black text-center sm:text-xs md:text-lg"
           />
       </div>
-
-      <div className="h-32 flex justify-center items-center">
-        <Image src={'/images/box.png'} alt="react logo" width={130} height={65}   quality={100} // Set quality to 100
-                unoptimized={true}/>
+      <div className="w-full max-w-[200px] mb-5 mx-auto" >
+        <UserDropdown options={options} onSelect={(option) => console.log(option)} placeholder="Select a person" />
       </div>
 
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-[10%]">
         <table class="w-full text-sm text-left text-gray-500 ">
           <thead class="text-xs text-gray-700 uppercase bg-gray-50  ">
             <tr>
-              <th scope="col" className="px-6 py-3 text-black">
+              <th scope="col" className="px-6 py-3 text-black min-w-[200px]">
                 Objects
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-black text-xl text-center flex flex-col"
+                className="px-6 py-3 text-black text-xl text-center flex flex-col  min-w-[200px]"
               >
                 Basic <span className="block">$0.00 / mo</span>{" "}
                 <div className="flex justify-center">
@@ -51,7 +52,7 @@ const Tables = () => {
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-black text-xl text-center "
+                className="px-6 py-3 text-black text-xl text-center min-w-[200px]"
               >
                 Pro <span className="block">$29.00 / mo</span>{" "}
                 <div className="flex justify-center">
@@ -65,7 +66,7 @@ const Tables = () => {
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-black text-xl text-center"
+                className="px-6 py-3 text-black text-xl text-center min-w-[200px]"
               >
                 Ultra <span className="block">$99.00 / mo</span>{" "}
                 <div className="flex justify-center">
@@ -79,7 +80,7 @@ const Tables = () => {
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-black text-xl text-center"
+                className="px-6 py-3 text-black text-xl text-center min-w-[200px]"
               >
                 Mega <span className="block">$999.00 / mo</span>{" "}
                 <div className="flex justify-center">
