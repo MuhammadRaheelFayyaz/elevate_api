@@ -13,6 +13,7 @@ import HubListingLayout from "@/components/HubListingLayout/HubListingLayout";
 export default function Home() {
     const [selectedOption, setSelectedOption] = useState('');
     const options = ['Option 1', 'Option 2', 'Option 3'];
+    const options2 = ['v1 Current', 'Manage Versions'];
 
     const handleSelect = (option) => {
         setSelectedOption(option);
@@ -21,23 +22,20 @@ export default function Home() {
        <HubListingLayout>
          <div className='mx-3 md:mx-10 md:w-[70%]  my-2 mt-8'>
            <Typography variant='h1' text='General Information' className='mb-4 text-blue-500'/>
-           <div className='flex justify-between items-center flex-wrap my-8 max-w-2xl'>
-             <div className='w-[80%] md:w-[30%] mb-0'>
+           <div className='flex gap-5 items-center flex-wrap my-8 max-w-2xl'>
                <Image
-                 src="/images/logo.webp"
+                 src="/images/logo.webp"  
                  width={150}
                  height={70}
                  className='overflow-hidden'
                  alt="Picture of the author"
                />
-             </div>
-             <div className='w-[100%] md:w-[70%] mb-3'>
+             <div className=' mb-3'>
                <Typography variant='h2' text='Drop File to Upload' className='mb-3 font-bold'/>
                <Button text='Upload Logo' className='max-w-[200px] mb-2'/>
                <Typography variant='body' text='The gateway developers use to make request to the API'/>
              </div>
            </div>
-           <Typography variant='h3' text='Category' className='mb-4'/>
            <div className="max-w-[500px]">
              <Dropdown
                options={options}
@@ -103,10 +101,34 @@ export default function Home() {
                <Checkbox checked={true}
                          label="I confirm that I own or have rights to publish this API according to the RapidAPI Terms of Service"/>
 
-               {/*<ToggleButton />*/}
+               {/* <ToggleButton /> */}
              </div>
            </div>
          </div>
+         <div className='mx-3 md:mx-10 max-w-[900px] my-3 border border-gray-400 overflow-hidden rounded-lg'>
+            <div className="flex items-center flex-wrap gap-1 p-3 bg-gray-100">
+              <img src="/icons/info.svg" alt="info" />
+              <Typography text='Version Specific' className='min-w-fit' variant='h3'/>
+              <Typography text='Changes will apply only to' className='min-w-fit' variant='small'/>
+              <Dropdown options={options2} onSelect={handleSelect} className='!mb-0 max-w-[180px] min-w-[180px]' placeholder={'Version v1 Current'} />
+            </div>
+            <div className="p-4">
+              <Typography variant='h3' className='mb-3' text='Base URL' />
+              <Typography variant='small' className='mb-4' text='Add a base URL, configure multiple URLs, override URLs, and select a load balancer' />
+              <Typography variant='h4' className='mb-4' text='URL' />
+              <div className="border-b-[1px] border-gray-300">
+                <div className="flex items-center gap-3 py-2 border-t-[1px] border-gray-300">
+                  <Input placeholder='https://' wrapperClassname='!mb-0' />
+                  <img src="/icons/delete.svg" alt="delete" />
+                </div>
+              </div>
+              <Button text='Add URL' className='bg-white !text-blue-500 mt-3' icon='/icons/plusBlue.svg' />
+            </div>
+         </div>
+         <div className="flex gap-2 border-t-[1px] bg-white border-gray-300 px-10 py-3 sticky bottom-0 left-0">
+            <Button text="Save" />
+            <Button text="Discard" className="bg-white !text-black border" />
+          </div>
        </HubListingLayout>
     )
 }
