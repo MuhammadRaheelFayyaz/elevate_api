@@ -8,7 +8,8 @@ const Typography = ({variant, className, text}) => {
         h3: 'text-lg ',
         h4: 'text-md ',
         body: 'text-base',
-        small: 'text-sm'
+        small: 'text-sm',
+        xs: 'text-[12px]'
     };
 
     return <p className={`${classes[variant]} ${className}`}>{text}</p>;
