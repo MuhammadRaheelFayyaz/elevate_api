@@ -82,9 +82,9 @@ const TraficAnalytics = ()=>{
         <div className="px-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-3 my-5 ">
                 <Dropdown options={endpointsOptions} className="w-full min-w-[250px] max-w-[800px] !mb-0" onSelect={(option)=>console.log(option)} placeholder='All Endpoints (Default)'/>
-                <div className="flex gap-3 flex-col sm:flex-row">
-                    <Dropdown options={timeOptions} className="w-[170px] !mb-0" onSelect={(option)=>console.log(option)} placeholder='GMT +00:00'/>
-                    <ul className="border rounded-[5px] overflow-hidden flex items-center w-fit h-[38px]">
+                <div className="flex justify-end gap-3 flex-col sm:flex-row w-full">
+                    <Dropdown options={timeOptions} className="min-w-[170px] max-w-[170px] !mb-0" onSelect={(option)=>console.log(option)} placeholder='GMT +00:00'/>
+                    <ul className="border rounded-[5px] overflow-hidden flex items-center min-w-fit max-w-fit h-[38px]">
                         {data.map((item, index) => (
                             <li key={item} className={`h-[38px] px-3 border-r-[1px] flex justify-center items-center text-sm cursor-pointer ${selectedIndex === index ? 'bg-gray-200' : ''}`}
                             onClick={() => handleItemClick(index)} >{item} </li>

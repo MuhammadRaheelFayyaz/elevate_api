@@ -10,7 +10,7 @@ const GeneralNavbar  = ()=>{
     const [selectedItem, setSelectedItem] = useState(0);
 
     return(
-        <div className="bg-white sm:px-6 border-b-[1px] flex justify-between items-center gap-3 flex-wrap py-2">
+        <div className="bg-white sm:px-6 border-b-[1px] flex justify-between items-center gap-3 flex-wrap">
             <ul className="flex list-none flex-wrap sm:flex-auto">
                 {
                     navItems.map((item, index)=>{
