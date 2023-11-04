@@ -159,7 +159,25 @@ export default function Pricing() {
               />
             </div>
           </div>
+
         </>
+        <div className="flex justify-between mx-[15%] my-12">
+            {/* {Array.from({ length: 5 }).map((index) => {
+              return ( */}
+            <div className="w-full">
+              <Image
+                src={"/images/graphs.png"}
+                alt="placeholder logo"
+                quality={100} // Set quality to 100
+                unoptimized={true}
+                width={100}
+                height={100}
+                className="w-full"
+              />
+            </div>
+            {/* );
+            })} */}
+          </div>
         <Footer />
       </div>
     </>
