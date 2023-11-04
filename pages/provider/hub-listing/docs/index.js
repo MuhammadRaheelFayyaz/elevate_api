@@ -1,13 +1,13 @@
 import Button from "@/components/Button/Button";
-import GeneralNavbar from "@/components/GeneralNavbar";
+import GeneralNavbar from "@/components/HubListingNavbar";
 import PageLayout from "@/components/HubLayout/HubLayout";
 import Typography from "@/components/Typegraphy/Typography";
+import HubListingLayout from "@/components/HubListingLayout/HubListingLayout";
 
 export default function Analytics() {
 
   return (
-    <PageLayout>
-      <GeneralNavbar />
+    <HubListingLayout>
       <div className="pt-10 pb-6 px-6">
         <Typography  variant="h3" text="Adding a Readme: Empowering your API Journey! 🌟" />
         <Typography  className="mt-2 mb-3" variant="small" text="Take a moment to unlock your API's full potential by adding a README to accompany your masterpiece in the Hub. Don't underestimate the power of a well-crafted README; it's like a guidebook that paves the way for developers to understand, utilize, and appreciate your API." />
@@ -20,6 +20,6 @@ export default function Analytics() {
         <Button text="Save" />
         <Button text="Discard" className="bg-white !text-black border" />
       </div>
-    </PageLayout>
+    </HubListingLayout>
   )
 }

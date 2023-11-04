@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import PageLayout from "@/components/HubLayout/HubLayout";
 import TabsNavbar from "@/components/TabsNavbar";
-import TabContent from "./TabsContent";
+import TabContent from "@/components/AnalyticsComponent/TabsContent";
 
 const tabs = ["Traffic Analytics", "User Analytics", "Revenue Analytics", "Alerts"];
 

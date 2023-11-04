@@ -5,6 +5,7 @@ import Input from "@/components/Input/Input";
 import Typography from "@/components/Typegraphy/Typography";
 import Dropdown from "@/components/Dropdown/Dropdown";
 import PageLayout from "@/components/HubLayout/HubLayout";
+import HubListingLayout from "@/components/HubListingLayout/HubListingLayout";
 
 export default function Home() {
     const [selectedOption, setSelectedOption] = useState('');
@@ -14,7 +15,7 @@ export default function Home() {
         setSelectedOption(option);
     };
     return (
-      <PageLayout>
+      <HubListingLayout>
               <div className='mx-3 md:mx-10 w-[70%] my-8'>
                   <Typography variant='h1' text='Gateway DNS' className='mb-4 text-blue-500'/>
                   <Typography
@@ -150,6 +151,6 @@ export default function Home() {
                       </Card>
                   </div>
               </div>
-      </PageLayout>
+      </HubListingLayout>
     )
 }

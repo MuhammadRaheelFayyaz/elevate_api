@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Typography from "@/components/Typegraphy/Typography";
 
-export default function ApiCard() {
+export default function ApiCard({onClick}) {
     return (
-        <>
-            <div className='flex justify-between'>
+        <div onClick={onClick}>
+            <div className='flex justify-between cursor-pointer'>
                 <div className='flex gap-4'>
                     <div className='rounded-full bg-blue-400 h-10 w-10 overflow-hidden'>
                         <Image
@@ -36,6 +36,6 @@ export default function ApiCard() {
                 text='Ut enim ad minima veniam, quis nostrum exercitationem,Ut enim minima veniam, quis nostrum
                 exercitationem'
             />
-        </>
+        </div>
     )
 }

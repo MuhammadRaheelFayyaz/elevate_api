@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Button from "@/components/Button/Button";
 import Typography from "@/components/Typegraphy/Typography";
 import Tabs from "@/components/Tabs/tabs";
-import PageLayout from "@/components/HubLayout/HubLayout";
+import HubListingLayout from "@/components/HubListingLayout/HubListingLayout";
 
 const tabs = [
     {label: 'Public plans'},
@@ -18,7 +18,7 @@ export default function Home() {
         setSelectedOption(option);
     };
     return (
-        <PageLayout>
+        <HubListingLayout>
             <div className="plan-wrapper mx-3 md:mx-10 mt-10">
                 <div className="flex gap-2.5 mb-2">
                     <Tabs tabs={tabs}/>
@@ -118,6 +118,6 @@ export default function Home() {
                     />
                 </div>
             </div>
-        </PageLayout>
+        </HubListingLayout>
     )
 }

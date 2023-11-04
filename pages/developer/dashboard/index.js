@@ -6,6 +6,7 @@ import Input from "@/components/Input/Input";
 import Dropdown from "@/components/Dropdown/Dropdown";
 import CountCard from "@/components/CountCard/CountCard";
 import Table from "@/components/custom-table/table";
+import AppsLayout from "@/components/AppsLayout/AppsLayout";
 
 export default function Dashboard() {
   const [selectedCard, setSelectedCard] = useState(0);
@@ -42,7 +43,7 @@ export default function Dashboard() {
 
   ];
   return (
-    <PageLayout>
+    <AppsLayout>
       <div className="max-sm:px-0 p-6 pb-8">
         <Typography variant="h1" text="Dashboard" />
       </div>
@@ -63,9 +64,9 @@ export default function Dashboard() {
         <Dropdown label="Time Zone" options={timezoneOptions} className="w-ful md:w-[49%] 2xl:w-[500px]" onSelect={(option)=>console.log(option)} placeholder='GMT+14:00 Line Islands Time (Pacific/Kiritimati)'/>
       </div>
       <div className='flex mb-6 border-b-[1px] flex-wrap'>
-        <CountCard heading="API Calls" subHeading="Total API Calls (Default)"  count="0" onClick={() => handleCardClick(0)} selected={selectedCard === 0}/>
-        <CountCard heading="Errors" subHeading="Average Error Rate (Default)"  count="0%" onClick={() => handleCardClick(1)} selected={selectedCard === 1}/>
-        <CountCard heading="Latency" subHeading="Average Latency (Default)"  count="0 ms" onClick={() => handleCardClick(2)} selected={selectedCard === 2}/>
+        <CountCard heading="API Calls" subHeading="Total API Calls (Default)" count="0" onClick={() => handleCardClick(0)} selected={selectedCard === 0}/>
+        <CountCard heading="Errors" subHeading="Average Error Rate (Default)" count="0%" onClick={() => handleCardClick(1)} selected={selectedCard === 1}/>
+        <CountCard heading="Latency" subHeading="Average Latency (Default)" count="0 ms" onClick={() => handleCardClick(2)} selected={selectedCard === 2}/>
       </div>
       <div className='px-6'>
         <Table columns={columns} data={data} />
@@ -74,6 +75,6 @@ export default function Dashboard() {
           <Typography variant='small' text='auto' />
         </div>
       </div>
-    </PageLayout>
+    </AppsLayout>
   )
 }

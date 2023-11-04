@@ -1,7 +1,7 @@
 import React from 'react';
-import TraficAnalytics from './TraficAnalytics';
+import TrafficAnalytics from './TraficAnalytics';
 
-const tabComponents = [TraficAnalytics, TraficAnalytics, TraficAnalytics, TraficAnalytics];
+const tabComponents = [TrafficAnalytics, TrafficAnalytics, TrafficAnalytics, TrafficAnalytics];
 
 const TabContent = ({ selectedTab }) => {
   const SelectedComponent = tabComponents[selectedTab];

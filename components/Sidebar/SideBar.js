@@ -6,6 +6,39 @@ import Link from "next/link";
 import UserDropdown from "../UserDropdown";
 
 const pages = [
+  // {
+  //   name: 'Dashboard',
+  //   icon: 'dashboard',
+  //   path: '/dashboard',
+  //   active: false,
+  // },
+  {
+    name: 'Analytics',
+    icon: 'analytics',
+    path: '/provider/analytics',
+    active: false,
+  },
+  {
+    name: 'Hub Listing',
+    icon: 'list',
+    path: '/provider/hub-listing/general',
+    active: false
+  },
+  {
+    name: 'Settings',
+    icon: 'setting',
+    path: '/provider/settings',
+    active: false,
+  },
+  {
+    name: 'Billing',
+    icon: 'billing',
+    path: '/provider/billing',
+    active: false,
+  },
+]
+
+const developerPages = [
   {
     name: 'Dashboard',
     icon: 'dashboard',
@@ -13,28 +46,16 @@ const pages = [
     active: false,
   },
   {
-    name: 'Analytics',
+    name: 'Inbox',
     icon: 'analytics',
-    path: '/analytics',
-    active: false,
-  },
-  {
-    name: 'Hub Listing',
-    icon: 'list',
-    path: '/hub-listing',
-    active: false
-  },
-  {
-    name: 'Settings',
-    icon: 'setting',
-    path: '/settings',
+    path: '/provider/analytics',
     active: false,
   },
   {
     name: 'Billing',
-    icon: 'billing',
-    path: '/billing',
-    active: false,
+    icon: 'list',
+    path: '/provider/hub-listing/general',
+    active: false
   },
 ]
 
@@ -43,8 +64,9 @@ const options = [
   { name: 'All Projects', avatar: '/icons/team.svg' },
 ];
 
-const SideBar = () => {
-  const [data, setData] = useState(pages)
+
+const SideBar = ({isDeveloper = false}) => {
+  const [data, setData] = useState(isDeveloper ? developerPages : pages)
   const {pathname} = useRouter();
   const activePage = () => {
     let temp = [...data]

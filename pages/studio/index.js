@@ -8,6 +8,7 @@ import ApiCard from "@/components/Crad/ApiCard";
 import Modal from "@/components/Modals/Modal";
 import AddAPI from "@/components/Modals/AddApi";
 import {useState} from "react";
+import {useRouter} from "next/router";
 
 
 const tabs = [
@@ -17,6 +18,10 @@ const tabs = [
 export default function Studio(){
     const [isOpen, setIsOpen]=useState(false)
     const [search, setSearch]=useState('')
+    const router=useRouter()
+    const cardClick=()=>{
+        router.push('/provider')
+    }
     return (
         <div>
             <Navbar />
@@ -43,22 +48,22 @@ export default function Studio(){
                 </div>
                 <div className='flex gap-4 justify-center flex-wrap mt-4'>
                     <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard/>
+                        <ApiCard onClick={cardClick}/>
                     </Card>
                     <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard/>
+                        <ApiCard onClick={cardClick}/>
                     </Card>
                     <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard/>
+                        <ApiCard onClick={cardClick}/>
                     </Card>
                     <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard/>
+                        <ApiCard onClick={cardClick}/>
                     </Card>
                     <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard/>
+                        <ApiCard onClick={cardClick}/>
                     </Card>
                     <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard/>
+                        <ApiCard onClick={cardClick}/>
                     </Card>
                 </div>
             </div>

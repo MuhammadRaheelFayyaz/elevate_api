@@ -9,6 +9,7 @@ import AddNewVersion from "@/components/Modals/AddNewVersion";
 import EndPoints from "@/components/EndPoints/endPoints";
 import SecurityView from "@/components/SecurityView/securityView";
 import PageLayout from "@/components/HubLayout/HubLayout";
+import HubListingLayout from "@/components/HubListingLayout/HubListingLayout";
 
 const options = [
     {label: 'Option 1', status: 'Active', value: 'option1'},
@@ -42,7 +43,7 @@ export default function Definitions() {
     }
 
     return (
-        <PageLayout>
+        <HubListingLayout>
             <div className='w-full p-4 md:p-10'>
                 <div className='flex gap-1 items-center bg-blue-400 p-2 rounded mb-4'>
                     <Typography text='These changes will apply only to' variant='body'/>
@@ -81,7 +82,7 @@ export default function Definitions() {
                    className='md:w-[450px]'>
                 <AddNewVersion onClose={() => setShowAddVersionModal(false)}/>
             </Modal>
-        </PageLayout>
+        </HubListingLayout>
     )
 
 }
