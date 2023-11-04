@@ -1,4 +1,4 @@
-import Header from "@/components/Header/Header";
+// import Header from "@/components/Header/Header";
 import Tables from "@/components/PriceTable/Table";
 import Typography from "@/components/Typegraphy/Typography";
 import React from "react";
@@ -6,10 +6,12 @@ import PlatformCard from "@/components/Pricing/PlatformCard";
 import Image from "next/image";
 import DashboardCard from "@/components/Pricing/DashboardCard";
 import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/Navbar/Navbar";
 export default function Pricing() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <Navbar/>
       <div>
         <div className="flex justify-center items-center h-20">
           <Typography
@@ -93,45 +95,90 @@ export default function Pricing() {
           </div>
 
           <div className="flex justify-between mx-[15%]">
-            <PlatformCard />
-            <PlatformCard />
-            <PlatformCard />
+            <PlatformCard image={"/images/user.png"} />
+            <PlatformCard image={"/images/apis.png"} />
+            <PlatformCard image={"/images/call.png"} />
+            <PlatformCard image={"/images/server.png"} />
           </div>
 
           <div className="flex justify-between mx-[15%] my-12">
-            {Array.from({ length: 5 }).map((index) => {
-              return (
-                <div className="">
-                  <Image src={'/icons/next.svg'} alt="placeholder logo" width={100} height={100} />
-                </div>
-              );
-            })}
+            {/* {Array.from({ length: 5 }).map((index) => {
+              return ( */}
+            <div className="w-full">
+              <Image
+                src={"/images/logoss.png"}
+                alt="placeholder logo"
+                quality={100} // Set quality to 100
+                unoptimized={true}
+                width={100}
+                height={100}
+                className="w-full"
+              />
+            </div>
+            {/* );
+            })} */}
           </div>
         </>
         <>
-        <div>
-      <div className="flex flex-col justify-center items-center my-10">
-      <Typography
-            variant="h2"
-            text="One Dashboard, All your APIs"
-            className="text-black text-2xl font-semibold pb-2"
-          />
-        <Typography
-            variant="body"
-            text="   RapidAPI provides clear visibily on all of the API you use. Worry less
+          <div>
+            <div className="flex flex-col justify-center items-center my-10">
+              <Typography
+                variant="h2"
+                text="One Dashboard, All your APIs"
+                className="text-black text-2xl font-semibold pb-2"
+              />
+              <Typography
+                variant="body"
+                text="   RapidAPI provides clear visibily on all of the API you use. Worry less
             about juggling multiple keys and subscription accounts"
-            className="text-black text-center sm:text-xs md:text-sm lg:text-lg"
-          />
-      </div>
+                className="text-black text-center sm:text-xs md:text-sm lg:text-lg"
+              />
+            </div>
 
-      <div className="flex justify-center items-center">
-         <DashboardCard/>
-         <DashboardCard/>
-         <DashboardCard/>
-      </div>
-    </div>
+            <div className="flex justify-center items-center">
+              <DashboardCard
+                number={"1"}
+                heading={"Call Volume And Billings"}
+                text={
+                  " Ensure your apps uptime by keeping track of API errors and trends in  latency."
+                }
+              />
+              <DashboardCard
+                number={"2"}
+                heading={"Errors and Latency"}
+                text={
+                  "Ensure your apps uptime by keeping track of API errors and trends in  latency."
+                }
+              />
+              <DashboardCard
+                number={"3"}
+                heading={"Logs for  your API calls"}
+                text={
+                  "Ensure your apps uptime by keeping track of API errors and trends in  latency."
+                }
+              />
+            </div>
+          </div>
+
         </>
-        <Footer/>
+        <div className="flex justify-between mx-[15%] my-12">
+            {/* {Array.from({ length: 5 }).map((index) => {
+              return ( */}
+            <div className="w-full">
+              <Image
+                src={"/images/graphs.png"}
+                alt="placeholder logo"
+                quality={100} // Set quality to 100
+                unoptimized={true}
+                width={100}
+                height={100}
+                className="w-full"
+              />
+            </div>
+            {/* );
+            })} */}
+          </div>
+        <Footer />
       </div>
     </>
   );

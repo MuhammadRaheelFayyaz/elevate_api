@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import Typography from '../Typegraphy/Typography'
-export default function PlatformCard() {
+export default function PlatformCard({image,text}) {
   return (
     <div className="flex flex-col items-center">
     <div className="flex flex-col justify-center items-center ">
-      <Image src={'/icons/next.svg'} alt="placeholder logo" width={100} height={100}/>
+      <Image src={image} alt="placeholder logo" width={100} height={100}  quality={100} // Set quality to 100
+                unoptimized={true}/>
       <Typography
             variant="body"
             text=" 3,000,000"
@@ -14,7 +15,7 @@ export default function PlatformCard() {
     </div>
    <Typography
             variant="body"
-            text="Developers"
+            text={text}
             className="text-black text-sm text-center"
           />
 
