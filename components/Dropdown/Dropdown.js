@@ -17,20 +17,20 @@ const Dropdown = ({ options, onSelect=()=>{}, placeholder, label, className }) =
             <div>
                 <button
                     type="button"
-                    className="inline-flex justify-between w-full rounded-md border bg-white px-4 py-2 text-sm"
+                    className="inline-flex justify-between w-full rounded-md border overflow-hidden bg-white px-4 py-2 text-sm"
                     onClick={()=>setOpen(!open)}
                 >
                     {selectedOption || placeholder}
                 </button>
             </div>
             {open && <div
-                className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 w-full">
+                className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 w-full z-10">
                 <div className="py-1 w-full" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                     {options.map((option) => (
                         <button
                             key={option}
                             onClick={() => handleSelect(option)}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left w-full"
+                            className="block px-4 py-2 text-sm text-gray-700 overflow-hidden hover:bg-gray-100 text-left w-full"
                             role="menuitem"
                         >
                             {option}

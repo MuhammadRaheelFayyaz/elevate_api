@@ -2,8 +2,10 @@ import React, {useState} from "react";
 import PageLayout from "@/components/HubLayout/HubLayout";
 import TabsNavbar from "@/components/TabsNavbar";
 import TabContent from "@/components/AnalyticsComponent/TabsContent";
+import TrafficAnalytics from "@/components/AnalyticsComponent/TraficAnalytics";
 
 const tabs = ["Traffic Analytics", "User Analytics", "Revenue Analytics", "Alerts"];
+const tabComponents = [TrafficAnalytics, TrafficAnalytics, TrafficAnalytics, TrafficAnalytics];
 
 export default function Analytics() {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -11,7 +13,7 @@ export default function Analytics() {
   return (
     <PageLayout>
       <TabsNavbar tabs={tabs} selectedTab={selectedTab} setSelectedTab={setSelectedTab}/>
-      <TabContent selectedTab={selectedTab} />
+      <TabContent selectedTab={selectedTab} tabComponents={tabComponents} />
     </PageLayout>
   )
 }
