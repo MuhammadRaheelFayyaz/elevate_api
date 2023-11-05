@@ -1,9 +1,6 @@
 import React from 'react';
-import TrafficAnalytics from './TraficAnalytics';
 
-const tabComponents = [TrafficAnalytics, TrafficAnalytics, TrafficAnalytics, TrafficAnalytics];
-
-const TabContent = ({ selectedTab }) => {
+const TabContent = ({ selectedTab, tabComponents }) => {
   const SelectedComponent = tabComponents[selectedTab];
   return (
     <div className="tab-content">
