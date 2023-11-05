@@ -16,7 +16,7 @@ const Tabs = ({tabs, onTabSelect=(value)=>{}}) => {
                 {tabs.map((tab, index) => (
                     <button
                         key={index}
-                        className={`py-2 px-4 text-gray-600  ${
+                        className={`py-2 px-4 text-gray-600 border border-transparent  ${
                             index === activeTab
                                 ? 'bg-blue-500 !text-blue-100 border border-blue-500'
                                 : 'bg-blue-100  hover:border hover:border-blue-500'

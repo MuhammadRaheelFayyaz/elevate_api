@@ -81,7 +81,7 @@ const SideBar = ({isDeveloper = false}) => {
   }, [pathname])
 
   return (
-    <div className="hidden lg:block w-1/6  lg:w-1/4 xl:w-1/6 text-black min-h-screen border-r border-blue-500 ">
+    <div className="hidden lg:block w-1/6  lg:w-1/4 xl:w-1/6 text-black min-h-screen border-r border-blue-500">
       {/* <div className='bg-blue-500 mb-4'>
         <img src={'/images/app-logo.png'} alt={'logo'} height={60} width={60} className='w-full'/>
       </div> */}

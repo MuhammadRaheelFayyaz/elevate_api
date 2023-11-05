@@ -69,11 +69,11 @@ export default function Dashboard() {
         <CountCard heading="Latency" subHeading="Average Latency (Default)" count="0 ms" onClick={() => handleCardClick(2)} selected={selectedCard === 2}/>
       </div>
       <div className='px-6'>
-        <Table columns={columns} data={data} />
-        <div className='flex justify-between w-full items-center border-t-[1px] py-1'>
-          <Typography variant='small' text='0' />
-          <Typography variant='small' text='auto' />
-        </div>
+        <Table columns={columns} data={data} havePagination={true} />
+        {/*<div className='flex justify-between w-full items-center border-t-[1px] py-1'>*/}
+        {/*  <Typography variant='small' text='0' />*/}
+        {/*  <Typography variant='small' text='auto' />*/}
+        {/*</div>*/}
       </div>
     </AppsLayout>
   )

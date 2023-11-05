@@ -1,7 +1,7 @@
 // components/Dropdown.js
 import React, { useState } from 'react';
 
-const Dropdown = ({ options, onSelect, placeholder, label, className }) => {
+const Dropdown = ({ options, onSelect=()=>{}, placeholder, label, className }) => {
     const [open, setOpen]=useState(false)
     const [selectedOption, setSelectedOption] = useState('');
 

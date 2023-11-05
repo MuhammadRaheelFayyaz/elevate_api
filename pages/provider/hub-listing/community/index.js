@@ -124,6 +124,33 @@ const data = [
         paid: '$49.99',
         active: '2023-10-19',
     },
+    {
+        username: 'user8',
+        status: 'Inactive',
+        name: 'Linda Wilson',
+        subscribedDate: '2023-06-30',
+        plan: 'Premium Plan',
+        paid: '$99.99',
+        active: '2023-10-18',
+    },
+    {
+        username: 'user9',
+        status: 'Active',
+        name: 'Peter Taylor',
+        subscribedDate: '2023-07-15',
+        plan: 'Standard Plan',
+        paid: '$74.99',
+        active: '2023-10-21',
+    },
+    {
+        username: 'user10',
+        status: 'Active',
+        name: 'Sara Hall',
+        subscribedDate: '2023-08-03',
+        plan: 'Basic Plan',
+        paid: '$49.99',
+        active: '2023-10-19',
+    },
 ];
 
 
@@ -140,12 +167,12 @@ export default function Community(){
                       <div className='mb-4'>
                           <Tabs tabs={usersTypes} />
                       </div>
-                      <div >
+                      <div>
                           <SearchInput placeholder='Search username' value={search} onChange={setSearch} />
                       </div>
                   </div>
                   <div className='w-[100vw] md:w-full overflow-scroll'>
-                      <Table columns={columns} data={data}/>
+                      <Table columns={columns} data={data} havePagination={true}/>
                   </div>
               </div>
           </div>

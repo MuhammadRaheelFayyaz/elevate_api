@@ -5,7 +5,6 @@ export default function PageLayout({children}) {
   return (
    <div>
      <Navbar/>
-
      <div className='flex'>
        <SideBar/>
        <div className='w-full lg:w-5/6'>

@@ -5,6 +5,9 @@ import Tabs from "@/components/Tabs/tabs";
 import Card from "@/components/Crad/Card";
 import ApiCard from "@/components/Crad/ApiCard";
 import Navbar from "@/components/Navbar/Navbar";
+import Table from "@/components/custom-table/Table";
+
+
 const tabs=[
     {
         label:"Publish API('s)"
@@ -31,6 +34,18 @@ const discussionTabs=[
         label:"Answers"
     },
 ]
+
+const columns = [
+    { key: 'title', label: 'Title' },
+    {key:'createdAt', label: 'Created At'}
+];
+const data = [
+    { title: 'Item 1', createdAt: '2023-11-04' },
+    { title: 'Item 2', createdAt: '2023-11-05' },
+    { title: 'Item 3', createdAt: '2023-11-06' }
+];
+
+
 export default function User() {
     return (
        <div>
@@ -79,6 +94,7 @@ export default function User() {
                </div>
                <div>
                    {/*discuustion table here*/}
+                   <Table columns={columns} data={data} />
                </div>
 
            </div>

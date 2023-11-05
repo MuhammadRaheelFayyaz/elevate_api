@@ -57,7 +57,7 @@ const TrafficChart = ({ data, dateLabels }) => {
   };
 
   return (
-    <div>
+    <div className="w-full h-full">
       <Line data={chartData} options={options} width={400} height={200} />
     </div>
   );

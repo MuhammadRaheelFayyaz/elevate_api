@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "@/components/Header/Header";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar/Navbar";
 

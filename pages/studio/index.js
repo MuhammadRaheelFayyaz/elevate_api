@@ -7,13 +7,19 @@ import Card from "@/components/Crad/Card";
 import ApiCard from "@/components/Crad/ApiCard";
 import Modal from "@/components/Modals/Modal";
 import AddAPI from "@/components/Modals/AddApi";
-import {useState} from "react";
+import React, {useState} from "react";
 import {useRouter} from "next/router";
+import UserDropdown from "@/components/UserDropdown";
 
 
 const tabs = [
     { label: 'All', content: 'Content for Tab 1' },
     { label: 'Favorites', content: 'Content for Tab 2' },
+];
+
+const options = [
+    { name: 'John Doe', avatar: '/images/profile.jpeg', accountType:"Personal Account" },
+    { name: 'All Projects', avatar: '/icons/team.svg' },
 ];
 export default function Studio(){
     const [isOpen, setIsOpen]=useState(false)
@@ -28,10 +34,8 @@ export default function Studio(){
             <div className='p-4'>
                 <div className='flex justify-between flex-col md:flex-row md:items-center gap-2'>
                     <div className='w-full md:w-1/2 flex flex-col md:flex-row md:gap-2 md:items-center'>
-                       <div className='flex'>
-                           <Typography variant='body' text='Personal' className='text-[14px] text-blue-500 border-b border-blue-500 cursor-pointer mx-1'  />
-                           <div>/</div>
-                           <Typography variant='body' text='All Projects' className='text-[14px] cursor-pointer mx-1 hover:text-blue-500 hover:border-b hover:border-blue-500'  />
+                       <div className='w-1/3'>
+                           <UserDropdown options={options} onSelect={(option) => console.log(option)} placeholder="Select a person"/>
                        </div>
                         <div className='mt-4 md:mt-0'>
                             <SearchInput value={search} onChange={(e)=>setSearch(e.target.value)} />
