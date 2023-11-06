@@ -1,11 +1,12 @@
 import Button from "@/components/Button/Button";
-import GeneralNavbar from "@/components/HubListingNavbar";
-import PageLayout from "@/components/HubLayout/HubLayout";
 import Typography from "@/components/Typegraphy/Typography";
 import HubListingLayout from "@/components/HubListingLayout/HubListingLayout";
 import dynamic from "next/dynamic";
-import Navbar from "@/components/Navbar/Navbar";
-import {useState} from "react";
+import { useState } from "react";
+
+
+
+
 
 const DynamicTextEditor = dynamic(
   () => import("@/components/Editor/EditorText"),
@@ -13,7 +14,10 @@ const DynamicTextEditor = dynamic(
 );
 
 export default function Analytics() {
+
   const [editorValue, setEditorValue] =useState('')
+
+
   return (
     <HubListingLayout>
       <div className="pt-10 pb-6 px-6">
@@ -24,7 +28,7 @@ export default function Analytics() {
           <div className="min-[814px]:w-[calc(100%_/_2)]">
             <DynamicTextEditor value={editorValue} setValue={setEditorValue} />
           </div>
-          <div className="min-[814px]:w-[calc(100%_/_2)]">
+          <div className="min-[814px]:w-[calc(100%_/_2)] ">
             <DynamicTextEditor value={editorValue} setValue={setEditorValue} readOnly={true}/>
           </div>
         </div>

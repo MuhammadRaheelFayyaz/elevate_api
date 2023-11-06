@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+import React, {useRef} from 'react';
+import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
-const TextEditor = ({value, setValue, readOnly=false}) => {
-  const [editorHtml, setEditorHtml] = useState('');
-
-  useEffect(() => {
-    // Use 'document' here or handle any DOM-related code within this useEffect
-  }, []);
-
+const TextEditor = ({ value, setValue, readOnly = false }) => {
   const modules = {
-    toolbar: readOnly ? [] : true, // Hide the toolbar when read-only
+    toolbar: readOnly ? [] : true,
+    // syntax:true
   };
+
+  const quillRef=useRef()
+
+  const formats = ['code-block'];
+
 
   return (
     <div className="w-full h-full ">
@@ -20,9 +19,10 @@ const TextEditor = ({value, setValue, readOnly=false}) => {
         theme="snow"
         value={value}
         onChange={(value) => setValue(value)}
-        style={{height:'calc(50vh - 32px) '}}
+        style={{height:'calc(50vh - 32px)', border:'none'}}
         readOnly={readOnly}
         modules={modules}
+        formats={formats}
       />
     </div>
   );

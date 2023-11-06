@@ -4,16 +4,16 @@ const Footer = () => {
 
   return (
     <div>
-      <footer class="bg-white rounded-lg shadow m-4 ">
-        <div class="w-full mx-auto max-w-screen-xl p-4 flex flex-col gap-2 md:flex-row items-center justify-between">
-          <span class="text-sm text-gray-500 sm:text-center ">
+      <footer className="bg-white rounded-lg shadow ">
+        <div className="w-full mx-auto max-w-screen-xl p-4 flex flex-col gap-2 md:flex-row items-center justify-between">
+          <span className="text-sm text-gray-500 sm:text-center ">
             © 2023{" "}
-            <a href="https://RapidAPI.com/" class="hover:underline">
+            <a href="https://RapidAPI.com/" className="hover:underline">
               RapidAPI
             </a>
             . All Rights Reserved.
           </span>
-          <ul class="flex flex-wrap items-center gap-2 list-none mt-3 text-sm font-medium text-gray-500  sm:mt-0">
+          <ul className="flex flex-wrap items-center gap-2 list-none mt-3 text-sm font-medium text-gray-500  sm:mt-0">
             <li className="min-w-fit">
                 About
             </li>

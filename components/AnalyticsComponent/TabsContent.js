@@ -1,10 +1,9 @@
 import React from 'react';
 
-const TabContent = ({ selectedTab, tabComponents }) => {
-  const SelectedComponent = tabComponents[selectedTab];
+const TabContent = ({ children }) => {
   return (
     <div className="tab-content">
-      <SelectedComponent />
+      {children}
     </div>
   );
 };
