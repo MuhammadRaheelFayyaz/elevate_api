@@ -11,24 +11,24 @@ import TabContent from "@/components/AnalyticsComponent/TabsContent";
 import NestedDropdown from "@/components/NestedDropdown";
 import apiCode from "@/lib/apiCode";
 const nestedOptions = [
-  "Clojure",
-  "C#",
-  "Go",
-  "HTTP",
-  "Java",
-  "JavaScript",
-  "Kotlin",
-  "Node.js",
-  "Objective-C",
-  "OCaml",
-  "PHP",
-  "PowerShell",
-  "Python",
-  "R",
-  "RapidQl",
-  "Ruby",
-  "Shell",
-  "swift",
+  {label:"Clojure"},
+  {label:"C#"},
+  {label:"Go"},
+  {label:"HTTP"},
+  {label:"Java"},
+  {label:"JavaScript"},
+  {label:"Kotlin"},
+  {label:"Node.js"},
+  {label:"Objective-C"},
+  {label:"OCaml"},
+  {label:"PHP"},
+  {label:"PowerShell"},
+  {label:"Python"},
+  {label:"R"},
+  {label:"RapidQl"},
+  {label:"Ruby"},
+  {label:"Shell"},
+  {label:"swift"},
 ];
 
 const htmlString = `
@@ -65,12 +65,14 @@ function HighlightedHTML() {
   };
   return (
     <div>
-      <NestedDropdown
-        options={nestedOptions}
-        onSelect={handleSelect}
-        placeholder="Select an option"
-        className="my-4 max-w-[250px]"
-      />
+      <div className="px-3">
+        <NestedDropdown
+          options={nestedOptions}
+          onSelect={handleSelect}
+          placeholder="Select an option"
+          className="my-4 max-w-[250px]"
+        />
+      </div>
       <div
         dangerouslySetInnerHTML={{
           __html: `<pre>
@@ -107,15 +109,21 @@ const options = [
   },
   { name: "Create new Organization", avatar: "/icons/plus.svg" },
 ];
-const option2 = ["default-application_7097837", "Add New App"];
-const option3 = ["rapidapi.com"];
-const option4 = ["38e6a2fcd7msh619634bb6f8edddp155610jsn2d24f69c922f"];
-const option5 = ["odds.p.rapidapi.com"];
-const option6 = ["True", "False", "Do not include in request"];
+const rapidApiOptions = ["default-application_7097837", "Add New App"];
+const requestUrlOptions = ["rapidapi.com"];
+const XrapidApiKeyOptions = ["38e6a2fcd7msh619634bb6f8edddp155610jsn2d24f69c922f"];
+const XrapidApiHostOptions = ["odds.p.rapidapi.com"];
+const allDropdownOptions = ["True", "False", "Do not include in request"];
 const tabs = ["Code snippets", "Example Responses", "Results"];
 
 const EndpointTab = () => {
   const [selectedTab, setSelectedTab] = useState(0);
+  const [rapidApiOption, setRapidApiOption] = useState(rapidApiOptions[0]);
+  const [requestUrlOption, setRequestUrlOption] = useState(requestUrlOptions[0]);
+  const [xrapidApiKeyOption, setXrapidApiKeyOption] = useState(XrapidApiKeyOptions[0]);
+  const [xrapidApiHostOption, setXrapidApiHostOption] = useState(XrapidApiHostOptions[0]);
+  const [allDropdownOption, setallDropdownOption] = useState(allDropdownOptions[0]);
+  // console.log("rapidApiOptions=>", rapidApiOption);
   const tabComponents = [HighlightedHTML, HighlightedHTML, HighlightedHTML];
   const SelectedTab = tabComponents[selectedTab];
 
@@ -186,9 +194,9 @@ const EndpointTab = () => {
                 </div>
                 <div className="w-[70%]">
                   <Dropdown
-                    options={option2}
+                    options={rapidApiOptions}
                     className="min-w-[170px] !mb-0"
-                    onSelect={(option) => console.log(option)}
+                    onSelect={(value) => setRapidApiOption(value)}
                     placeholder="default-application_7097837"
                   />
                   <p className="uppercase text-blue-500 mt-0.5 text-[10px]">
@@ -202,9 +210,9 @@ const EndpointTab = () => {
                 </div>
                 <div className="w-[70%]">
                   <Dropdown
-                    options={option3}
+                    options={requestUrlOptions}
                     className="min-w-[170px] !mb-0"
-                    onSelect={(option) => console.log(option)}
+                    onSelect={(value) => setRequestUrlOption(value)}
                     placeholder="rapidapi.com"
                   />
                   <p className="uppercase text-blue-500 mt-0.5 text-[10px]">
@@ -229,9 +237,9 @@ const EndpointTab = () => {
                     </div>
                     <div className="w-[70%]">
                       <Dropdown
-                        options={option4}
+                        options={XrapidApiKeyOptions}
                         className="min-w-[170px] !mb-0"
-                        onSelect={(option) => console.log(option)}
+                        onSelect={(value) => setXrapidApiKeyOption(value)}
                         placeholder="38e6a2fcd7msh619634bb6f8edddp155610jsn2d24f69c922f"
                       />
                       <p className="uppercase text-blue-500 mt-0.5 text-[10px]">
@@ -250,9 +258,9 @@ const EndpointTab = () => {
                     </div>
                     <div className="w-[70%]">
                       <Dropdown
-                        options={option5}
+                        options={XrapidApiHostOptions}
                         className="min-w-[170px] !mb-0"
-                        onSelect={(option) => console.log(option)}
+                        onSelect={(value) => setXrapidApiHostOption(value)}
                         placeholder="odds.p.rapidapi.com"
                       />
                       <p className="uppercase text-blue-500 mt-0.5 text-[10px]">
@@ -279,9 +287,9 @@ const EndpointTab = () => {
                     </div>
                     <div className="w-[70%]">
                       <Dropdown
-                        options={option6}
+                        options={allDropdownOptions}
                         className="min-w-[170px] !mb-0"
-                        onSelect={(option) => console.log(option)}
+                        onSelect={(value) => csetallDropdownOption(value)}
                         placeholder="True"
                       />
                       <div className="flex gap-2">
