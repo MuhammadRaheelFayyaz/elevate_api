@@ -24,16 +24,25 @@ ChartJS.register(
   Legend
 );
 
-const TrafficChart = ({data, dateLabels}) => {
+const TrafficChart = ({leftYData, rightYData, dateLabels}) => {
   const chartData = {
     labels: dateLabels,
     datasets: [
       {
-        label: 'Users',
-        data: data,
+        label: "API Calls",
+        data: leftYData,
         borderColor: 'blue',
         borderWidth: 2,
         fill: false,
+        yAxisID: 'left-y-axis', // Assign this dataset to the left y-axis
+      },
+      {
+        label: 'Errors',
+        data: rightYData,
+        borderColor: 'red',
+        borderWidth: 2,
+        fill: false,
+        yAxisID: 'right-y-axis', // Assign this dataset to the right y-axis
       },
     ],
   };
@@ -50,9 +59,21 @@ const TrafficChart = ({data, dateLabels}) => {
           },
         },
       },
-      y: {
+      'left-y-axis': {
+        position: 'left',
         beginAtZero: true,
-        position: 'right'
+        ticks: {
+          min: 0,
+          callback: (value) => `${value} ms`, // Add "ms" to the left y-axis values
+        },
+      },
+      'right-y-axis': {
+        beginAtZero: true,
+        position: 'right',
+        ticks: {
+          min: 0,
+          callback: (value) => `${value}`, // Add "ms" to the y-axis values
+        },
       },
     },
   };

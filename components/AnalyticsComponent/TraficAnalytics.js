@@ -11,7 +11,8 @@ const TrafficAnalytics = ()=>{
     const data = ["1hr", "3hr", "12hr", "24h", "7d", "30d", "90d"]
     const dropdownData = ["No Results"]
     const [selectedIndex, setSelectedIndex] = useState(4);
-  const chartData = [0, 0, 0, 0, 0];
+  const leftYData = [0, 0,0, 0, 0]; // Example data for the left y-axis
+  const rightYData = [0, 0, 0, 0, 0];
   const dateLabels = ['2023-11-01', '2023-11-02', '2023-11-03', '2023-11-04', '2023-11-05'];
 
     const handleItemClick = (index) => {
@@ -103,7 +104,7 @@ const TrafficAnalytics = ()=>{
                 <Dropdown options={dropdownData} className="min-w-[170px] max-w-[170px] !mb-0" onSelect={(option)=>console.log(option)} placeholder='All locations'/>
             </div>
             <div className="w-full border rounded-[8px] h-[500px] flex justify-center items-center mb-6">
-              <TrafficChart data={chartData} dateLabels={dateLabels} />
+              <TrafficChart leftYData={leftYData} rightYData={rightYData} dateLabels={dateLabels} />
                 {/*<div className="text-center">*/}
                 {/*    <img src='/icons/info.svg' alt='info-icon'  className="mx-auto mb-3" />*/}
                 {/*    <Typography text="You don't have any endpoints yet" variant="h2" className="mb-2" />*/}

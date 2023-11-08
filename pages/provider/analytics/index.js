@@ -14,7 +14,7 @@ export default function Analytics() {
   return (
     <PageLayout>
       <TabsNavbar tabs={tabs} selectedTab={selectedTab} setSelectedTab={setSelectedTab}/>
-      <TabContent selectedTab={selectedTab}  >
+      <TabContent selectedTab={selectedTab} >
         <SelectedTab />
       </TabContent>
     </PageLayout>
