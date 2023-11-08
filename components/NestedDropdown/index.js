@@ -22,10 +22,11 @@ const NestedDropdown = ({ options, onSelect = () => {}, placeholder, label, clas
       <div>
         <button
           type="button"
-          className="inline-flex justify-between w-full rounded-md border overflow-hidden bg-white px-4 py-2 text-sm"
+          className="inline-flex justify-between items-center w-full rounded-md border overflow-hidden bg-white px-4 py-2 text-sm"
           onClick={() => setOpen(!open)}
         >
           {selectedOption || placeholder}
+          <img src="/icons/downArrow.svg" className='w-5 h-5' alt="Down arrow" />
         </button>
       </div>
       {open && (

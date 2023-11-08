@@ -8,10 +8,11 @@ export default function RecommendApiCard({
   tick,
   trend,
   onClick,
+  verified,
 }) {
   return (
     <div
-      className="flex flex-col  border mx-2 border-gray-200 rounded p-3 cursor-pointer"
+      className="flex flex-col  border mx-2 border-gray-200 rounded-lg p-3 cursor-pointer"
       onClick={() => onClick()}
     >
       <div className="flex justify-between">
@@ -27,10 +28,23 @@ export default function RecommendApiCard({
       </div>
       <Typography variant="h2" text={heading} className="text-left font-bold" />
       <Typography
-        variant="h4"
+        variant="small"
         text={text}
         className="text-left break-words pt-2.5 pb-5"
       />
+      <div className="h-full min-h-[32px]">
+        {verified === true && <div className="flex w-fit rounded-[20px] overflow-hidden mb-1">
+          <Typography variant="xs" text="Verified" className="text-left !text-white p-1 px-2 bg-black" />
+          <div className="bg-green-300 py-1 px-0.5">
+            <Image
+                src={"/icons/tick.svg"}
+                alt="Button Icon"
+                width={20}
+                height={20}
+              />
+          </div>
+        </div>}
+      </div>
       <div className="flex justify-between">
         <div className="flex items-center gap-px	">
           <Image

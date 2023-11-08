@@ -44,7 +44,7 @@ export default function Dashboard() {
   ];
   return (
     <AppsLayout>
-      <div className="max-sm:px-0 p-6 pb-8">
+      <div className="p-6 pb-8">
         <Typography variant="h1" text="Dashboard" />
       </div>
       <div className="flex gap-2.5 flex-wrap">
@@ -53,7 +53,7 @@ export default function Dashboard() {
       </div>
       <div className="flex items-center gap-2.5 px-3 mt-6 md:mb-[60px]">
         <Input placeholder={"API name"} />
-        <div className="w-[42px] h-[42px] border rounded flex justify-center items-center mb-2">
+        <div className="w-[42px] h-[42px] border rounded flex justify-center items-center mb-4">
           <img src={"/icons/refresh.svg"} alt={'refresh -icon'} />
         </div>
       </div>

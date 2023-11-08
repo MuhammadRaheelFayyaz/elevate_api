@@ -33,7 +33,7 @@ const pages = [
   {
     name: 'Billing',
     icon: 'billing',
-    path: '/provider/billing',
+    path: '/provider/hub-listing/monetize',
     active: false,
   },
 ]
@@ -42,7 +42,13 @@ const developerPages = [
   {
     name: 'Dashboard',
     icon: 'dashboard',
-    path: '/dashboard',
+    path: '/developer/dashboard',
+    active: false,
+  },
+  {
+    name: 'Add New App',
+    icon: 'add-circle',
+    path: '/developer/add-app',
     active: false,
   },
   {
@@ -54,7 +60,7 @@ const developerPages = [
   {
     name: 'Billing',
     icon: 'list',
-    path: '/provider/hub-listing/general',
+    path: '/provider/hub-listing/monetize',
     active: false
   },
 ]

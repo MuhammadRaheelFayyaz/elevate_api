@@ -5,7 +5,7 @@ import Tabs from "@/components/Tabs/tabs";
 import Card from "@/components/Crad/Card";
 import ApiCard from "@/components/Crad/ApiCard";
 import Navbar from "@/components/Navbar/Navbar";
-import Table from "@/components/custom-table/Table";
+import Table from "@/components/custom-table/table";
 import Slider from "@/components/Slider/Slider";
 import {useState} from "react";
 import {useRouter} from "next/router";
@@ -129,7 +129,12 @@ export default function User() {
           </Slider>
         }
         {
-          selectedTab === 3 && <div>need to complete</div>
+          selectedTab === 3 && <div className="w-full h-[250px] flex justify-center items-center">
+            <div className="w-[300px] text-center">
+              <Typography variant="h2" text='Not Following Yet' />
+              <Typography variant="small" text='They must have not found the one yet' />
+            </div>
+          </div>
         }
 
         <div className='flex justify-between md:items-center flex-col md:flex-row mb-4 p-2 md:p-0'>
