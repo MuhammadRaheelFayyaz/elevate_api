@@ -5,6 +5,39 @@ import { useState } from "react";
 import Table from "@/components/custom-table/table";
 import TrafficChart from "@/components/Charts/TrafficChart";
 
+const graphResultCardsData = [
+  {
+    id: 1,
+    title: 'Endpoints',
+    count: "0",
+  },
+  {
+    id: 2,
+    title: 'Consumers',
+    count: "0",
+  },
+  {
+    id: 3,
+    title: 'Versions',
+    count: "0",
+  },
+  {
+    id: 3,
+    title: 'Methods',
+    count: "0",
+  },
+  {
+    id: 3,
+    title: 'Responses',
+    count: "0",
+  },
+  {
+    id: 3,
+    title: 'Locations',
+    count: "0",
+  }
+];
+
 const TrafficAnalytics = ()=>{
     const endpointsOptions = ["Disabled"]
     const timeOptions = ["GMT +00:00", "GMT +01:00", "GMT +02:00", "GMT +03:00", "GMT +04:00"]
@@ -103,7 +136,7 @@ const TrafficAnalytics = ()=>{
                 <Dropdown options={dropdownData} className="min-w-[170px] max-w-[170px] !mb-0" onSelect={(option)=>console.log(option)} placeholder='All responses'/>
                 <Dropdown options={dropdownData} className="min-w-[170px] max-w-[170px] !mb-0" onSelect={(option)=>console.log(option)} placeholder='All locations'/>
             </div>
-            <div className="w-full border rounded-[8px] h-[500px] flex justify-center items-center mb-6">
+            <div className="w-full border rounded-[8px] h-fit flex justify-center items-center p-2 mb-6">
               <TrafficChart leftYData={leftYData} rightYData={rightYData} dateLabels={dateLabels} />
                 {/*<div className="text-center">*/}
                 {/*    <img src='/icons/info.svg' alt='info-icon'  className="mx-auto mb-3" />*/}
@@ -111,6 +144,18 @@ const TrafficAnalytics = ()=>{
                 {/*    <Typography text="Add endpoints to start gathering analytics data" variant="small" className="mb-2" />*/}
                 {/*    <Button className="bg-white !text-black border border-gray-300 mx-auto" text="Add Endpoints" />*/}
                 {/*</div>*/}
+            </div>
+            <div>
+            <div className='flex items-center p-1 gap-2 flex-wrap mb-4'>
+              {graphResultCardsData.map((card)=>{
+                  return(
+                    <div key={card.id} className={`p-3 rounded-md w-full hover:bg-gray-100 max-w-[200px] border border-gray-200`}>
+                      <Typography variant="small" className='text-gray-500' text={card.title} />
+                      <p className='text-[24px] font-bold'>{card.count}<span className='text-gray-400 ml-1'>{card.countType}</span></p>
+                    </div>
+                  )
+              })}
+            </div>
             </div>
             <Typography text="Logs" variant="h3" />
             <Table columns={columns} data={pageData} havePagination={true} />

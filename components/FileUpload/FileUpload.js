@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 
-const FileUpload = ({className}) => {
+const FileUpload = ({className, placeholder="Drag and drop your files here, or click to browse."}) => {
     const [isDragOver, setIsDragOver] = useState(false);
     const [selectedFiles, setSelectedFiles] = useState([]);
     const ref=useRef()
@@ -43,7 +43,7 @@ const FileUpload = ({className}) => {
             <label className="mb-2">
                 <i className="fas fa-upload text-4xl"></i>
             </label>
-            <p>Drag and drop your files here, or click to browse.</p>
+            <p>{placeholder}</p>
             <input
                 type="file"
                 multiple

@@ -77,6 +77,24 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
+              verified={true}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+              verified={true}
             />
             <RecommendApiCard
               heading="TEST TEASED"
@@ -101,22 +119,7 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
+              verified={true}
             />
           </Slider>
         </div>
@@ -139,6 +142,7 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
+              verified={true}
             />
             <RecommendApiCard
               heading="TEST TEASED"
@@ -163,6 +167,7 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
+              verified={true}
             />
             <RecommendApiCard
               heading="TEST TEASED"
@@ -171,6 +176,7 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
+              verified={true}
             />
             <RecommendApiCard
               heading="TEST TEASED"
@@ -201,6 +207,24 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
+              verified={true}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+              verified={true}
             />
             <RecommendApiCard
               heading="TEST TEASED"
@@ -225,22 +249,7 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
+              verified={true}
             />
           </Slider>
         </div>
@@ -263,6 +272,7 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
+              verified={true}
             />
             <RecommendApiCard
               heading="TEST TEASED"
@@ -279,6 +289,7 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
+              verified={true}
             />
             <RecommendApiCard
               heading="TEST TEASED"
@@ -287,6 +298,7 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
+              verified={true}
             />
             <RecommendApiCard
               heading="TEST TEASED"
@@ -333,6 +345,7 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
+              verified={true}
             />
             <RecommendApiCard
               heading="TEST TEASED"
@@ -349,6 +362,7 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
+              verified={true}
             />
           </Slider>
         </div>
