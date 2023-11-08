@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Button from "../Button/Button";
 import Dropdown from "../Dropdown/Dropdown";
 import SearchInput from "../Search/Search";
@@ -10,59 +10,49 @@ import TabsNavbar from "@/components/TabsNavbar";
 import TabContent from "@/components/AnalyticsComponent/TabsContent";
 import NestedDropdown from "@/components/NestedDropdown";
 import apiCode from "@/lib/apiCode";
+
 const nestedOptions = [
-  {label:"Clojure"},
-  {label:"C#"},
-  {label:"Go"},
-  {label:"HTTP"},
-  {label:"Java"},
-  {label:"JavaScript"},
-  {label:"Kotlin"},
-  {label:"Node.js"},
-  {label:"Objective-C"},
-  {label:"OCaml"},
-  {label:"PHP"},
-  {label:"PowerShell"},
-  {label:"Python"},
-  {label:"R"},
-  {label:"RapidQl"},
-  {label:"Ruby"},
-  {label:"Shell"},
-  {label:"swift"},
+  {label: "Clojure"},
+  {label: "C#"},
+  {label: "Go"},
+  {label: "HTTP"},
+  {label: "Java"},
+  {label: "JavaScript"},
+  {label: "Kotlin"},
+  {label: "Node.js"},
+  {label: "Objective-C"},
+  {label: "OCaml"},
+  {label: "PHP"},
+  {label: "PowerShell"},
+  {label: "Python"},
+  {label: "R"},
+  {label: "RapidQl"},
+  {label: "Ruby"},
+  {label: "Shell"},
+  {label: "swift"},
 ];
 
-const htmlString = `
-import axios from 'axios';
-
-const options = {
-  method: 'GET',
-  url: 'https://odds.p.rapidapi.com/v4/sports',
-  params: {all: 'true'},
-  headers: {
-    'X-RapidAPI-Key': '140cc54476msh6e5a5a628deda36p15f5ebjsn78cc5faf6eb8',
-    'X-RapidAPI-Host': 'odds.p.rapidapi.com'
-  }
-};
-
-try {
-\tconst response = await axios.request(options);
-\tconsole.log(response.data);
-} catch (error) {
-\tconsole.error(error);
-}
-  `;
-
-function HighlightedHTML() {
+function HighlightedHTML({
+                           rapidApiOption,
+                           requestUrlOption,
+                           xrapidApiKeyOption,
+                           xrapidApiHostOption,
+                           allDropdownOption
+                         }) {
   const [selectedValue, setSelectedValue] = useState("Node.js");
-  console.log(apiCode[selectedValue]("123"));
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     hljs.highlightAll();
-  }, [htmlString]);
+    setTimeout(() => {
+      setLoading(false);
+    }, 200);
+  }, [selectedValue, xrapidApiKeyOption, xrapidApiHostOption,allDropdownOption]); // Listen to changes in selectedValue
 
   const handleSelect = (value) => {
-    console.log("value", value);
     setSelectedValue(value);
   };
+
   return (
     <div>
       <div className="px-3">
@@ -73,21 +63,32 @@ function HighlightedHTML() {
           className="my-4 max-w-[250px]"
         />
       </div>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `<pre>
-      <code>
-      ${apiCode[selectedValue]("123")}
-      </code>
-      </pre>`,
-        }}
-      />
+      {!loading && (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `<pre><code>${apiCode[selectedValue](rapidApiOption, requestUrlOption, xrapidApiKeyOption, xrapidApiHostOption, allDropdownOption).replace(/^\s*/gm, '').replace(/^/gm, ' ')}</code></pre>`,
+          }}
+        />
+      )}
     </div>
   );
 }
 
+
 const dropdownOptions = ["v4 (Current)", "v1"];
 const filesNames = [
+  {
+    type: "GET",
+    fileName: "/v4/sports",
+  },
+  {
+    type: "GET",
+    fileName: "/v4/sports/{sport}/odds",
+  },
+  {
+    type: "GET",
+    fileName: "/v4/sports/{sport}/scores",
+  },
   {
     type: "GET",
     fileName: "/v4/sports",
@@ -107,13 +108,13 @@ const options = [
     avatar: "/images/profile.jpeg",
     accountType: "Personal Account",
   },
-  { name: "Create new Organization", avatar: "/icons/plus.svg" },
+  {name: "Create new Organization", avatar: "/icons/plus.svg"},
 ];
-const rapidApiOptions = ["default-application_7097837", "Add New App"];
-const requestUrlOptions = ["rapidapi.com"];
-const XrapidApiKeyOptions = ["38e6a2fcd7msh619634bb6f8edddp155610jsn2d24f69c922f"];
-const XrapidApiHostOptions = ["odds.p.rapidapi.com"];
-const allDropdownOptions = ["True", "False", "Do not include in request"];
+const rapidApiOptions = ["default-application_7097837", "default1-application_7097837"];
+const requestUrlOptions = ["rapidapi.com", "rapidapi-test.com"];
+const XrapidApiKeyOptions = ["38e6a2fcd7msh619634bb6f8edddp155610jsn2d24f69c922f", "6a2fcd7msh619634bb6f8edddp155610jsn2d24f69c922f"];
+const XrapidApiHostOptions = ["odds.p.rapidapi.com", "odds.test.p.rapidapi.com"]
+const allDropdownOptions = ["True", "False"];
 const tabs = ["Code snippets", "Example Responses", "Results"];
 
 const EndpointTab = () => {
@@ -123,7 +124,6 @@ const EndpointTab = () => {
   const [xrapidApiKeyOption, setXrapidApiKeyOption] = useState(XrapidApiKeyOptions[0]);
   const [xrapidApiHostOption, setXrapidApiHostOption] = useState(XrapidApiHostOptions[0]);
   const [allDropdownOption, setallDropdownOption] = useState(allDropdownOptions[0]);
-  // console.log("rapidApiOptions=>", rapidApiOption);
   const tabComponents = [HighlightedHTML, HighlightedHTML, HighlightedHTML];
   const SelectedTab = tabComponents[selectedTab];
 
@@ -144,12 +144,12 @@ const EndpointTab = () => {
             onSelect={(option) => console.log(option)}
             placeholder="v4 (Current)"
           />
-          <img src="/icons/fullscreen.svg" alt="fullscreen" />
+          {/*<img src="/icons/fullscreen.svg" alt="fullscreen"/>*/}
         </div>
-        <div className="flex h-[calc(100vh_-_429px)] border-t-[1px] border-gray-200">
-          <div className="w-[20%] h-full overflow-y-auto">
+        <div className="flex h-[calc(100vh_-_429px)] border-t-[1px] border-gray-200 flex-wrap">
+          <div className="w-full md:w-[20%] h-full overflow-y-auto">
             <div className="px-3 py-[11px] bg-gray-100">
-              <SearchInput placeholder="Search Endpoints" />
+              <SearchInput placeholder="Search Endpoints"/>
             </div>
             {filesNames.map((item) => {
               return (
@@ -164,12 +164,12 @@ const EndpointTab = () => {
               );
             })}
           </div>
-          <div className="w-[40%] border-l-2 border-r-2 border-gray-200 h-full">
+          <div className="w-full md:w-[40%] border-l-2 border-r-2 border-gray-200 h-full">
             <div className="p-3 flex items-center justify-between gap-3 bg-gray-100">
               <p className="text-xs">
                 <span className="text-base text-green-700">GET</span> /v4/sports
               </p>
-              <Button text="Subscribe to test" />
+              <Button text="Subscribe to test"/>
             </div>
             <div className="overflow-y-auto h-full ">
               <div className="p-3 border-b-[1px] border-gray-200">
@@ -190,7 +190,7 @@ const EndpointTab = () => {
               </div>
               <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200">
                 <div className="w-[30%]">
-                  <Typography variant="small" text="RapidAPI App" />
+                  <Typography variant="small" text="RapidAPI App"/>
                 </div>
                 <div className="w-[70%]">
                   <Dropdown
@@ -206,7 +206,7 @@ const EndpointTab = () => {
               </div>
               <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200">
                 <div className="w-[30%]">
-                  <Typography variant="small" text="Request URL" />
+                  <Typography variant="small" text="Request URL"/>
                 </div>
                 <div className="w-[70%]">
                   <Dropdown
@@ -222,13 +222,13 @@ const EndpointTab = () => {
               </div>
               <div className="Accordion1">
                 <div className="flex gap-2 bg-gray-300 p-2 cursor-pointer">
-                  <img src="/icons/arrowRight.svg" alt="Arrow Right" />
-                  <Typography variant="small" text="Header Parameters" />
+                  <img src="/icons/arrowRight.svg" alt="Arrow Right"/>
+                  <Typography variant="small" text="Header Parameters"/>
                 </div>
                 <div>
                   <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200">
                     <div className="w-[30%]">
-                      <Typography variant="small" text="X-RapidAPI-Key" />
+                      <Typography variant="small" text="X-RapidAPI-Key"/>
                       <Typography
                         variant="small"
                         className="mt-1 !text-gray-400"
@@ -249,7 +249,7 @@ const EndpointTab = () => {
                   </div>
                   <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200">
                     <div className="w-[30%]">
-                      <Typography variant="small" text="X-RapidAPI-Host" />
+                      <Typography variant="small" text="X-RapidAPI-Host"/>
                       <Typography
                         variant="small"
                         className="mt-1 !text-gray-400"
@@ -272,13 +272,13 @@ const EndpointTab = () => {
               </div>
               <div className="Accordion2">
                 <div className="flex gap-2 bg-gray-300 p-2 cursor-pointer">
-                  <img src="/icons/arrowRight.svg" alt="Arrow Right" />
-                  <Typography variant="small" text="Optional Parameters" />
+                  <img src="/icons/arrowRight.svg" alt="Arrow Right"/>
+                  <Typography variant="small" text="Optional Parameters"/>
                 </div>
                 <div>
                   <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200">
                     <div className="w-[30%]">
-                      <Typography variant="small" text="all" />
+                      <Typography variant="small" text="all"/>
                       <Typography
                         variant="small"
                         className="mt-1 !text-gray-400"
@@ -289,7 +289,7 @@ const EndpointTab = () => {
                       <Dropdown
                         options={allDropdownOptions}
                         className="min-w-[170px] !mb-0"
-                        onSelect={(value) => csetallDropdownOption(value)}
+                        onSelect={(value) => setallDropdownOption(value)}
                         placeholder="True"
                       />
                       <div className="flex gap-2">
@@ -308,16 +308,20 @@ const EndpointTab = () => {
               </div>
             </div>
           </div>
-          <div className="w-[40%] h-full overflow-scroll">
-            {/*<HighlightedHTML />*/}
-
+          <div className="w-full md:w-[40%] h-full overflow-scroll">
             <TabsNavbar
               tabs={tabs}
               selectedTab={selectedTab}
               setSelectedTab={setSelectedTab}
             />
             <TabContent>
-              <SelectedTab />
+              <SelectedTab
+                rapidApiOption={rapidApiOption}
+                requestUrlOption={requestUrlOption}
+                xrapidApiKeyOption={xrapidApiKeyOption}
+                xrapidApiHostOption={xrapidApiHostOption}
+                allDropdownOption={allDropdownOption}
+              />
             </TabContent>
           </div>
         </div>

@@ -45,7 +45,7 @@ const APIDetail = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center flex-wrap md:flex-nowrap">
             <div className="px-3">
               <div className="flex gap-1 items-center mb-1">
                 <img src="/icons/trending_up.svg" alt="trending_up" />
@@ -84,9 +84,9 @@ const APIDetail = () => {
       <TabContent>
         <SelectedTab />
       </TabContent>
-      <div className="fixed bottom-0 z-20 bg-white w-full">
-        <Footer />
-      </div>
+      {/*<div className="fixed bottom-0 z-20 bg-white w-full mt-5">*/}
+      {/*  <Footer />*/}
+      {/*</div>*/}
     </div>
   );
 };
