@@ -24,25 +24,18 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-const UsersCahrt = ({leftYData, dateLabels}) => {
 const graphCardsData = [
   {
     id: 1,
-    title: 'Active Users',
-    count: "0",
-    selected: false
-  },
-  {
-    id: 2,
-    title: 'Total Users',
-    count: "2",
+    title: 'Total Paid',
+    count: "$0.00",
     selected: false
   },
 ];
 
+const RevenueChart = ({leftYData, dateLabels}) => {
 
-  const [selectedCard, setSelectedCard] = useState(1);
+  const [selectedCard, setSelectedCard] = useState(0);
   const handleCardClick = (index) => {
     setSelectedCard(index);
   };
@@ -51,7 +44,7 @@ const graphCardsData = [
     labels: dateLabels,
     datasets: [
       {
-        label: "Users",
+        label: "Revenue",
         data: leftYData,
         borderColor: 'blue',
         borderWidth: 2,
@@ -78,26 +71,24 @@ const graphCardsData = [
         beginAtZero: true,
         ticks: {
           min: 0,
-          callback: (value) => `${value} ms`, // Add "ms" to the left y-axis values
+          callback: (value) => `$ ${value}`, // Add "ms" to the left y-axis values
         },
       },
-     
+
     },
   };
-
-  
 
   return (
     <div className="w-full h-full">
       <div className='flex items-center p-1 gap-1 w-full '>
         {graphCardsData.map((card, index)=>{
-            const isSelected = selectedCard === index;
-            return(
-              <div key={card.id} onClick={() => handleCardClick(index)} className={`p-3 hover:bg-gray-100 w-1/2 rounded-md cursor-pointer ${isSelected ? 'bg-gray-200' : ''}`}>
-                <Typography variant="small" className='text-gray-500' text={card.title} />
-                <p className='text-[24px] font-bold'>{card.count}<span className='text-gray-400 ml-1'>{card.countType}</span></p>
-              </div>
-            )
+          const isSelected = selectedCard === index;
+          return(
+            <div key={card.id} onClick={() => handleCardClick(index)} className={`p-3 hover:bg-gray-100 w-full rounded-md cursor-pointer ${isSelected ? 'bg-gray-200' : ''}`}>
+              <Typography variant="small" className='text-gray-500' text={card.title} />
+              <p className='text-[24px] font-bold'>{card.count}<span className='text-gray-400 ml-1'>{card.countType}</span></p>
+            </div>
+          )
         })}
       </div>
       <Line data={chartData} options={options} width={400} height={200}/>
@@ -105,4 +96,4 @@ const graphCardsData = [
   );
 };
 
-export default UsersCahrt;
+export default RevenueChart;

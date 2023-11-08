@@ -1,4 +1,3 @@
-import Button from "@/components/Button/Button";
 import Dropdown from "@/components/Dropdown/Dropdown";
 import Typography from "@/components/Typegraphy/Typography";
 import { useState } from "react";
@@ -44,9 +43,9 @@ const TrafficAnalytics = ()=>{
     const data = ["1hr", "3hr", "12hr", "24h", "7d", "30d", "90d"]
     const dropdownData = ["No Results"]
     const [selectedIndex, setSelectedIndex] = useState(4);
-  const leftYData = [0, 0,0, 0, 0]; // Example data for the left y-axis
-  const rightYData = [0, 0, 0, 0, 0];
-  const dateLabels = ['2023-11-01', '2023-11-02', '2023-11-03', '2023-11-04', '2023-11-05'];
+    const leftYData = [0, 0,0, 0, 0]; // Example data for the left y-axis
+    const rightYData = [0, 0, 0, 0, 0];
+    const dateLabels = ['2023-11-01', '2023-11-02', '2023-11-03', '2023-11-04', '2023-11-05'];
 
     const handleItemClick = (index) => {
         setSelectedIndex(index);

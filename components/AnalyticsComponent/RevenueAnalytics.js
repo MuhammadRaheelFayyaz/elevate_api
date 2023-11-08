@@ -1,55 +1,18 @@
 import Dropdown from "@/components/Dropdown/Dropdown";
-import Typography from "@/components/Typegraphy/Typography";
 import {useState} from "react";
-import Table from "@/components/custom-table/table";
-import UserChart from "@/components/Charts/UserChart";
+import RevenueChart from "@/components/Charts/RevenueChart";
 
-const graphResultCardsData = [
-  {
-    id: 1,
-    title: 'Endpoints',
-    count: "0",
-  },
-  {
-    id: 2,
-    title: 'Consumers',
-    count: "0",
-  },
-  {
-    id: 3,
-    title: 'Versions',
-    count: "0",
-  },
-  {
-    id: 3,
-    title: 'Methods',
-    count: "0",
-  },
-  {
-    id: 3,
-    title: 'Responses',
-    count: "0",
-  },
-  {
-    id: 3,
-    title: 'Locations',
-    count: "0",
-  }
-];
 
-const UsersAnalytics = () => {
+const RevenueAnalytics = () => {
   const timeOptions = ["GMT +00:00", "GMT +01:00", "GMT +02:00", "GMT +03:00", "GMT +04:00"]
-  const data = ["1hr", "3hr", "12hr", "24h", "7d", "30d", "90d"]
-  const [selectedIndex, setSelectedIndex] = useState(4);
-  const leftYData = [2, 0, 0, 0, 0]; // Example data for the left y-axis
-  // const rightYData = [0, 0, 0, 0, 0];
+  const data = ["3 Months", "6 Months", "12 Months"]
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const leftYData = [0, 0, 0, 0, 0]; // Example data for the left y-axis
   const dateLabels = ['2023-11-01', '2023-11-02', '2023-11-03', '2023-11-04', '2023-11-05'];
 
   const handleItemClick = (index) => {
     setSelectedIndex(index);
   };
-
-
 
   return (
     <div className="px-8">
@@ -69,10 +32,10 @@ const UsersAnalytics = () => {
       </div>
 
       <div className="w-full border rounded-[8px] h-fit flex justify-center items-center p-2 mb-6">
-        <UserChart leftYData={leftYData} dateLabels={dateLabels}/>
+        <RevenueChart leftYData={leftYData} dateLabels={dateLabels}/>
       </div>
     </div>
   )
 }
 
-export default UsersAnalytics;
+export default RevenueAnalytics;
