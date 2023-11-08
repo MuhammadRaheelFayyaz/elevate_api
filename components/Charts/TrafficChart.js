@@ -2,7 +2,7 @@ import React from 'react';
 import Chart from 'chart.js/auto';
 import "chartjs-adapter-moment";
 
-import { Line } from 'react-chartjs-2';
+import {Line} from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   TimeScale,
@@ -24,7 +24,7 @@ ChartJS.register(
   Legend
 );
 
-const TrafficChart = ({ data, dateLabels }) => {
+const TrafficChart = ({data, dateLabels}) => {
   const chartData = {
     labels: dateLabels,
     datasets: [
@@ -52,13 +52,14 @@ const TrafficChart = ({ data, dateLabels }) => {
       },
       y: {
         beginAtZero: true,
+        position: 'right'
       },
     },
   };
 
   return (
     <div className="w-full h-full">
-      <Line data={chartData} options={options} width={400} height={200} />
+      <Line data={chartData} options={options} width={400} height={200}/>
     </div>
   );
 };

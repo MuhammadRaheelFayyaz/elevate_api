@@ -13,7 +13,7 @@ const Tables = () => {
       <div className="mb-6 w-full px-4 pt-4 sm:w-2/4 mx-auto">
       <Typography
             variant="h1"
-            text=" Choose the Right Plan For You"
+            text="Choose the Right Plan For You"
             className="text-black text-center text-2xl font-semibold pb-2"
           />
       
@@ -77,6 +77,7 @@ const Tables = () => {
                     Subscribe
                   </button>
                 </div>
+                <Typography variant='body' text='Recommended' />
               </th>
               <th
                 scope="col"

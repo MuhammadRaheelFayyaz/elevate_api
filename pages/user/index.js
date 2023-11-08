@@ -100,7 +100,6 @@ export default function User() {
             <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
               <ApiCard/>
             </Card>
-
             <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
               <ApiCard/>
             </Card>

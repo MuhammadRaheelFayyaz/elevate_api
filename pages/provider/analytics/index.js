@@ -9,11 +9,14 @@ const tabComponents = [TrafficAnalytics, TrafficAnalytics, TrafficAnalytics, Tra
 
 export default function Analytics() {
   const [selectedTab, setSelectedTab] = useState(0);
+  const SelectedTab = tabComponents[selectedTab];
 
   return (
     <PageLayout>
       <TabsNavbar tabs={tabs} selectedTab={selectedTab} setSelectedTab={setSelectedTab}/>
-      <TabContent selectedTab={selectedTab} tabComponents={tabComponents} />
+      <TabContent selectedTab={selectedTab}  >
+        <SelectedTab />
+      </TabContent>
     </PageLayout>
   )
 }

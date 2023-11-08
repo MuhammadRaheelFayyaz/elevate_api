@@ -45,7 +45,7 @@ export default function Home() {
                         </div>
                         <div className="plans-card w-full max-w-[200px] align-center text-center">
                             {/*<ToggleButton />*/}
-                            <Typography variant='h2' text='ULTRA' className='text-blue-500 font-semibold mt-5'/>
+                            <Typography variant='h2' text='`ULTRA' className='text-blue-500 font-semibold mt-5'/>
                             <Typography variant='body' className='mb-2' text='$0.00/month'/>
                             <Button text='Edit' className='max-w-[200px] w-full flex justify-center mb-2 mx-auto'/>
                         </div>

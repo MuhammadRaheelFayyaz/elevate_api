@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="w-full mx-auto max-w-screen-xl p-4 flex flex-col gap-2 md:flex-row items-center justify-between">
           <span className="text-sm text-gray-500 sm:text-center ">
             © 2023{" "}
-            <a href="https://RapidAPI.com/" className="hover:underline">
-              RapidAPI
+            <a href="https://elevateAPI.com/" className="hover:underline">
+              elevateAPI
             </a>
             . All Rights Reserved.
           </span>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Accordion = ({ title, content }) => {
+const Accordion = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -31,7 +31,7 @@ const Accordion = ({ title, content }) => {
       </div>
       {isOpen && (
         <div className="mt-2">
-          {content}
+          {children}
         </div>
       )}
     </div>

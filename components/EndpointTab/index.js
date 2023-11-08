@@ -10,6 +10,7 @@ import TabsNavbar from "@/components/TabsNavbar";
 import TabContent from "@/components/AnalyticsComponent/TabsContent";
 import NestedDropdown from "@/components/NestedDropdown";
 import apiCode from "@/lib/apiCode";
+import Accodian from "@/components/Accodian";
 
 const nestedOptions = [
   {label: "Clojure"},
@@ -37,7 +38,8 @@ function HighlightedHTML({
                            requestUrlOption,
                            xrapidApiKeyOption,
                            xrapidApiHostOption,
-                           allDropdownOption
+                           allDropdownOption,
+                           selectedRoute
                          }) {
   const [selectedValue, setSelectedValue] = useState("Node.js");
   const [loading, setLoading] = useState(false);
@@ -47,7 +49,7 @@ function HighlightedHTML({
     setTimeout(() => {
       setLoading(false);
     }, 200);
-  }, [selectedValue, xrapidApiKeyOption, xrapidApiHostOption,allDropdownOption]); // Listen to changes in selectedValue
+  }, [selectedValue, xrapidApiKeyOption, xrapidApiHostOption,allDropdownOption, selectedRoute]); // Listen to changes in selectedValue
 
   const handleSelect = (value) => {
     setSelectedValue(value);
@@ -66,7 +68,7 @@ function HighlightedHTML({
       {!loading && (
         <div
           dangerouslySetInnerHTML={{
-            __html: `<pre><code>${apiCode[selectedValue](rapidApiOption, requestUrlOption, xrapidApiKeyOption, xrapidApiHostOption, allDropdownOption).replace(/^\s*/gm, '').replace(/^/gm, ' ')}</code></pre>`,
+            __html: `<pre><code>${apiCode[selectedValue](rapidApiOption, requestUrlOption, xrapidApiKeyOption, xrapidApiHostOption, allDropdownOption, selectedRoute).replace(/^\s*/gm, '').replace(/^/gm, ' ')}</code></pre>`,
           }}
         />
       )}
@@ -89,18 +91,7 @@ const filesNames = [
     type: "GET",
     fileName: "/v4/sports/{sport}/scores",
   },
-  {
-    type: "GET",
-    fileName: "/v4/sports",
-  },
-  {
-    type: "GET",
-    fileName: "/v4/sports/{sport}/odds",
-  },
-  {
-    type: "GET",
-    fileName: "/v4/sports/{sport}/scores",
-  },
+
 ];
 const options = [
   {
@@ -110,10 +101,11 @@ const options = [
   },
   {name: "Create new Organization", avatar: "/icons/plus.svg"},
 ];
+
 const rapidApiOptions = ["default-application_7097837", "default1-application_7097837"];
-const requestUrlOptions = ["rapidapi.com", "rapidapi-test.com"];
+const requestUrlOptions = ["elevateapi.com", "elevateapi-test.com"];
 const XrapidApiKeyOptions = ["38e6a2fcd7msh619634bb6f8edddp155610jsn2d24f69c922f", "6a2fcd7msh619634bb6f8edddp155610jsn2d24f69c922f"];
-const XrapidApiHostOptions = ["odds.p.rapidapi.com", "odds.test.p.rapidapi.com"]
+const XrapidApiHostOptions = ["odds.p.elevateapi.com", "odds.test.p.elevateapi.com"]
 const allDropdownOptions = ["True", "False"];
 const tabs = ["Code snippets", "Example Responses", "Results"];
 
@@ -124,8 +116,13 @@ const EndpointTab = () => {
   const [xrapidApiKeyOption, setXrapidApiKeyOption] = useState(XrapidApiKeyOptions[0]);
   const [xrapidApiHostOption, setXrapidApiHostOption] = useState(XrapidApiHostOptions[0]);
   const [allDropdownOption, setallDropdownOption] = useState(allDropdownOptions[0]);
+  const [selectedRoute, setSelectedRoute] = useState("/v4/sports",)
   const tabComponents = [HighlightedHTML, HighlightedHTML, HighlightedHTML];
   const SelectedTab = tabComponents[selectedTab];
+
+  const handleEndPointClick=(endPoint)=>{
+    setSelectedRoute(endPoint)
+  }
 
   return (
     <div>
@@ -151,9 +148,37 @@ const EndpointTab = () => {
             <div className="px-3 py-[11px] bg-gray-100">
               <SearchInput placeholder="Search Endpoints"/>
             </div>
+            <Accodian title='Live Sports'>
+              {filesNames.map((item) => {
+                return (
+                  <div className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer" onClick={()=>handleEndPointClick(item.fileName)}>
+                    <p className="text-xs">
+                    <span className="text-[10px] text-green-700">
+                      {item.type}
+                    </span>{" "}
+                      {item.fileName}
+                    </p>
+                  </div>
+                );
+              })}
+            </Accodian>
+            <Accodian title='Live Sports Copy'>
+              {filesNames.map((item) => {
+                return (
+                  <div className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer" onClick={()=>handleEndPointClick(item.fileName)}>
+                    <p className="text-xs">
+                    <span className="text-[10px] text-green-700">
+                      {item.type}
+                    </span>{" "}
+                      {item.fileName}
+                    </p>
+                  </div>
+                );
+              })}
+            </Accodian>
             {filesNames.map((item) => {
               return (
-                <div className="px-3 py-2 bg-gray-200 hover:bg-gray-300">
+                <div className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer" onClick={()=>handleEndPointClick(item.fileName)}>
                   <p className="text-xs">
                     <span className="text-[10px] text-green-700">
                       {item.type}
@@ -190,7 +215,7 @@ const EndpointTab = () => {
               </div>
               <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200">
                 <div className="w-[30%]">
-                  <Typography variant="small" text="RapidAPI App"/>
+                  <Typography variant="small" text="ElevateAPI App"/>
                 </div>
                 <div className="w-[70%]">
                   <Dropdown
@@ -213,7 +238,7 @@ const EndpointTab = () => {
                     options={requestUrlOptions}
                     className="min-w-[170px] !mb-0"
                     onSelect={(value) => setRequestUrlOption(value)}
-                    placeholder="rapidapi.com"
+                    placeholder="elevateapi.com"
                   />
                   <p className="uppercase text-blue-500 mt-0.5 text-[10px]">
                     Required
@@ -228,7 +253,7 @@ const EndpointTab = () => {
                 <div>
                   <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200">
                     <div className="w-[30%]">
-                      <Typography variant="small" text="X-RapidAPI-Key"/>
+                      <Typography variant="small" text="X-RapiElevateAPI-Key"/>
                       <Typography
                         variant="small"
                         className="mt-1 !text-gray-400"
@@ -249,7 +274,7 @@ const EndpointTab = () => {
                   </div>
                   <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200">
                     <div className="w-[30%]">
-                      <Typography variant="small" text="X-RapidAPI-Host"/>
+                      <Typography variant="small" text="X-ElevateAPI-Host"/>
                       <Typography
                         variant="small"
                         className="mt-1 !text-gray-400"
@@ -261,7 +286,7 @@ const EndpointTab = () => {
                         options={XrapidApiHostOptions}
                         className="min-w-[170px] !mb-0"
                         onSelect={(value) => setXrapidApiHostOption(value)}
-                        placeholder="odds.p.rapidapi.com"
+                        placeholder="odds.p.elevateapi.com"
                       />
                       <p className="uppercase text-blue-500 mt-0.5 text-[10px]">
                         Required
@@ -321,6 +346,7 @@ const EndpointTab = () => {
                 xrapidApiKeyOption={xrapidApiKeyOption}
                 xrapidApiHostOption={xrapidApiHostOption}
                 allDropdownOption={allDropdownOption}
+                selectedRoute={selectedRoute}
               />
             </TabContent>
           </div>

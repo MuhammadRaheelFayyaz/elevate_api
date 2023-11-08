@@ -11,7 +11,7 @@ const TrafficAnalytics = ()=>{
     const data = ["1hr", "3hr", "12hr", "24h", "7d", "30d", "90d"]
     const dropdownData = ["No Results"]
     const [selectedIndex, setSelectedIndex] = useState(4);
-  const chartData = [10, 15, 8, 20, 12];
+  const chartData = [0, 0, 0, 0, 0];
   const dateLabels = ['2023-11-01', '2023-11-02', '2023-11-03', '2023-11-04', '2023-11-05'];
 
     const handleItemClick = (index) => {
