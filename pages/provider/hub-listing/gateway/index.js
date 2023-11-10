@@ -222,8 +222,8 @@ export default function Gateway() {
           <Typography variant='xs' className='mb-4'
                       text="Secret request headers and parameters will be transparently added to every request made by a client"/>
           <div>
-            {Array.from({length: count}, (_, index) => index + 1).map(item => (
-              <div className="flex gap-3 items-center border-b-[1px] border-gray-200 pb-2">
+            {Array.from({length: count}, (_, index) => index + 1).map((item,index) => (
+              <div key={`'gateway1-${index}'`} className="flex gap-3 items-center border-b-[1px] border-gray-200 pb-2">
                 <Input placeholder='Name' wrapperClassname='!mb-0' className='!h-[38px]'/>
                 <Input placeholder='Value' wrapperClassname='!mb-0' className='!h-[38px]'/>
                 <Dropdown placeholder='HEADER' className='!mb-0' options={options3}/>

@@ -149,9 +149,9 @@ const EndpointTab = () => {
               <SearchInput placeholder="Search Endpoints"/>
             </div>
             <Accodian title='Live Sports'>
-              {filesNames.map((item) => {
+              {filesNames.map((item, index) => {
                 return (
-                  <div className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer" onClick={()=>handleEndPointClick(item.fileName)}>
+                  <div key={`'live1-${index}'`} className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer" onClick={()=>handleEndPointClick(item.fileName)}>
                     <p className="text-xs">
                     <span className="text-[10px] text-green-700">
                       {item.type}
@@ -163,9 +163,9 @@ const EndpointTab = () => {
               })}
             </Accodian>
             <Accodian title='Live Sports Copy'>
-              {filesNames.map((item) => {
+              {filesNames.map((item, index) => {
                 return (
-                  <div className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer" onClick={()=>handleEndPointClick(item.fileName)}>
+                  <div key={`'live2-${index}'`} className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer" onClick={()=>handleEndPointClick(item.fileName)}>
                     <p className="text-xs">
                     <span className="text-[10px] text-green-700">
                       {item.type}
@@ -176,9 +176,9 @@ const EndpointTab = () => {
                 );
               })}
             </Accodian>
-            {filesNames.map((item) => {
+            {filesNames.map((item, index) => {
               return (
-                <div className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer" onClick={()=>handleEndPointClick(item.fileName)}>
+                <div key={`'live3-${index}'`} className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer" onClick={()=>handleEndPointClick(item.fileName)}>
                   <p className="text-xs">
                     <span className="text-[10px] text-green-700">
                       {item.type}

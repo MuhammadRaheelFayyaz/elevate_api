@@ -120,8 +120,8 @@ export default function Home() {
           <Typography variant='h4' className='mb-4' text='URL'/>
           <div className="border-b-[1px] border-gray-300">
             {
-              Array.from({length: count}, (_, index) => index + 1).map(item => (
-                <div className="flex items-center gap-3 py-2 border-t-[1px] border-gray-300">
+              Array.from({length: count}, (_, index) => index + 1).map((item,index) => (
+                <div key={`'general-${index}'`} className="flex items-center gap-3 py-2 border-t-[1px] border-gray-300">
                   <Input placeholder='https://' wrapperClassname='!mb-0'/>
                   <img src="/icons/delete.svg" alt="delete" onClick={() => setCount(count > 1 ? count - 1 : count)}/>
                 </div>
