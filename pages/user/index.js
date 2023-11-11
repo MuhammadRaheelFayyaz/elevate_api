@@ -83,7 +83,7 @@ export default function User() {
                 {editMode?<Input wrapperClassname='!mb-1' placeholder='Islamabad' />:<Typography text='Islamabad' variant='h3'/>}
               </div>
               <div className='flex gap-2 items-center'>
-                {editMode?<Input wrapperClassname='mb-1' placeholder='BIO' />:<Typography text='BIO' variant='h3'/>}
+                {editMode?<Input wrapperClassname='!mb-1' placeholder='BIO' />:<Typography text='BIO' variant='h3'/>}
               </div>
             </div>
           </div>
