@@ -28,7 +28,7 @@ const UserDropdown = ({ options, onSelect, placeholder, label, className }) => {
                 </button>
             </div>
             {open && (
-                <div className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 w-full">
+                <div className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 w-full z-10">
                     <div className="py-1 w-full" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         {options.map((option) => (
                             <button

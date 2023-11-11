@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-blue-500 border-b border-blue-500 p-4 md:p-2 lg:py-0 lg:px-4 ">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-end md:justify-between">
           <div className='max-[425px]:hidden max-[425px]:w-[19%] w-1/4 lg:w-[10%]'>
             <img src={'/images/app-logo.png'} alt={'logo'}   />
           </div>

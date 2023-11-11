@@ -99,7 +99,6 @@ const allDropdownOptions = ["True", "False"];
 const tabs = ["Code snippets", "Example Responses", "Results"];
 
 const EndpointTab = () => {
-  const [selectedTab, setSelectedTab] = useState(0);
   const [rapidApiOption, setRapidApiOption] = useState(rapidApiOptions[0]);
   const [requestUrlOption, setRequestUrlOption] = useState(requestUrlOptions[0]);
   const [xrapidApiKeyOption, setXrapidApiKeyOption] = useState(XrapidApiKeyOptions[0]);
@@ -177,10 +176,9 @@ const EndpointTab = () => {
                   </p>
 
                 </div>
-                <div className="overflow-y-auto h-full ">
-                  <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200">
-                    <div className='flex flex-1'>
-                      <div>
+                <div className="overflow-hidden h-full ">
+                  <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200 flex-wrap">
+                      <div className=' w-full md:flex-1'>
                         <Dropdown
                           options={rapidApiOptions}
                           className="min-w-[170px] !mb-0"
@@ -191,10 +189,8 @@ const EndpointTab = () => {
                         <p className="uppercase text-blue-500 mt-0.5 text-[10px]">
                           Required
                         </p>
-                      </div>
                     </div>
-                    <div className='flex flex-1'>
-                      <div >
+                      <div className='flex-1'>
                         <Dropdown
                           options={requestUrlOptions}
                           className="min-w-[170px] !mb-0"
@@ -205,7 +201,6 @@ const EndpointTab = () => {
                         <p className="uppercase text-blue-500 mt-0.5 text-[10px]">
                           Required
                         </p>
-                      </div>
                     </div>
                   </div>
                   <div className="Accordion1">
@@ -218,7 +213,7 @@ const EndpointTab = () => {
                           <Dropdown
                             label='API-Key'
                             options={XrapidApiKeyOptions}
-                            className="min-w-[170px] !mb-0"
+                            className="min-w-[170px] max-w-[92%] !mb-0"
                             onSelect={(value) => setXrapidApiKeyOption(value)}
                             placeholder="38e6a2fcd7msh619634bb6f8edddp155610jsn2d24f69c922f"
                           />
@@ -241,21 +236,16 @@ const EndpointTab = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="Accordion2">
-                    <div className="flex gap-2 bg-gray-300 p-2 cursor-pointer">
-                      <Typography variant="small" text="Query Parameters"/>
-                    </div>
-                    <div>
-                      <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200">
+                  <div className="Accordion2 min-h-[175px] overflow-y-scroll border-b-0 p-4 ">
+                      {/*<div className="flex gap-2 w-full px-3 pt-2 pb-12 border-gray-200">*/}
                         <Dropdown
                           label="All"
                           options={allDropdownOptions}
-                          className="w-[170px] !mb-0"
+                          className="min-w-[170px] md:w-[170px]"
                           onSelect={(value) => setallDropdownOption(value)}
                           placeholder="True"
                         />
-                      </div>
-                    </div>
+                    {/*</div>*/}
                   </div>
                 </div>
               </div>
