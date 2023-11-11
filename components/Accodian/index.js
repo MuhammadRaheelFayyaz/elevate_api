@@ -15,7 +15,7 @@ const Accordion = ({ title, children }) => {
       >
         <h2 className="text-lg font-semibold">{title}</h2>
         <svg
-          className={`feather feather-chevron-down transform ${isOpen ? 'rotate-180' : 'rotate-0'} transition-transform`}
+          className={`feather feather-chevron-down transform ${!isOpen ? 'rotate-180' : 'rotate-0'} transition-transform`}
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"

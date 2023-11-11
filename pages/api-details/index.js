@@ -5,11 +5,19 @@ import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import TabsNavbar from "@/components/TabsNavbar";
 import Typography from "@/components/Typegraphy/Typography";
+import {useRouter} from "next/router";
 
-const tabs = ["Endpoints", "About", "Tutorials", "Discussions", "Pricing"];
+const tabs = ["Endpoints",  "Pricing"];
 
 const APIDetail = () => {
   const [selectedTab, setSelectedTab] = useState(0);
+  const router=useRouter()
+  const handleTabClick=(index)=>{
+    if(index === 1){
+      router.push('/pricing')
+    }
+    setSelectedTab(index)
+  }
   const tabComponents = [
     EndpointTab,
     EndpointTab,
@@ -29,19 +37,16 @@ const APIDetail = () => {
             </div>
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <Typography variant="h2" text="Live Sports Odds" />
+                <Typography variant="h2" text="Show API Name" />
                 <img src="/icons/bookmark.svg" alt="" />
                 <p className="bg-gray-200 text-xs px-1 py-0.5 rounded-md min-w-fit">
                   FREEMIUM
                 </p>
               </div>
               <p className="text-sm">
-                By{" "}
-                <span className="text-blue-500 cursor-pointer">
-                  The Odds API
-                </span>{" "}
-                | Updated 5 months ago |{" "}
-                <span className="text-blue-500 cursor-pointer">Sports</span>
+
+                 Updated 5 months ago |{" "}
+                <span className="">Sports</span>
               </p>
             </div>
           </div>
@@ -78,7 +83,7 @@ const APIDetail = () => {
         <TabsNavbar
           tabs={tabs}
           selectedTab={selectedTab}
-          setSelectedTab={setSelectedTab}
+          setSelectedTab={handleTabClick}
         />
       </div>
       <TabContent>

@@ -17,7 +17,7 @@ const NestedDropdown = ({ options, onSelect = () => {}, placeholder, label, clas
   };
 
   return (
-    <div className={`relative inline-block text-left w-full mb-4 ${className}`} ref={ref}>
+    <div className={`relative inline-block text-left w-full ${className}`} ref={ref}>
       {label && <label className="block text-gray-700 mb-2">{label}</label>}
       <div>
         <button

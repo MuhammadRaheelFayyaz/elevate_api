@@ -15,9 +15,6 @@ export default function index() {
         <div></div>
         <div></div>
         <DynamicTextEditor />
-        {/* 
-      <DynamicTextEditor />
-      <DynamicTextEditor /> */}
       </div>
     </div>
   );
