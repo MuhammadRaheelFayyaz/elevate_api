@@ -10,8 +10,8 @@ export default function ApiPageLayout({children}) {
       <Navbar/>
       <div className="bg-[rgb(48,47,61)] lg:h-1/6">
         <div className="container mx-auto p-6 lg:max-h-120 lg:h-1/6 ">
-          <Typography variant='h1' text='Welcome to the Elevate Api Hub' className='mb-4 text-white'/>
-          <Typography variant='body' text='Discover and connect to thousands of APIs' className='mb-4 text-white'/>
+          <Typography variant='h1' text='Simply dummy text of the printing and typesetting' className='mb-4 text-white'/>
+          <Typography variant='body' text='Lorem Ipsum has been the industry standard dummy text ever since the 1500s' className='mb-4 text-white'/>
         </div>
       </div>
       <div>

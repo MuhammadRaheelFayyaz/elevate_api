@@ -22,7 +22,7 @@ export default function ApiHub() {
           />
           <Typography
             variant="body"
-            text="Browse through our collections to learn about new use cases to implement in your app"
+            text="Explore our diverse collections to discover innovative use cases to integrate into your app."
             className="text-left mb-4"
           />
           <Slider>
@@ -61,12 +61,12 @@ export default function ApiHub() {
         <div className="mb-8">
           <Typography
             variant="h2"
-            text="Recommended APIs"
+            text="Top-Rated APIs"
             className="text-left font-bold"
           />
           <Typography
             variant="body"
-            text="APIs curated by RapidAPI and recommended based on functionality offered, performance, and support!"
+            text="Handpicked APIs by RapidAPI, recommended for their functionality, performance, and support!"
             className="text-left mb-4"
           />
           <Slider>
@@ -126,12 +126,12 @@ export default function ApiHub() {
         <div className="mb-8">
           <Typography
             variant="h2"
-            text="Popular APIs"
+            text="Trending APIs"
             className="text-left font-bold"
           />
           <Typography
             variant="body"
-            text="Discover and connect to thousands of APIs"
+            text="Explore and seamlessly connect to a vast array of APIs."
             className="text-left mb-4"
           />
           <Slider>
@@ -185,184 +185,6 @@ export default function ApiHub() {
               tick="02"
               trend="30"
               onClick={onClick}
-            />
-          </Slider>
-        </div>
-        <div className="mb-8">
-          <Typography
-            variant="h2"
-            text="Free Public APIs for Developers"
-            className="text-left font-bold"
-          />
-          <Typography
-            variant="body"
-            text="APIs that are popular and frequently used on RapidAPI"
-            className="text-left mb-4"
-          />
-          <Slider>
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-              verified={true}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-              verified={true}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-              verified={true}
-            />
-          </Slider>
-        </div>
-        <div className="mb-8">
-          <Typography
-            variant="h2"
-            text="Top AI Based APIs"
-            className="text-left font-bold"
-          />
-          <Typography
-            variant="body"
-            text="Discover and connect to thousands of APIs"
-            className="text-left mb-4"
-          />
-          <Slider>
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-              verified={true}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-              verified={true}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-              verified={true}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-            />
-          </Slider>
-        </div>
-        <div>
-          <Typography
-            variant="h2"
-            text="Tax APIs"
-            className="text-left font-bold"
-          />
-          <Typography
-            variant="body"
-            text="Discover and connect to thousands of APIs"
-            className="text-left mb-4"
-          />
-          <Slider>
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-              verified={true}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-            />
-            <RecommendApiCard
-              heading="TEST TEASED"
-              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-              time="23"
-              tick="02"
-              trend="30"
-              onClick={onClick}
-              verified={true}
             />
           </Slider>
         </div>

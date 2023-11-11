@@ -10,10 +10,6 @@ const pages = [
     path: '/api-hub'
   },
   {
-    name: 'Pricing ',
-    path: '/pricing'
-  },
-  {
     name: 'Apps',
     path: '/developer/dashboard'
   },
@@ -34,7 +30,7 @@ const Navbar = () => {
             <img src={'/images/app-logo.png'} alt={'logo'}   />
           </div>
           <div className='flex  gap-4'>
-          <ul className="flex items-end  gap-2 md:gap-4 items-center">
+          <ul className="flex items-end gap-2 md:gap-4 items-center">
             {
               pages.map(((page, index) => (
                 <li
