@@ -17,12 +17,12 @@ export default function ApiHub() {
         <div className="mb-8">
           <Typography
             variant="h2"
-            text="Discover More APIs"
+            text="Simply dummy text of the printing"
             className="text-left font-bold"
           />
           <Typography
             variant="body"
-            text="Explore our diverse collections to discover innovative use cases to integrate into your app."
+            text="Lorem Ipsum has been the industry standard dummy text ever since the 1500s"
             className="text-left mb-4"
           />
           <Slider>
@@ -61,12 +61,12 @@ export default function ApiHub() {
         <div className="mb-8">
           <Typography
             variant="h2"
-            text="Top-Rated APIs"
+            text="Simply dummy text of the printing"
             className="text-left font-bold"
           />
           <Typography
             variant="body"
-            text="Handpicked APIs by RapidAPI, recommended for their functionality, performance, and support!"
+            text="Lorem Ipsum has been the industry standard dummy text ever since the 1500s"
             className="text-left mb-4"
           />
           <Slider>
@@ -126,12 +126,186 @@ export default function ApiHub() {
         <div className="mb-8">
           <Typography
             variant="h2"
-            text="Trending APIs"
+            text="Simply dummy text of the printing"
             className="text-left font-bold"
           />
           <Typography
             variant="body"
-            text="Explore and seamlessly connect to a vast array of APIs."
+            text="Lorem Ipsum has been the industry standard dummy text ever since the 1500s"
+            className="text-left mb-4"
+          />
+          <Slider>
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+              verified={true}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+              verified={true}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+              verified={true}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+            />
+          </Slider>
+        </div>
+        <div className="mb-8">
+          <Typography
+            variant="h2"
+            text="Simply dummy text of the printing"
+            className="text-left font-bold"
+          />
+          <Typography
+            variant="body"
+            text="Lorem Ipsum has been the industry standard dummy text ever since the 1500s"
+            className="text-left mb-4"
+          />
+          <Slider>
+            <ApiHubCard
+              image="/images/chart.webp"
+              heading="Api 1"
+              onClick={onClick}
+            />
+            <ApiHubCard
+              image="/images/chart.webp"
+              heading="Api 2"
+              onClick={onClick}
+            />
+            <ApiHubCard
+              image="/images/chart.webp"
+              heading="Api 3"
+              onClick={onClick}
+            />
+            <ApiHubCard
+              image="/images/chart.webp"
+              heading="Api 4"
+              onClick={onClick}
+            />
+            <ApiHubCard
+              image="/images/chart.webp"
+              heading="Api 5"
+              onClick={onClick}
+            />
+            <ApiHubCard
+              image="/images/chart.webp"
+              heading="Api 6"
+              onClick={onClick}
+            />
+          </Slider>
+        </div>
+        <div className="mb-8">
+          <Typography
+            variant="h2"
+            text="Simply dummy text of the printing"
+            className="text-left font-bold"
+          />
+          <Typography
+            variant="body"
+            text="Lorem Ipsum has been the industry standard dummy text ever since the 1500s"
+            className="text-left mb-4"
+          />
+          <Slider>
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+              verified={true}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+              verified={true}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+            />
+            <RecommendApiCard
+              heading="TEST TEASED"
+              text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              time="23"
+              tick="02"
+              trend="30"
+              onClick={onClick}
+              verified={true}
+            />
+          </Slider>
+        </div>
+        <div className="mb-8">
+          <Typography
+            variant="h2"
+            text="Simply dummy text of the printing"
+            className="text-left font-bold"
+          />
+          <Typography
+            variant="body"
+            text="Lorem Ipsum has been the industry standard dummy text ever since the 1500s"
             className="text-left mb-4"
           />
           <Slider>
