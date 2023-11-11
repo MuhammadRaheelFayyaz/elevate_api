@@ -124,7 +124,7 @@ const EndpointTab = () => {
                 <div className="px-3 py-[11px] bg-gray-100">
                   <SearchInput placeholder="Search Endpoints"/>
                 </div>
-                <Accodian title='Live Sports'>
+                <Accodian title='Show Api Name '>
                   {filesNames.map((item, index) => {
                     return (
                       <div key={`'live1-${index}'`} className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer"
@@ -139,7 +139,7 @@ const EndpointTab = () => {
                     );
                   })}
                 </Accodian>
-                <Accodian title='Live Sports Copy'>
+                <Accodian title='Show Api Name'>
                   {filesNames.map((item, index) => {
                     return (
                       <div key={`'live2-${index}'`} className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer"

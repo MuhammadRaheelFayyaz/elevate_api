@@ -87,7 +87,7 @@ const APIDetail = () => {
         />
       </div>
       <TabContent>
-        <SelectedTab />
+        <EndpointTab />
       </TabContent>
       {/*<div className="fixed bottom-0 z-20 bg-white w-full mt-5">*/}
       {/*  <Footer />*/}
