@@ -9,6 +9,7 @@ import Table from "@/components/custom-table/table";
 import Slider from "@/components/Slider/Slider";
 import {useState} from "react";
 import {useRouter} from "next/router";
+import Input from '@/components/Input/Input';
 
 
 const tabs = [
@@ -51,6 +52,7 @@ const data = [
 
 export default function User() {
   const [selectedTab, setSelectedTab] = useState(0)
+  const [editMode, setEditMode] = useState(false)
   const router = useRouter();
   const onClick = () => {
     router.push("/user");
@@ -58,7 +60,7 @@ export default function User() {
   return (
     <div>
       <Navbar/>
-      <div className='w-full md:w-[85%] md:my-20  mx-auto'>
+      <div className='w-full md:w-[85%] md:mb-20 md:mt-5  mx-auto'>
         <div className='flex flex-col md:flex-row p-4 md:p-0 justify-between mb-4'>
           <div className='flex gap-4'>
             <div className='w-[200px] md:h-[200px] rounded overflow-hidden '>
@@ -69,14 +71,23 @@ export default function User() {
               />
             </div>
             <div>
-              <Typography text='Muhammad Raheel' variant='h2' className='text-blue-500 cursor-pointer'/>
-              <Typography text='raheelfayyazid@gamil.com' variant='h3'
-                          className='text-blue-500 cursor-pointer hover:underline '/>
+              {
+                editMode?<Input placeholder='Muhammad Raheel' />: <Typography text='Muhammad Raheel' variant='h2' className='cursor-pointer'/>
+              }
+              <div className='flex gap-2 items-center'>
+                {editMode?<Input placeholder='Software Developer' />:<Typography text='Software Developer' variant='h3'/>}
+                <Typography text='at' variant='h3'/>
+                {editMode?<Input placeholder='ABC APPs' />:<Typography text='ABC APPs' variant='h3'/>}
+              </div>
+              <div className='flex gap-2 items-center'>
+                {editMode?<Input placeholder='Islamabad' />:<Typography text='Islamabad' variant='h3'/>}
+              </div>
+              <div className='flex gap-2 items-center'>
+                {editMode?<Input placeholder='BIO' />:<Typography text='BIO' variant='h3'/>}
+              </div>
             </div>
           </div>
-          <div className='mt-4 md:mt-0'>
-            <Button text='Edit' icon='/icons/edit.svg' className='w-[150px] justify-center'/>
-          </div>
+            <Button text={editMode?'Save':'Edit Profile'} icon={editMode?'':'/icons/edit.svg'} className='w-[100px] h-[40px] justify-center' onClick={()=>setEditMode(!editMode)}/>
         </div>
         <div className='mb-4'>
           <Tabs tabs={tabs} onTabSelect={setSelectedTab}/>
