@@ -4,61 +4,61 @@ import Typography from '../Typegraphy/Typography'
 export default function ApiHubSideBar() {
   const data = [
     {
-      name: 'Sports',
+      name: 'Category 1',
     },
     {
-      name: 'Finance',
+      name: 'Category 2',
     },
     {
-      name: 'Data',
+      name: 'Category 3',
     },
     {
-      name: 'Entertainment',
+      name: 'Category 4',
     },
     {
-      name: 'Travel',
+      name: 'Category 5',
     },
     {
-      name: 'Location',
+      name: 'Category 6',
     },
     {
-      name: 'Science',
+      name: 'Category 7',
     },
     {
-      name: 'Food',
+      name: 'Category 8',
     },
     {
-      name: 'Transportation',
+      name: 'Category 9',
     },
     {
-      name: 'Business',
+      name: 'Category 10',
     },
     {
-      name: 'Visual Recognition',
+      name: 'Category 11',
     },
     {
-      name: 'Tools',
+      name: 'Category 12',
     },
     {
-      name: 'Text Analysis',
+      name: 'Category 13',
     },
     {
-      name: 'Weather',
+      name: 'Category 14',
     },
     {
-      name: 'Gaming',
+      name: 'Category 15',
     },
     {
-      name: 'SMS',
+      name: 'Category 16',
     },
     {
-      name: 'Events',
+      name: 'Category 17',
     },
     {
-      name: 'Health and Fitness',
+      name: 'Category 18',
     },
     {
-      name: ' View All Categories',
+      name: 'Category 19',
     },
   ]
   return (
