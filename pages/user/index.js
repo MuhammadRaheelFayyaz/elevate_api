@@ -72,22 +72,22 @@ export default function User() {
             </div>
             <div>
               {
-                editMode?<Input placeholder='Muhammad Raheel' />: <Typography text='Muhammad Raheel' variant='h2' className='cursor-pointer'/>
+                editMode?<Input wrapperClassname='!mb-1' placeholder='Muhammad Raheel' />: <Typography text='Muhammad Raheel' variant='h2' className='cursor-pointer'/>
               }
-              <div className='flex gap-2 items-center'>
-                {editMode?<Input placeholder='Software Developer' />:<Typography text='Software Developer' variant='h3'/>}
-                <Typography text='at' variant='h3'/>
-                {editMode?<Input placeholder='ABC APPs' />:<Typography text='ABC APPs' variant='h3'/>}
+              <div className='flex gap-2 '>
+                {editMode?<Input wrapperClassname='!mb-1' placeholder='Software Developer' />:<Typography text='Software Developer' variant='h3'/>}
+                <Typography text='at' className={editMode?'mt-1':''} variant='h3'/>
+                {editMode?<Input className='!mb-1' placeholder='ABC APPs' />:<Typography text='ABC APPs' variant='h3'/>}
               </div>
               <div className='flex gap-2 items-center'>
-                {editMode?<Input placeholder='Islamabad' />:<Typography text='Islamabad' variant='h3'/>}
+                {editMode?<Input wrapperClassname='!mb-1' placeholder='Islamabad' />:<Typography text='Islamabad' variant='h3'/>}
               </div>
               <div className='flex gap-2 items-center'>
-                {editMode?<Input placeholder='BIO' />:<Typography text='BIO' variant='h3'/>}
+                {editMode?<Input wrapperClassname='mb-1' placeholder='BIO' />:<Typography text='BIO' variant='h3'/>}
               </div>
             </div>
           </div>
-            <Button text={editMode?'Save':'Edit Profile'} icon={editMode?'':'/icons/edit.svg'} className='w-[100px] h-[40px] justify-center' onClick={()=>setEditMode(!editMode)}/>
+            <Button text={editMode?'Save':'Edit Profile'} icon={editMode?'':'/icons/edit.svg'} className='md:w-[100px] mt-1 md:t-0 h-[40px] justify-center' onClick={()=>setEditMode(!editMode)}/>
         </div>
         <div className='mb-4'>
           <Tabs tabs={tabs} onTabSelect={setSelectedTab}/>
