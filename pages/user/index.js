@@ -76,8 +76,8 @@ export default function User() {
               }
               <div className='flex gap-2 '>
                 {editMode?<Input wrapperClassname='!mb-1' placeholder='Software Developer' />:<Typography text='Software Developer' variant='h3'/>}
-                <Typography text='at' className={editMode?'mt-1':''} variant='h3'/>
-                {editMode?<Input className='!mb-1' placeholder='ABC APPs' />:<Typography text='ABC APPs' variant='h3'/>}
+                <Typography text='at' className={editMode?'mt-1 mb-0':''} variant='h3'/>
+                {editMode?<Input wrapperClassname='!mb-1' placeholder='ABC APPs' />:<Typography text='ABC APPs' variant='h3'/>}
               </div>
               <div className='flex gap-2 items-center'>
                 {editMode?<Input wrapperClassname='!mb-1' placeholder='Islamabad' />:<Typography text='Islamabad' variant='h3'/>}
