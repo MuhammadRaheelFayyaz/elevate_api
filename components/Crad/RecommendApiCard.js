@@ -26,14 +26,14 @@ export default function RecommendApiCard({
           />
         </div>
       </div>
-      <Typography variant="h2" text={heading} className="text-left font-bold" />
+      <Typography variant="h2" text={heading} className="text-center font-bold mt-1" />
       <Typography
         variant="small"
         text={text}
-        className="text-left break-words pt-2.5 pb-5"
+        className=" break-words pt-2.5 pb-5"
       />
       <div className="h-full min-h-[32px]">
-        {verified === true && <div className="flex w-fit rounded-[20px] overflow-hidden mb-1">
+        {verified === true && <div className="flex w-fit rounded-[20px] overflow-hidden mb-1 ml-auto">
           <Typography variant="xs" text="Verified" className="text-left !text-white p-1 px-2 bg-black" />
           <div className="bg-green-300 py-1 px-0.5">
             <Image

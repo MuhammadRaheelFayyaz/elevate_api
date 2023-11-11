@@ -91,7 +91,7 @@ const SideBar = ({isDeveloper = false}) => {
       {/* <div className='bg-blue-500 mb-4'>
         <img src={'/images/app-logo.png'} alt={'logo'} height={60} width={60} className='w-full'/>
       </div> */}
-      <div className="p-6 border-b-[1px] border-gray-300">
+      <div className="p-6 border-b-[1px] border-gray-300 mb-2">
         <UserDropdown options={options} onSelect={(option) => console.log(option)} placeholder="Select a person"/>
       </div>
       <ul className="space-y-2 px-2">
