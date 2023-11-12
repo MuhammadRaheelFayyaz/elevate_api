@@ -64,7 +64,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <MobileDrawer isOpen={true} />
+      <MobileDrawer isOpen={false} />
     </>
   );
 };
