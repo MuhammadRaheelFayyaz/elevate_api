@@ -2,9 +2,7 @@ import React from "react";
 import Typography from "../Typegraphy/Typography";
 import UserDropdown from "../UserDropdown";
 
-const options = [
-  { name: 'John Doe', avatar: '/images/profile.jpeg', accountType:"Personal Account" },
-];
+
 
 const Tables = () => {
   

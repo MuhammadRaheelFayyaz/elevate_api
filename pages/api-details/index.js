@@ -5,27 +5,29 @@ import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import TabsNavbar from "@/components/TabsNavbar";
 import Typography from "@/components/Typegraphy/Typography";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
-const tabs = ["Endpoints",  "Pricing"];
+const tabs = ["Endpoints", "Pricing"];
 
 const APIDetail = () => {
   const [selectedTab, setSelectedTab] = useState(0);
-  const router=useRouter()
-  const handleTabClick=(index)=>{
-    if(index === 1){
-      router.push('/pricing')
+  const router = useRouter();
+  const handleTabClick = (index) => {
+    if (index === 1) {
+      router.push("/pricing");
     }
-    setSelectedTab(index)
-  }
-  const tabComponents = [
-    EndpointTab,
-    EndpointTab,
-    EndpointTab,
-    EndpointTab,
-    EndpointTab,
-  ];
-  const SelectedTab = tabComponents[selectedTab];
+    setSelectedTab(index);
+  };
+  // const tabComponents = [
+  //   EndpointTab,
+  //   EndpointTab,
+  //   EndpointTab,
+  //   EndpointTab,
+  //   EndpointTab,
+  // ];
+  // const SelectedTab = tabComponents[selectedTab];
+
+  
   return (
     <div>
       <Navbar />
@@ -44,9 +46,7 @@ const APIDetail = () => {
                 </p>
               </div>
               <p className="text-sm">
-
-                 Updated 5 months ago |{" "}
-                <span className="">Sports</span>
+                Updated 5 months ago | <span className="">Sports</span>
               </p>
             </div>
           </div>
