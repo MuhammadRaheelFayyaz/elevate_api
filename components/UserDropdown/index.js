@@ -6,7 +6,6 @@ import React, { useState } from 'react';
 const UserDropdown = ({ options,  onSelect, placeholder, label, className }) => {
     const [open, setOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(options[0] || null);
-
     const handleSelect = (option) => {
         setSelectedOption(option);
         onSelect(option);

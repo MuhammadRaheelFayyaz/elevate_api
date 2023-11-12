@@ -14,7 +14,7 @@ export default function Settings() {
                 <Typography variant='h2' text='Transfer ownership' className='mb-4'/>
                 <Typography
                     variant='h4'
-                    text='Transfer ownership of this API to another RapidAP|user or team'
+                    text='Transfer ownership of this API to another ElevateAPI user or team.'
                     className='mb-4'
                 />
                 <Typography variant='h3' text='Transfer to' className='mb-4'/>
@@ -40,15 +40,15 @@ export default function Settings() {
                     <SearchInput value={search} onChange={(e) => setSearch(e.target.value)}/>
                 </div>
                 <div className='mb-4'>
-                    <Button text='Transfer ownership' className='bg-red-600 text-blue-100'/>
+                    <Button text='Transfer' className='bg-red-600 text-blue-100'/>
                 </div>
                 <div className='mb-4'>
-                    <Typography variant='h2' text='Delete AP Proiect'/>
+                    <Typography variant='h2' text='Delete API'/>
                 </div>
                 <div className='mb-4'>
                     <Typography
                         variant='body'
-                        text={`Permanently deleting this API proiect will remove it from the RapidAP! Hub Listing. will destroy vour team's data from Requests. Testing and Descriptions. This action is not reversible`}
+                        text={`Permanently deleting this API project will remove it from the ElevateAPI Hub Listing. This action will erase your team's data, including Requests, Testing, and Descriptions, and it is irreversible.`}
                     />
                 </div>
                 <Button text='Delete Api' className='bg-red-600 text-blue-100'/>
