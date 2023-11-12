@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Accordion = ({ title, children }) => {
+const Accordion = ({ title, children, wrapperClasses='', headerClasses= '' }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -8,9 +8,9 @@ const Accordion = ({ title, children }) => {
   };
 
   return (
-    <div className="border border-gray-200 p-2 mb-2">
+    <div className={`border border-gray-200 p-2 mb-2 ${wrapperClasses}`}>
       <div
-        className="flex justify-between cursor-pointer"
+        className={`flex justify-between cursor-pointer ${headerClasses}`}
         onClick={toggleAccordion}
       >
         <h2 className="text-lg font-semibold">{title}</h2>
