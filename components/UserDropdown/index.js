@@ -1,11 +1,9 @@
 // components/Dropdown.js
 import React, { useState } from 'react';
 
-const options = [
-    { name: 'John Doe', avatar: '/images/profile.jpeg', accountType:"Personal Account" },
-  ];
 
-const UserDropdown = ({  onSelect, placeholder, label, className }) => {
+
+const UserDropdown = ({ options,  onSelect, placeholder, label, className }) => {
     const [open, setOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(options[0] || null);
 

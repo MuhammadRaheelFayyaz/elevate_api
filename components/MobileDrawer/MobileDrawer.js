@@ -194,13 +194,13 @@ const MobileDrawer = ({isOpen, onClose, children,}) => {
                     data.map((page, index) => {
                       const isSelected = !!(page.children && page.children.some(child => child.path.includes(pathname)))
                       return (
-                        <li>
+                        <li  key={`page-${page.name}`}>
                           {
                             !page.children && (
                               <Link
                                 href={page.path}
                                 className={`flex gap-1 hover:bg-blue-400 text-blue-500 bg-white hover:rounded p-3 cursor-pointer ${page.active && !page.children && '!bg-blue-500 hover:bg-blue-500 text-white rounded p-3'} ${!page.children ? 'mb-2' : ''}`}
-                                key={`page-${page.name}`}
+
                               >
                                 {/*<Image src={`/icons/${page.icon}.svg`} height={20} width={20} alt={`page-icon`}/>*/}
                                 <Typography variant='body' text={page.name}/>
@@ -214,7 +214,7 @@ const MobileDrawer = ({isOpen, onClose, children,}) => {
                                   <ul className='ml-2 mt-2'>
                                     {
                                       page.children.map(item => (
-                                        <li className='mt-2'>
+                                        <li className='mt-2'  key={`sub-page-${item.name}`}>
                                           <Link
                                             href={item.path}
                                             className={`flex gap-1 hover:bg-blue-400 text-blue-500 bg-white hover:rounded p-3 cursor-pointer ${item.path.includes(pathname) && '!bg-blue-500 hover:bg-blue-500 text-white rounded p-3'}`}
