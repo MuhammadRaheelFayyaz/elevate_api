@@ -163,7 +163,7 @@ const MobileDrawer = ({isOpen, onClose, children,}) => {
         onClick={onClose}
       >
       </div>
-      <div className="fixed inset-y-0 right-0 pl-10 max-w-full flex w-2/3">
+      <div className="fixed inset-y-0 right-0 pl-10 w-full flex justify-end max-w-[90%] sm:max-w-2/3">
         <div className="relative w-screen max-w-md">
           <div className="h-full bg-white shadow-xl overflow-y-scroll">
             <div className="">
@@ -177,7 +177,7 @@ const MobileDrawer = ({isOpen, onClose, children,}) => {
 
               <div className='p-4'>
                 <div
-                  className={`flex gap-1 cursor-pointer border p-3 mb-4 ${pathname==='/user'?'border-blue-400':''}`}
+                  className={`flex gap-2 cursor-pointer items-center border p-3 mb-4 rounded-lg border-blue-500 ${pathname==='/user'?'border-blue-400':''}`}
                   onClick={() => router.push("/user")}
                 >
                   <img

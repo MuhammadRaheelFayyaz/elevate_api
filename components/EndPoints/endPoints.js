@@ -40,7 +40,7 @@ export default function EndPoints({ onTabSelect }) {
         />
         <Typography variant="body" text="Add and define your API endpoints." />
       </div>
-      <div className="flex flex-col  lg:flex-row justify-between">
+      <div className="flex flex-col gap-2 lg:flex-row justify-between">
         <div>
           <SearchInput
             placeholder="Search Endpoint"
@@ -48,18 +48,20 @@ export default function EndPoints({ onTabSelect }) {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        <div className="flex flex-col md:flex-row gap-1 mb-4 mt-2 lg:mt-0">
+        <div className="flex w-full flex-col max-w-[300px] md:max-w-full md:flex-row gap-1 mb-4 mt-2 lg:mt-0">
           <Button
             text="Add REST API Endpoint"
             icon="/icons/add.svg"
             onClick={() => console.log("clicked")}
+            className='justify-center'
           />
           <Button
             text="Add GraphQl Endpoint"
             icon="/icons/add.svg"
             onClick={() => console.log("clicked")}
+            className='justify-center'
           />
-          <Button text="Delete" className="bg-red-600" />
+          <Button text="Delete" className="bg-red-600 justify-center" />
         </div>
       </div>
       <div>

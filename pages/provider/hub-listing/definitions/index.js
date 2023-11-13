@@ -45,7 +45,7 @@ export default function Definitions() {
     return (
         <HubListingLayout>
             <div className='w-full p-4 md:p-10'>
-                <div className='flex gap-1 items-center bg-blue-400 p-2 rounded mb-4'>
+                <div className='flex items-center flex-wrap gap-2 bg-blue-400 p-2 rounded mb-4'>
                     <Typography text='These changes will apply only to' variant='body'/>
                     <CustomDropdown options={options}
                                     footer={<ManageVersion onClick={() => setShowVersionModal(true)}/>}/>

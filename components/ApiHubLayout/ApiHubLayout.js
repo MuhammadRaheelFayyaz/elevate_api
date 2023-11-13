@@ -15,7 +15,7 @@ export default function ApiPageLayout({children}) {
         </div>
       </div>
       <div>
-        <div className="flex">
+        <div className="flex bgGradient1">
           <ApiHubSideBar/>
           <div className=" w-full md:w-4/5 ">
             {children}
