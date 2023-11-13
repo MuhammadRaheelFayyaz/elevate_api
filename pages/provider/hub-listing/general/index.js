@@ -27,7 +27,7 @@ export default function Home() {
             src="/images/logo.webp"
             width={150}
             height={70}
-            className='overflow-hidden'
+            className='overflow-hidden rounded-full'
             alt="Picture of the author"
           />
           <div className=' mb-3'>

@@ -62,7 +62,7 @@ export default function ApiHubSideBar() {
     },
   ]
   return (
-    <div className="w-30 md:w-1/5 p-4 lg:p-8 xl:p-12 2xl:p-20 hidden md:flex flex-col">
+    <div className="w-30 md:w-1/5 p-4 lg:p-8 xl:p-12 hidden md:flex flex-col border-r-[1px] border-blue-500 mr-6">
       <Typography variant='h2' text='Categories' className='mb-4'/>
       <ul className="space-y-2">
         {

@@ -4,7 +4,7 @@ import Typography from "../Typegraphy/Typography";
 export default function ApiHubCard({ image, heading, onClick }) {
   return (
     <div
-      className="rounded-lg overflow-hidden cursor-pointer mx-2"
+      className="rounded-xl overflow-hidden cursor-pointer bg-blue-100 mx-2 border border-blue-200"
       onClick={() => onClick()}
     >
       <img

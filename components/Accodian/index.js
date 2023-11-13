@@ -8,14 +8,14 @@ const Accordion = ({ title, children, wrapperClasses='', headerClasses= '' }) =>
   };
 
   return (
-    <div className={`border border-gray-200 p-2 mb-2 ${wrapperClasses}`}>
+    <div className={`border border-gray-200 p-2 mb-2 rounded-md ${wrapperClasses}`}>
       <div
         className={`flex justify-between cursor-pointer ${headerClasses}`}
         onClick={toggleAccordion}
       >
-        <h2 className="text-lg font-semibold">{title}</h2>
+        <h2 className="text-base font-semibold">{title}</h2>
         <svg
-          className={`feather feather-chevron-down transform ${!isOpen ? 'rotate-180' : 'rotate-0'} transition-transform`}
+          className={`feather feather-chevron-down transform ${!isOpen ? 'rotate-0' : 'rotate-180'} transition-transform`}
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"

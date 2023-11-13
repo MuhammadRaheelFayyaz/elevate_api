@@ -26,7 +26,7 @@ const navItems = [
     path: '/provider/hub-listing/community'
   },
   {
-    name: 'monetize',
+    name: 'Monetize',
     path: '/provider/hub-listing/monetize'
   },
 
@@ -37,7 +37,7 @@ const HubListingNavbar = () => {
   const router = useRouter()
   const {pathname} = useRouter()
   return (
-    <div className="bg-white sm:px-6 border-b-[1px] flex justify-between items-center gap-3 flex-wrap">
+    <div className="bg-white sm:px-6 border-b-[1px] hidden md:flex justify-between items-center gap-3 flex-wrap">
       <ul className="flex list-none flex-wrap sm:flex-auto">
         {
           navItems.map((item, index) => {

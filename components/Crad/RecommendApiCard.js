@@ -12,7 +12,7 @@ export default function RecommendApiCard({
 }) {
   return (
     <div
-      className="flex flex-col  border mx-2 border-gray-200 rounded-lg p-3 cursor-pointer"
+      className="flex flex-col  border mx-2 border-blue-300 rounded-xl p-3 cursor-pointer"
       onClick={() => onClick()}
     >
       <div className="flex justify-between">
