@@ -33,7 +33,7 @@ const APIDetail = () => {
       <Navbar />
       <div className="w-full border-b-[1px] border-gray-300 py-3">
         <div className="w-full max-w-[1200px] px-6 mx-auto flex justify-center min-[845px]:justify-between items-center flex-wrap gap-3">
-          <div className="flex justify-center gap-3">
+          <div className="flex justify-center gap-3 flex-wrap">
             <div className="w-[60px] h-[60px]">
               <img src="/images/logo.webp" alt="" className="w-full h-full" />
             </div>
@@ -50,8 +50,8 @@ const APIDetail = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center flex-wrap md:flex-nowrap">
-            <div className="px-3">
+          <div className="flex items-center gap-2 flex-wrap md:flex-nowrap">
+            <div className="p-3 rounded-md bg-blue-200">
               <div className="flex gap-1 items-center mb-1">
                 <img src="/icons/trending_up.svg" alt="trending_up" />
                 <Typography variant="small " text="Popularity" />
@@ -62,14 +62,14 @@ const APIDetail = () => {
                 text="9.9 / 10"
               />
             </div>
-            <div className="px-3 border-l-[1px] border-r-[1px] border-gray-300">
+            <div className="p-3 rounded-md bg-blue-200">
               <div className="flex gap-1 items-center mb-1">
                 <img src="/icons/clock.svg" alt="clock" />
                 <Typography variant="small " text="Popularity" />
               </div>
               <Typography variant="h2" className="text-center" text="251 ms" />
             </div>
-            <div className="px-3">
+            <div className="p-3 rounded-md bg-blue-200">
               <div className="flex gap-1 items-center mb-1">
                 <img src="/icons/tick.svg" alt="" />
                 <Typography variant="small " text="Popularity" />

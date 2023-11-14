@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Checkbox = ({ label, checked, onChange, disable=false }) => {
+const Checkbox = ({ label, checked, onChange, disable=false, className }) => {
     return (
-        <label className={`flex items-center space-x-2 ${disable === true ? "text-gray-400 cursor-not-allowed":""}`}>
+        <label className={`flex items-center space-x-2 ${disable === true ? "text-gray-400 cursor-not-allowed":""} ${className}`}>
             <input
                 type="checkbox"
                 checked={checked}

@@ -52,10 +52,12 @@ const Navbar = () => {
                 className="hidden md:flex gap-1 items-center justify-end cursor-pointer"
                 onClick={() => router.push("/user")}
               >
-                <img
-                  src={"/images/profile.jpeg"}
-                  className="h-[30px] w-[30px] rounded-full"
-                />
+                <div className="w-10 h-10 rounded-full overflow-hidden">
+                  <img
+                    src={"/images/profile.jpeg"}
+                    className="w-full h-full cover"
+                  />
+                </div>
                 <Typography
                   text="Muhammad"
                   variant="body"

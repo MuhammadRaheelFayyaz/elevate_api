@@ -41,14 +41,14 @@ export default function EndPoints({ onTabSelect }) {
         <Typography variant="body" text="Add and define your API endpoints." />
       </div>
       <div className="flex flex-col gap-2 lg:flex-row justify-between">
-        <div>
+        <div className="w-[300px]">
           <SearchInput
             placeholder="Search Endpoint"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        <div className="flex w-full flex-col max-w-[300px] md:max-w-full md:flex-row gap-1 mb-4 mt-2 lg:mt-0">
+        <div className="flex w-full flex-col justify-end max-w-[300px] md:max-w-full md:flex-row gap-1 mb-4 mt-2 lg:mt-0">
           <Button
             text="Add REST API Endpoint"
             icon="/icons/add.svg"
