@@ -117,80 +117,77 @@ const EndpointTab = () => {
 
   return (
         <div className="flex  border-t-[1px] border-gray-200 flex-wrap">
-          <div className='flex w-full'>
-            <div className="w-full md:w-[30%] h-[calc(100vh_-_429px)]  overflow-y-auto">
-              <div className='sticky w-full'>
-                <div className="px-3 py-[11px] bg-gray-100">
-                  <SearchInput placeholder="Search Endpoints"/>
-                </div>
-                <Accodian title='Show Api Name '>
-                  {filesNames.map((item, index) => {
-                    return (
-                      <div key={`'live1-${index}'`} className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer"
-                           onClick={() => handleEndPointClick(item.fileName)}>
-                        <p className="text-xs">
-                    <span className="text-[10px] text-green-700">
-                      {item.type}
-                    </span>{" "}
-                          {item.fileName}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </Accodian>
-                <Accodian title='Show Api Name'>
-                  {filesNames.map((item, index) => {
-                    return (
-                      <div key={`'live2-${index}'`} className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer"
-                           onClick={() => handleEndPointClick(item.fileName)}>
-                        <p className="text-xs">
-                    <span className="text-[10px] text-green-700">
-                      {item.type}
-                    </span>{" "}
-                          {item.fileName}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </Accodian>
+          <div className='w-full max-w-[1440px] mx-auto px-6 '>
+            <div className='w-full h-fit mb-3 p-3 bg-blue-200 rounded-lg'>
+              <div className="py-[11px] mb-2">
+                <SearchInput placeholder="Search Endpoints"/>
+              </div>
+              <Accodian title='Show Api Name'>
                 {filesNames.map((item, index) => {
                   return (
-                    <div key={`'live3-${index}'`} className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer"
-                         onClick={() => handleEndPointClick(item.fileName)}>
+                    <div key={`'live1-${index}'`} className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer"
+                          onClick={() => handleEndPointClick(item.fileName)}>
                       <p className="text-xs">
-                    <span className="text-[10px] text-green-700">
-                      {item.type}
-                    </span>{" "}
+                  <span className="text-[10px] text-green-700">
+                    {item.type}
+                  </span>{" "}
                         {item.fileName}
                       </p>
                     </div>
                   );
                 })}
-              </div>
+              </Accodian>
+              <Accodian title='Show Api Name'>
+                {filesNames.map((item, index) => {
+                  return (
+                    <div key={`'live2-${index}'`} className="px-3 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer"
+                          onClick={() => handleEndPointClick(item.fileName)}>
+                      <p className="text-xs">
+                  <span className="text-[10px] text-green-700">
+                    {item.type}
+                  </span>{" "}
+                        {item.fileName}
+                      </p>
+                    </div>
+                  );
+                })}
+              </Accodian>
+              {filesNames.map((item, index) => {
+                return (
+                  <div key={`'live3-${index}'`} className="px-3 py-2 hover:bg-gray-300 cursor-pointer"
+                        onClick={() => handleEndPointClick(item.fileName)}>
+                    <p className="text-xs">
+                  <span className="text-[10px] text-green-700">
+                    {item.type}
+                  </span>{" "}
+                      {item.fileName}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
-            <div className="w-full md:w-[70%] border-l-2 border-r-2 border-gray-200 ">
-              <div>
+            <div className="w-full flex flex-col md:flex-row items-center border ">
+              <div className="w-full md:w-1/2 border-b-[1px] md:border-b-0 md:border-r-[1px] border-gray-300 h-[470px] no-scrollbar overflow-auto">
                 <div className="p-3 flex items-center justify-between gap-3 bg-gray-100">
                   <p className="text-xs">
                     <span className="text-base text-green-700">GET</span> /v4/sports
                   </p>
-
                 </div>
-                <div className="overflow-hidden h-full ">
-                  <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200 flex-wrap">
-                      <div className=' w-full md:flex-1'>
-                        <Dropdown
-                          options={rapidApiOptions}
-                          className="min-w-[170px] !mb-0"
-                          onSelect={(value) => setRapidApiOption(value)}
-                          placeholder="default-application_7097837"
-                          label='ElevateAPI App'
-                        />
-                        <p className="uppercase text-blue-500 mt-0.5 text-[10px]">
-                          Required
-                        </p>
-                    </div>
-                      <div className='flex-1'>
+                <div className="h-full ">
+                  <div className="px-3 pt-2 pb-6 border-b-[1px] border-gray-200 flex-wrap">
+                      <div className='w-full sm:w-2/3 mb-6'>
+                          <Dropdown
+                            options={rapidApiOptions}
+                            className="min-w-[170px] !mb-0"
+                            onSelect={(value) => setRapidApiOption(value)}
+                            placeholder="default-application_7097837"
+                            label='ElevateAPI App'
+                          />
+                          <p className="uppercase text-blue-500 mt-0.5 text-[10px]">
+                            Required
+                          </p>
+                      </div>
+                      <div className="w-full sm:w-2/3">
                         <Dropdown
                           options={requestUrlOptions}
                           className="min-w-[170px] !mb-0"
@@ -208,12 +205,12 @@ const EndpointTab = () => {
                       <Typography variant="small" text="Header Parameters"/>
                     </div>
                     <div>
-                      <div className="flex gap-2 w-full px-3 pt-2 pb-12 border-b-[1px] border-gray-200 flex-wrap">
-                        <div className="flex-1">
+                      <div className="w-full px-3 pt-2 pb-6 border-b-[1px] border-gray-200">
+                        <div className="mb-6 w-full sm:w-2/3">
                           <Dropdown
                             label='API-Key'
                             options={XrapidApiKeyOptions}
-                            className="min-w-[170px] max-w-[92%] !mb-0"
+                            className="min-w-[170px] !mb-0"
                             onSelect={(value) => setXrapidApiKeyOption(value)}
                             placeholder="38e6a2fcd7msh619634bb6f8edddp155610jsn2d24f69c922f"
                           />
@@ -221,7 +218,7 @@ const EndpointTab = () => {
                             Required
                           </p>
                         </div>
-                        <div className= "flex-1">
+                        <div className="w-full sm:w-2/3">
                           <Dropdown
                             label='Api-Host'
                             options={XrapidApiHostOptions}
@@ -236,7 +233,7 @@ const EndpointTab = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="Accordion2 min-h-[175px] overflow-y-scroll border-b-0 p-4 ">
+                  <div className="Accordion2 border-b-0 p-4 ">
                       {/*<div className="flex gap-2 w-full px-3 pt-2 pb-12 border-gray-200">*/}
                         <Dropdown
                           label="All"
@@ -249,7 +246,7 @@ const EndpointTab = () => {
                   </div>
                 </div>
               </div>
-              <div className='border'>
+              <div className='w-full md:w-1/2 no-scrollbar' style={{minHeight:"400px"}}>
                 <div className='flex justify-end px-4 mt-4'>
                   <NestedDropdown
                     options={nestedOptions}
@@ -269,11 +266,6 @@ const EndpointTab = () => {
                 />
               </div>
             </div>
-          </div>
-
-
-          <div className="w-full h-full overflow-scroll">
-
           </div>
         </div>
   );

@@ -10,6 +10,7 @@ import AddAPI from "@/components/Modals/AddApi";
 import React, {useState} from "react";
 import {useRouter} from "next/router";
 import UserDropdown from "@/components/UserDropdown";
+import Footer from "@/components/Footer/Footer";
 
 
 const tabs = [
@@ -29,51 +30,54 @@ export default function Studio(){
         router.push('/provider')
     }
     return (
-        <div>
-            <Navbar />
-            <div className='p-4'>
-                <div className='flex justify-between flex-col md:flex-row md:items-center gap-2'>
-                    <div className='w-full md:w-1/2 flex flex-col md:flex-row md:gap-2 md:items-center'>
-                       <div className='w-1/3'>
-                           <UserDropdown options={options} onSelect={(option) => console.log(option)} placeholder="Select a person"/>
-                       </div>
-                        <div className='mt-4 md:mt-0'>
-                            <SearchInput value={search} onChange={(e)=>setSearch(e.target.value)} />
+        <div className="min-h-screen flex flex-col justify-between overflow-y-auto">
+            <div>
+                <Navbar />
+                <div className='p-4'>
+                    <div className='flex justify-between flex-col md:flex-row md:items-center gap-2'>
+                        <div className='w-full md:w-1/2 flex flex-col md:flex-row md:gap-2 md:items-center'>
+                        <div className='w-1/3'>
+                            <UserDropdown options={options} onSelect={(option) => console.log(option)} placeholder="Select a person"/>
+                        </div>
+                            <div className='mt-4 md:mt-0'>
+                                <SearchInput value={search} onChange={(e)=>setSearch(e.target.value)} />
+                            </div>
+                        </div>
+                        <div className='w-full md:w-1/2 flex items-center justify-between mt-4 md:mt-0'>
+                            <div className='flex'>
+                                <Tabs tabs={tabs} />
+                            </div>
+                            <div className='ml-auto'>
+                                <Button text='Add Api' onClick={()=>setIsOpen(true)} icon='/icons/add.svg' />
+                            </div>
                         </div>
                     </div>
-                    <div className='w-full md:w-1/2 flex items-center justify-between mt-4 md:mt-0'>
-                        <div className='flex'>
-                            <Tabs tabs={tabs} />
-                        </div>
-                        <div className='ml-auto'>
-                            <Button text='Add Api' onClick={()=>setIsOpen(true)} icon='/icons/add.svg' />
-                        </div>
+                    <div className='flex gap-4 justify-evenly flex-wrap mt-6'>
+                        <Card className='w-full min-[425px]:w-[300px]'>
+                            <ApiCard onClick={cardClick}/>
+                        </Card>
+                        <Card className='w-full min-[425px]:w-[300px]'>
+                            <ApiCard onClick={cardClick}/>
+                        </Card>
+                        <Card className='w-full min-[425px]:w-[300px]'>
+                            <ApiCard onClick={cardClick}/>
+                        </Card>
+                        <Card className='w-full min-[425px]:w-[300px]'>
+                            <ApiCard onClick={cardClick}/>
+                        </Card>
+                        <Card className='w-full min-[425px]:w-[300px]'>
+                            <ApiCard onClick={cardClick}/>
+                        </Card>
+                        <Card className='w-full min-[425px]:w-[300px]'>
+                            <ApiCard onClick={cardClick}/>
+                        </Card>
                     </div>
-                </div>
-                <div className='flex gap-4 justify-center flex-wrap mt-4'>
-                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard onClick={cardClick}/>
-                    </Card>
-                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard onClick={cardClick}/>
-                    </Card>
-                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard onClick={cardClick}/>
-                    </Card>
-                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard onClick={cardClick}/>
-                    </Card>
-                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard onClick={cardClick}/>
-                    </Card>
-                    <Card className='w-full md:w-[300px] lg:w-[23%]'>
-                        <ApiCard onClick={cardClick}/>
-                    </Card>
                 </div>
             </div>
             <Modal isOpen={isOpen} onClose={()=>setIsOpen(false)}>
                 <AddAPI onCancel={()=>setIsOpen(false)} onApply={()=>setIsOpen(false)} />
             </Modal>
+            <Footer />
         </div>
     )
 }

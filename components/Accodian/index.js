@@ -8,7 +8,7 @@ const Accordion = ({ title, children, wrapperClasses='', headerClasses= '' }) =>
   };
 
   return (
-    <div className={`border border-gray-200 p-2 mb-2 rounded-md ${wrapperClasses}`}>
+    <div className={`border border-gray-200 p-2 mb-2 bg-white rounded-md ${wrapperClasses}`}>
       <div
         className={`flex justify-between cursor-pointer ${headerClasses}`}
         onClick={toggleAccordion}
