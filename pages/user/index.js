@@ -60,47 +60,44 @@ export default function User() {
   return (
     <div>
       <Navbar/>
-      <div className='w-full md:w-[85%] md:mb-20 md:mt-5  mx-auto'>
-        <div className='flex flex-col md:flex-row p-4 md:p-0 justify-between mb-4'>
-          <div className='flex gap-4'>
-            <div className='w-[200px] md:h-[200px] rounded overflow-hidden '>
-              <Image
-                src={'/images/profile.jpeg'}
-                width={300}
-                height={300}
-              />
+      <div className='w-full md:w-[85%] md:mb-20 mt-5 p-4 mx-auto'>
+        <div className='flex flex-col justify-center gap-3 items-center w-full max-w-[402px] border-2 shadow-custom border-white mx-auto p-4 rounded-2xl mb-4 bg-blue-300'>
+          <div className='w-[150px] h-[150px] rounded-full overflow-hidden border-2 border-white'>
+            <Image
+              src={'/images/profile.jpeg'}
+              width={150}
+              height={150}
+            />
+          </div>
+          <div className="text-center">
+            {
+              editMode?<Input wrapperClassname='!mb-1' placeholder='Muhammad Raheel' />: <Typography text='Muhammad Raheel' variant='h2' className='cursor-pointer font-bold'/>
+            }
+            <div className='flex gap-2 justify-center flex-wrap'>
+              {editMode?<Input wrapperClassname='!mb-1' placeholder='Software Developer' />:<Typography text='Software Developer' variant='h4'/>}
+              {editMode?<Input wrapperClassname='!mb-1' placeholder='ABC APPs' />:<Typography text='ABC APPs' variant='h4'/>}
             </div>
-            <div>
-              {
-                editMode?<Input wrapperClassname='!mb-1' placeholder='Muhammad Raheel' />: <Typography text='Muhammad Raheel' variant='h2' className='cursor-pointer'/>
-              }
-              <div className='flex gap-2 '>
-                {editMode?<Input wrapperClassname='!mb-1' placeholder='Software Developer' />:<Typography text='Software Developer' variant='h3'/>}
-                <Typography text='at' className={editMode?'mt-1 mb-0':''} variant='h3'/>
-                {editMode?<Input wrapperClassname='!mb-1' placeholder='ABC APPs' />:<Typography text='ABC APPs' variant='h3'/>}
-              </div>
-              <div className='flex gap-2 items-center'>
-                {editMode?<Input wrapperClassname='!mb-1' placeholder='Islamabad' />:<Typography text='Islamabad' variant='h3'/>}
-              </div>
-              <div className='flex gap-2 items-center'>
-                {editMode?<Input wrapperClassname='!mb-1' placeholder='BIO' />:<Typography text='BIO' variant='h3'/>}
-              </div>
+            <div className='flex gap-2 items-center justify-center'>
+              {editMode?<Input wrapperClassname='!mb-1' placeholder='Islamabad' />:<Typography text='Islamabad' variant='h3' className='text-gray-600'/>}
+            </div>
+            <div className='flex gap-2 items-center justify-center'>
+              {editMode?<Input wrapperClassname='!mb-1' placeholder='BIO' />:<Typography text='BIO' variant='h4'/>}
             </div>
           </div>
-            <Button text={editMode?'Save':'Edit Profile'} icon={editMode?'':'/icons/edit.svg'} className='md:w-[100px] mt-1 md:t-0 h-[40px] justify-center' onClick={()=>setEditMode(!editMode)}/>
+          <Button text={editMode?'Save':'Edit Profile'} icon={editMode?'':'/icons/edit.svg'} className='md:w-[100px] mt-1 md:t-0 h-[40px] justify-center' onClick={()=>setEditMode(!editMode)}/>
         </div>
         <div className='mb-4'>
           <Tabs tabs={tabs} onTabSelect={setSelectedTab}/>
         </div>
         {
           selectedTab === 0 && <div className='flex gap-4 flex-wrap mb-8'>
-            <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+            <Card className='w-full min-[425px]:w-[300px]'>
               <ApiCard/>
             </Card>
-            <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+            <Card className='w-full min-[425px]:w-[300px]'>
               <ApiCard/>
             </Card>
-            <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+            <Card className='w-full min-[425px]:w-[300px]'>
               <ApiCard/>
             </Card>
           </div>
@@ -108,10 +105,10 @@ export default function User() {
 
         {
           selectedTab === 1 && <div className='flex gap-4 flex-wrap mb-8'>
-            <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+            <Card className='w-full min-[425px]:w-[300px]'>
               <ApiCard/>
             </Card>
-            <Card className='w-full md:min-w-[300px] lg:w-[23%]'>
+            <Card className='w-full min-[425px]:w-[300px]'>
               <ApiCard/>
             </Card>
           </div>

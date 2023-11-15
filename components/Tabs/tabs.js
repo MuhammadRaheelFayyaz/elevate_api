@@ -10,14 +10,14 @@ const Tabs = ({tabs, onTabSelect=(value)=>{}}) => {
         }
     };
     return (
-            <div className="flex flex-wrap gap-0.5 md:gap-1 ">
+            <div className="flex flex-wrap gap-2 md:gap-1 ">
                 {tabs.map((tab, index) => (
                     <button
                         key={index}
                         className={`p-2 md:py-2 md:px-4 text-[14px] text-gray-600 border rounded-md border-transparent  ${
                             index === activeTab
                                 ? 'bg-blue-500 !text-blue-100 border border-blue-500'
-                                : 'bg-blue-100 hover:border hover:border-blue-500'
+                                : 'bg-blue-200 hover:border hover:border-blue-500'
                         }`}
                         onClick={() => handleTabClick(index)}
                     >

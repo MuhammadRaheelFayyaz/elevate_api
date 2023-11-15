@@ -89,7 +89,7 @@ export default function Gateway() {
         <Typography variant='h2' text='Firewall Setting' className='mb-4 text-blue-500'/>
         <Typography
           variant='body'
-          text='Protect your API by blocking requests that are not from the RapidAPI infrastructure. RapidAPI adds the “X-RapidAPI-Proxy-Secret” header on every request. This header has a unique value for each API.'
+          text='Protect your API by blocking requests that are not from the Elevate-API infrastructure. Elevate-API adds the “X-Elevate-API-Proxy-Secret” header on every request. This header has a unique value for each API.'
           className='mb-10'
         />
         <Typography variant='h2' text='X-PROXY_SECRET' className='mb-3'/>
@@ -98,7 +98,7 @@ export default function Gateway() {
             <Input
               placeholder='custom input'
               value='key here'
-              label='X-RapidAPI-Proxy-Secret'
+              label='X-Elevate-API-Proxy-Secret'
               type="password"
             />
           </div>
@@ -106,7 +106,7 @@ export default function Gateway() {
             <Button text='Copy' className='w-full justify-center'/>
           </div>
         </div>
-        <Typography variant='body' text='Whitelist RapidAPI IPs to allow request only from RapidAPI.'/>
+        <Typography variant='body' text='Whitelist Elevate-API IPs to allow request only from Elevate-API.'/>
       </div>
       <div className="max-w-5xl">
         <div className='mx-3 md:mx-10 my-8 mb-8'>
@@ -167,7 +167,7 @@ export default function Gateway() {
                 </div>
                 <div className='w-full md:w-[37%]'>
                   <Dropdown
-                    className="!mb-1 py-[10px] w-[300px] md:w-auto"
+                    className="!mb-4 w-[300px] md:w-auto"
                     options={options}
                     onSelect={handleSelect}
                     placeholder={'MB'}

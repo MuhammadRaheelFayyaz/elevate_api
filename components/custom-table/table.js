@@ -15,28 +15,28 @@ const Table = ({columns, data, havePagination = false}) => {
   };
 
   return (
-    <div className='w-full mb-4'>
+    <div className='w-full mb-4 border border-blue-500 rounded-xl overflow-hidden'>
       <div className='max-w-full overflow-x-auto'>
         <table className="w-full divide-y divide-gray-200 ">
-          <thead>
+          <thead className='bg-blue-500 h-14'>
           <tr>
             {columns.map((column) => (
               <th
                 key={column.key}
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-6 py-3 text-left text-base font-medium text-white uppercase tracking-wider"
               >
                 {column.label}
               </th>
             ))}
           </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className=" divide-y divide-gray-200">
           {currentData.map((row, rowIndex) => (
-            <tr key={rowIndex}>
+            <tr key={rowIndex} className='odd:bg-blue-200 even:bg-blue-100 hover:bg-blue-300 text-sm'>
               {columns.map((column, colIndex) => (
                 <td
                   key={colIndex}
-                  className="px-6 py-4 whitespace-nowrap w-[250px] md:w-auto"
+                  className="px-6 py-2 whitespace-nowrap max-w-[250px] md:w-auto"
                 >
                   {row[column.key]}
                 </td>
@@ -47,7 +47,7 @@ const Table = ({columns, data, havePagination = false}) => {
         </table>
       </div>
       {havePagination && totalPages > 1 && (
-        <div className='flex'>
+        <div className='flex p-3'>
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
