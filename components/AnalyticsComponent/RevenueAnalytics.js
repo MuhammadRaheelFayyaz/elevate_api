@@ -15,7 +15,7 @@ const RevenueAnalytics = () => {
   };
 
   return (
-    <div className="px-8">
+    <div className="md:px-8">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-3 my-5 ">
 
         <div className="flex justify-end gap-3 flex-col sm:flex-row w-full">

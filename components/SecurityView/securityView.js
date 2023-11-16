@@ -13,17 +13,17 @@ export default function SecurityView({onTabSelect}) {
     return (
         <div className='p-2'>
             <Typography variant='h2' text='Security Schemes'/>
-            <Typography variant='body'
+            <Typography variant='small'
                         text='Security Schemes are used for APIs that require additional authorization such as OAuth 2.0. '/>
-            <div className='flex justify-end mb-4'>
+            <div className='flex justify-end mb-4 mt-2'>
                 <Button text='New Schema' onClick={()=>setView('addEndPoints')}/>
             </div>
-            <div className='border flex'>
-                <div className='border-r p-2 w-1/5'>
+            <div className='border flex flex-col md:flex-row rounded-lg'>
+                <div className='border-b md:border-r md:border-b-0 md:w-1/5 p-2 w-full'>
                     <div className='flex justify-between mb-4'>New Auth</div>
                     <div className='flex justify-between mb-4'>New Auth1</div>
                 </div>
-               <div className='w-4/5'>
+               <div className='w-full md:w-4/5'>
                    {view === 'viewEndPoints' && <ViewEndPoints/>}
                    {view ==='addEndPoints' && <AddEndPoints onClick={setView} />}
                </div>
@@ -35,27 +35,27 @@ export default function SecurityView({onTabSelect}) {
 
 const ViewEndPoints = () => {
     return (
-        <div className='p-4'>
-            <Typography variant='h2' text='New Auth' className='mb-3'/>
-            <div className='mb-2 flex gap-2 items-center'>
-                <Typography variant='h3' text='Description:'/>
-                <Typography variant='body' text='Some description here'/>
+        <div className='p-4 w-full'>
+            <Typography variant='h2' text='New Auth' className='mb-3 font-bold'/>
+            <div className='mb-2 flex flex-col md:flex-row gap-2'>
+                <Typography variant='base' className='font-bold' text='Description:'/>
+                <Typography variant='small' text='Some description here'/>
             </div>
-            <div className='mb-2 flex gap-2 items-center'>
-                <Typography variant='h3' text='Authorization set:'/>
-                <Typography variant='body' text='Authorization set'/>
+            <div className='mb-2 flex flex-col md:flex-row gap-2'>
+                <Typography variant='base' className='font-bold' text='Authorization set:'/>
+                <Typography variant='small' text='Authorization set'/>
             </div>
-            <div className='mb-2 flex gap-2 items-center'>
-                <Typography variant='h3' text='Key:'/>
-                <Typography variant='body' text='Key here'/>
+            <div className='mb-2 flex flex-col md:flex-row gap-2'>
+                <Typography variant='base' className='font-bold' text='Key:'/>
+                <Typography variant='small' text='Key here'/>
             </div>
-            <div className='mb-2 flex gap-2 items-center'>
-                <Typography variant='h3' text='Description:'/>
-                <Typography variant='body' text='Some description here'/>
+            <div className='mb-2 flex flex-col md:flex-row gap-2'>
+                <Typography variant='base' className='font-bold' text='Description:'/>
+                <Typography variant='small' text='Some description here'/>
             </div>
-            <div className='mb-2 flex gap-2 items-center'>
-                <Typography variant='h3' text='Add to:'/>
-                <Typography variant='body' text='Header'/>
+            <div className='mb-2 flex flex-col md:flex-row gap-2'>
+                <Typography variant='base' className='font-bold' text='Add to:'/>
+                <Typography variant='small' text='Header'/>
             </div>
         </div>
     )
@@ -68,7 +68,7 @@ const AddEndPoints = ({onClick}) => {
     };
     return (
         <div className='p-4'>
-           <div className='w-[50%]'>
+           <div className='md:max-w-[60%]'>
                <Input value='New Auth' />
                 <TextArea label='Auth Description' />
                <Dropdown

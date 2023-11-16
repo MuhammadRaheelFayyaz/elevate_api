@@ -114,7 +114,7 @@ const graphCardsData = [
 
   return (
     <div className="w-full h-full">
-      <div className='flex justify-end items-center p-1 gap-1'>
+      <div className='flex justify-end items-center p-1 gap-1 flex-wrap'>
         {graphCardsData.map((card, index)=>{
             const isSelected = selectedCard === index;
             return(
@@ -125,7 +125,9 @@ const graphCardsData = [
             )
         })}
       </div>
-      <Line data={chartData} options={options} width={400} height={200}/>
+      <div className='max-w-[1000px]'>
+        <Line data={chartData} options={options} width={400} height={200}/>
+      </div>
     </div>
   );
 };

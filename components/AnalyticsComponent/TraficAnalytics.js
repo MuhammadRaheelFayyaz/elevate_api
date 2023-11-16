@@ -115,7 +115,7 @@ const TrafficAnalytics = ()=>{
       ];
     const pageData=[...rowsData, ...rowsData,...rowsData,...rowsData, ...rowsData ]
     return (
-        <div className="px-8">
+        <div className="md:px-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-3 my-5 flex-wrap">
                 <Dropdown options={endpointsOptions} className="w-full min-w-[250px] max-w-[800px] !mb-0" onSelect={(option)=>console.log(option)} placeholder='All Endpoints (Default)'/>
                 <div className="flex justify-end gap-3 flex-col sm:flex-row w-fit">

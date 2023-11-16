@@ -158,7 +158,7 @@ export default function Community(){
     const [search, setSearch]=useState('')
     return (
       <HubListingLayout>
-          <div className='w-fit md:w-auto'>
+          <div className='w-full md:w-auto'>
               <div className='p-4 md:p-10'>
                   <div className='mb-4'>
                       <Tabs tabs={usersTabs} />
@@ -171,7 +171,7 @@ export default function Community(){
                           <SearchInput placeholder='Search username' value={search} onChange={setSearch} />
                       </div>
                   </div>
-                  <div className='w-[100vw] md:w-full overflow-scroll'>
+                  <div className='w-full overflow-scroll'>
                       <Table columns={columns} data={data} havePagination={true}/>
                   </div>
               </div>

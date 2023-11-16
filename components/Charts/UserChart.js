@@ -100,7 +100,9 @@ const graphCardsData = [
             )
         })}
       </div>
-      <Line data={chartData} options={options} width={400} height={200}/>
+      <div className='max-w-[1000px]'>
+        <Line data={chartData} options={options} width={400} height={200}/>
+      </div>
     </div>
   );
 };
