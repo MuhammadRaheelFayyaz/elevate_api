@@ -26,7 +26,7 @@ export default function Home() {
                 <Typography
                     variant='body'
                     className='mb-10'
-                    text='RapidAP supports 4 tvpes of APIs pricing modules: free. pav per use. freemium and paid.'
+                    text='ElevateAPI supports 4 tvpes of APIs pricing modules: free. pav per use. freemium and paid.'
                 />
                 <div className="overflow-auto no-scrollbar border border-blue-500 rounded-lg">
                     <div className="tab-content w-full min-w-[1150px]">

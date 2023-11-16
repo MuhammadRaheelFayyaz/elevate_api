@@ -52,7 +52,7 @@ export default function Definitions() {
                 </div>
                 <div className='mb-4'>
                     <Typography
-                        text='When publishing an API version to the RapidAPI Hub, you can either manually edit definitions or upload a specification file.'
+                        text='When publishing an API version to the ElevateAPI Hub, you can either manually edit definitions or upload a specification file.'
                         variant='body'
                     />
                 </div>
