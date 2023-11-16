@@ -217,7 +217,7 @@ export default function Gateway() {
           </div>
           <div className="p-4">
             <Typography variant='body' className='mb-2' text='Authorization'/>
-            <Typography variant='xs' className='mb-4' text="RapidAPI implements a single secret key per developer application across all APIs to minimize friction in testing and implementing APIs.
+            <Typography variant='xs' className='mb-4' text="ElevateAPI implements a single secret key per developer application across all APIs to minimize friction in testing and implementing APIs.
                   If your API requires additional layer of authorization, go to 'Definitions' => 'Security' and setup your security scheme."/>
             <Typography variant='body' className='mb-2' text='Secret Headers & Parameters'/>
             <Typography variant='xs' className='mb-4'
@@ -244,7 +244,7 @@ export default function Gateway() {
             <div className="mt-3">
               <Typography variant='body' className='mb-2' text='Transformations'/>
               <p className="text-xs">Transformations can be used to remove, remap or add parameters in a request or a
-                response via RapidAPI proxy. <span
+                response via ElevateAPI proxy. <span
                   className="text-blue-500 cursor-pointer"> View transformation examples</span> or <span
                   className="text-blue-500 cursor-pointer">learn more</span> in documentation. </p>
               <div className="flex gap-2 items-center justify-between flex-wrap my-3">

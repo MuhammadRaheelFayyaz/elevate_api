@@ -102,7 +102,7 @@ export default function Home() {
                 className='mb-2'/>
               <Checkbox checked={true}
               className="!items-start border border-gray-200 p-2 rounded-md"
-                        label="I confirm that I own or have rights to publish this API according to the RapidAPI Terms of Service"/>
+                        label="I confirm that I own or have rights to publish this API according to the ElevateAPI Terms of Service"/>
 
               {/* <ToggleButton /> */}
             </div>
