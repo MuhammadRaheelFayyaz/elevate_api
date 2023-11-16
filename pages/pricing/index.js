@@ -14,7 +14,7 @@ export default function Pricing() {
       <Navbar/>
       <div>
         <Tables />
-        <div className="mx-[11%]">
+        <div className="mx-3 sm:mx-[11%]">
           <div className="py-5">
             <Typography
               variant="h1"
@@ -82,7 +82,7 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="flex justify-between gap-3 flex-wrap">
+          <div className="flex justify-between gap-3 flex-wrap border shadow-lg p-5 rounded-lg mt-5">
             <PlatformCard image={"/images/user.png"} />
             <PlatformCard image={"/images/apis.png"} />
             <PlatformCard image={"/images/call.png"} />
@@ -137,7 +137,7 @@ export default function Pricing() {
             </div>
           </div>
           <div className="flex justify-between my-12">
-              <div className="w-full mx-[11%]">
+              <div className="w-full mx-3 sm:mx-[11%] lg:max-w-[1100px] lg:mx-auto">
                 <Image
                   src={"/images/graphs.png"}
                   alt="placeholder logo"
@@ -149,7 +149,7 @@ export default function Pricing() {
                 />
               </div>
           </div>
-        {/*<Footer />*/}
+        <Footer />
       </div>
     </>
   );

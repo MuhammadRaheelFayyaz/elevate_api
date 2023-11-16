@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import "chartjs-adapter-moment";
-
 import {Line} from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -12,7 +11,6 @@ import {
   Tooltip,
   Legend
 } from "chart.js";
-import Typography from '../Typegraphy/Typography';
 
 ChartJS.register(
   TimeScale,
@@ -77,7 +75,7 @@ const ErrorsChart = ({leftYData, dateLabels}) => {
   };
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full max-w-[1000px] mx-auto">
       <Line data={chartData} options={options} width={400} height={200}/>
     </div>
   );

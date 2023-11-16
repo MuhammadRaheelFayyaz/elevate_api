@@ -115,14 +115,14 @@ const TrafficAnalytics = ()=>{
       ];
     const pageData=[...rowsData, ...rowsData,...rowsData,...rowsData, ...rowsData ]
     return (
-        <div className="px-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-3 my-5 ">
+        <div className="md:px-8">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-3 my-5 flex-wrap">
                 <Dropdown options={endpointsOptions} className="w-full min-w-[250px] max-w-[800px] !mb-0" onSelect={(option)=>console.log(option)} placeholder='All Endpoints (Default)'/>
-                <div className="flex justify-end gap-3 flex-col sm:flex-row w-full">
+                <div className="flex justify-end gap-3 flex-col sm:flex-row w-fit">
                     <Dropdown options={timeOptions} className="min-w-[170px] max-w-[170px] !mb-0" onSelect={(option)=>console.log(option)} placeholder='GMT +00:00'/>
-                    <ul className="border rounded-[5px] overflow-hidden flex items-center min-w-fit max-w-fit h-[38px]">
+                    <ul className="border rounded-[5px] flex items-center min-w-fit max-w-fit flex-wrap">
                         {data.map((item, index) => (
-                            <li key={item} className={`h-[38px] px-3 border-r-[1px] flex justify-center items-center text-sm cursor-pointer ${selectedIndex === index ? 'bg-gray-200' : ''}`}
+                            <li key={item} className={`h-[38px] px-3 border-r-[1px] rounded-[5px] flex flex-auto justify-center items-center text-sm cursor-pointer ${selectedIndex === index ? 'bg-blue-500 text-white' : ''}`}
                             onClick={() => handleItemClick(index)}>{item} </li>
                         ))}
                     </ul>
@@ -148,9 +148,9 @@ const TrafficAnalytics = ()=>{
             <div className='flex items-center p-1 gap-2 flex-wrap mb-4'>
               {graphResultCardsData.map((card)=>{
                   return(
-                    <div key={card.id} className={`p-3 rounded-md w-full hover:bg-gray-100 max-w-[200px] border border-gray-200`}>
-                      <Typography variant="small" className='text-gray-500' text={card.title} />
-                      <p className='text-[24px] font-bold'>{card.count}<span className='text-gray-400 ml-1'>{card.countType}</span></p>
+                    <div key={card.id} className={`p-3 rounded-md w-full hover:bg-gray-100 text-white hover:text-gray-500 max-w-[200px] border border-gray-200 bg-blue-500`}>
+                      <Typography variant="small" text={card.title} />
+                      <p className='text-[24px] font-bold'>{card.count}<span className='ml-1'>{card.countType}</span></p>
                     </div>
                   )
               })}

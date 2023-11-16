@@ -10,33 +10,33 @@ const Tables = () => {
   
   return (
     <>
-      <div className="mb-6 w-full px-4 pt-4 sm:w-2/4 mx-auto">
+      <div className="mb-6 w-[90%] px-4 pt-4 sm:w-3/4 lg:w-1/2 mx-auto">
       <Typography
-            variant="h1"
+            variant="h2"
             text="Select the Ideal Plan for Your Needs"
-            className="text-black text-center text-2xl font-semibold pb-2"
+            className="text-black text-center md:!text-2xl font-semibold pb-2"
           />
       
         <Typography
-            variant="body"
+            variant="xs"
             text="ElevateAPI collaborates directly with API providers to offer straightforward, transparent pricing. Discover a plan that aligns perfectly with the scale required for your application."
-            className="text-black text-center sm:text-xs md:text-lg"
+            className="text-black text-center text-[14px] md:text-lg"
           />
       </div>
       <div className="w-full max-w-[200px] mb-5 mx-auto" >
         <UserDropdown options={options} onSelect={(option) => console.log(option)} placeholder="Select a person" />
       </div>
 
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg md:mx-[10%]">
+      <div className="relative overflow-x-auto shadow-md rounded-xl border border-blue-500 md:mx-[10%] mx-3">
         <table className="w-full text-sm text-left text-gray-500 ">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50  ">
+          <thead className="text-xs text-white uppercase bg-blue-500  ">
             <tr>
-              <th scope="col" className="px-6 py-3 text-black min-w-[200px]">
+              <th scope="col" className="px-6 py-5 min-w-[200px]">
                 Objects
               </th>
               <th
                 scope="col"
-                className="px-6 py-5 text-black text-xl text-center flex flex-col  min-w-[200px]"
+                className="px-6 py-5 text-xl text-center flex flex-col  min-w-[200px]"
               >
                 Basic <span className="block">$00.00 / mo</span>{" "}
                 <div className="flex justify-center">
@@ -50,7 +50,7 @@ const Tables = () => {
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-black text-xl text-center min-w-[200px]"
+                className="px-6 py-5 text-xl text-center min-w-[200px]"
               >
                 Pro <span className="block">$29.00 / mo</span>{" "}
                 <div className="flex justify-center">
@@ -64,7 +64,7 @@ const Tables = () => {
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-black text-xl text-center min-w-[200px]"
+                className="px-6 py-5 text-xl text-center min-w-[200px] relative"
               >
                 Ultra <span className="block">$99.00 / mo</span>{" "}
                 <div className="flex justify-center">
@@ -75,11 +75,11 @@ const Tables = () => {
                     Subscribe
                   </button>
                 </div>
-                <Typography variant='body' text='Recommended' />
+                <Typography variant='xs' className="absolute top-0.5 left-1/2 -translate-x-1/2 bg-blue-200 px-2 py-0.5 leading-tight rounded-full text-blue-500" text='Recommended' />
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-black text-xl text-center min-w-[200px]"
+                className="px-6 py-5 text-xl text-center min-w-[200px]"
               >
                 Mega <span className="block">$999.00 / mo</span>{" "}
                 <div className="flex justify-center">
@@ -171,7 +171,7 @@ const Tables = () => {
                 <span className="block font-normal">+ $0.001 each other</span>
               </td>
             </tr>
-            <tr className="border-b bg-gray-50 ">
+            <tr className="border-b bg-blue-300 ">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "

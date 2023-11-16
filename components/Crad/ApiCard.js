@@ -6,7 +6,7 @@ export default function ApiCard({onClick}) {
         <div onClick={onClick}>
             <div className='flex justify-between cursor-pointer'>
                 <div className='flex items-center gap-2 mb-3'>
-                    <div className='rounded-full h-[60px] w-[60px] overflow-hidden'>
+                    <div className='rounded-full min-h-[60px] w-[60px] h-[60px] min-w-[60px] overflow-hidden'>
                         <Image
                             src="/images/profile.jpeg"
                             width={60}

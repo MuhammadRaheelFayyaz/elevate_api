@@ -10,9 +10,9 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
   const endPage = Math.min(startPage + pagesToShow, totalPages);
 
   return (
-    <div className='ml-auto '>
+    <div className='ml-auto'>
       {showPrev && (
-        <button onClick={() => onPageChange(currentPage - 1)}>Previous</button>
+        <button className="mr-1 text-sm text-blue-500" onClick={() => onPageChange(currentPage - 1)}>Previous</button>
       )}
 
       {pageNumbers
@@ -21,14 +21,14 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`h-10 w-10 hover:bg-blue-500 hover:border-white ${currentPage === page ? 'bg-blue-500 border-blue-500 border' : 'border-transparent border'}`}
+            className={`h-10 w-10 mr-0.5 hover:bg-gray-200 hover:border-blue-500 rounded-md border ${currentPage === page ? 'bg-blue-500 text-white hover:bg-blue-500' : ''}`}
           >
             {page}
           </button>
         ))}
 
       {showNext && (
-        <button onClick={() => onPageChange(currentPage + 1)}>Next</button>
+        <button className="ml-1 text-sm text-blue-500" onClick={() => onPageChange(currentPage + 1)}>Next</button>
       )}
     </div>
   );

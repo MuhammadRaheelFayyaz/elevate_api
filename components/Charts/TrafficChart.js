@@ -114,18 +114,20 @@ const graphCardsData = [
 
   return (
     <div className="w-full h-full">
-      <div className='flex items-center p-1 gap-1'>
+      <div className='flex justify-end items-center p-1 gap-1 flex-wrap'>
         {graphCardsData.map((card, index)=>{
             const isSelected = selectedCard === index;
             return(
-              <div key={card.id} onClick={() => handleCardClick(index)} className={`p-3 hover:bg-gray-100 w-fit rounded-md cursor-pointer ${isSelected ? 'bg-gray-200' : ''}`}>
+              <div key={card.id} onClick={() => handleCardClick(index)} className={`p-3 hover:bg-gray-100 w-fit rounded-md cursor-pointer border-2 hover:border-gray-500 ${isSelected ? 'bg-gray-200 border-gray-500 hover:bg-gray-200' : ''}`}>
                 <Typography variant="small" className='text-gray-500' text={card.title} />
                 <p className='text-[24px] font-bold'>{card.count}<span className='text-gray-400 ml-1'>{card.countType}</span></p>
               </div>
             )
         })}
       </div>
-      <Line data={chartData} options={options} width={400} height={200}/>
+      <div className='max-w-[1000px]'>
+        <Line data={chartData} options={options} width={400} height={200}/>
+      </div>
     </div>
   );
 };

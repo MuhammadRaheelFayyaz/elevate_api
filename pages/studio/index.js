@@ -36,7 +36,7 @@ export default function Studio(){
                 <div className='p-4'>
                     <div className='flex justify-between flex-col md:flex-row md:items-center gap-2'>
                         <div className='w-full md:w-1/2 flex flex-col md:flex-row md:gap-2 md:items-center'>
-                        <div className='w-1/3'>
+                        <div className='w-1/2 sm:w-1/3 min-w-[200px]'>
                             <UserDropdown options={options} onSelect={(option) => console.log(option)} placeholder="Select a person"/>
                         </div>
                             <div className='mt-4 md:mt-0'>

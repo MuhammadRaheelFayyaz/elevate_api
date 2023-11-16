@@ -15,16 +15,16 @@ const RevenueAnalytics = () => {
   };
 
   return (
-    <div className="px-8">
+    <div className="md:px-8">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-3 my-5 ">
 
         <div className="flex justify-end gap-3 flex-col sm:flex-row w-full">
           <Dropdown options={timeOptions} className="min-w-[170px] max-w-[170px] !mb-0"
                     onSelect={(option) => console.log(option)} placeholder='GMT +00:00'/>
-          <ul className="border rounded-[5px] overflow-hidden flex items-center min-w-fit max-w-fit h-[38px]">
+          <ul className="border rounded-[5px] flex items-center min-w-fit max-w-fit flex-wrap">
             {data.map((item, index) => (
               <li key={item}
-                  className={`h-[38px] px-3 border-r-[1px] flex justify-center items-center text-sm cursor-pointer ${selectedIndex === index ? 'bg-gray-200' : ''}`}
+              className={`h-[38px] px-3 border-r-[1px] rounded-[5px] flex flex-auto justify-center items-center text-sm cursor-pointer ${selectedIndex === index ? 'bg-blue-500 text-white' : ''}`}
                   onClick={() => handleItemClick(index)}>{item} </li>
             ))}
           </ul>

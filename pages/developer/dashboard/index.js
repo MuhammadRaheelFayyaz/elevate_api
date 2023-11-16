@@ -55,7 +55,7 @@ export default function Dashboard() {
         <DashboardCard heading="Latest Transactions" description="No Payments Made Yet" />
         <DashboardCard heading="Top API Usage by Quota" description="You haven't enrolled in any paid or freemium plans yet." />
       </div>
-      <div className="mt-6 ml-auto md:max-w-[300px] mb-6">
+      <div className="mt-6 mr-auto md:max-w-[300px] mb-6">
         <SearchInput />
         {/*<Input placeholder={"API name"} />*/}
         {/*<div className="w-[42px] h-[42px] border rounded flex justify-center items-center mb-4">*/}
@@ -69,13 +69,13 @@ export default function Dashboard() {
         <Dropdown label="Temporal Zone" options={timezoneOptions} className="w-ful md:w-[49%] 2xl:w-[500px]" onSelect={(option)=>console.log(option)} placeholder='GMT+14:00 Line Islands Time (Pacific/Kiritimati)'/>
       </div>
 
-      <div className='flex mb-6 border-b-[1px] flex-wrap'>
+      <div className='flex sm:px-6 mb-6 border-b-[1px] flex-wrap'>
         <CountCard heading="API Requests" subHeading="Total Default API Calls" count="0" onClick={() => handleCardClick(0)} selected={selectedCard === 0}/>
         <CountCard heading="Error Incidents" subHeading="Average Error Rate (Default)" count="0%" onClick={() => handleCardClick(1)} selected={selectedCard === 1}/>
         <CountCard heading="Response Time" subHeading="Average Latency (Default)" count="0 ms" onClick={() => handleCardClick(2)} selected={selectedCard === 2}/>
       </div>
       <ErrorsChart leftYData={leftYData} dateLabels={dateLabels}/>
-      <div className='px-6'>
+      <div className='sm:px-6 mt-6'>
         <Table columns={columns} data={data} havePagination={true} />
         {/*<div className='flex justify-between w-full items-center border-t-[1px] py-1'>*/}
         {/*  <Typography variant='small' text='0' />*/}
