@@ -26,94 +26,84 @@ export default function Home() {
                 <Typography
                     variant='body'
                     className='mb-10'
-                    text='ElevateAPI supports 4 tvpes of APIs pricing modules: free. pav per use. freemium and paid.'
+                    text='ElevateAPI supports 4 types of APIs pricing modules: free. pav per use. freemium and paid.'
                 />
-                <div className="overflow-auto no-scrollbar border border-blue-500 rounded-lg">
-                    <div className="tab-content w-full min-w-[1150px]">
-                        <div
-                            className="w-full ml-auto p-3.5 flex flex-wrap gap-4 justify-end border-b border-blue-500">
-                            <div className="plans-card w-[200px] text-center">
-                                {/*<ToggleButton />*/}
-                                <Typography variant='h2' text='BASIC' className='text-blue-500 font-semibold mt-5'/>
-                                <Typography variant='body' className='mb-3' text='$0.00/month'/>
-                                <Button text='Edit' className='w-full !min-w-full flex justify-center mb-2 mx-auto'/>
+                <div className="border border-blue-500 rounded-xl p-4">
+                    <div className="py-3 border-b border-blue-500 mb-3">
+                        <Typography variant='body' className='mb-1 text-blue-500 font-bold' text='Requests'/>
+                        <Typography variant='body' className='mb-3' text='A call to any endpoint is one Request'/>
+                        <Typography variant='body' className='mb-1 text-blue-500 font-bold' text='Elevate-free-plans-hard-limit'/>
+                        <Typography variant='body' className='mb-1' text='An object which will be applied only on free plans (this object is not visible to the consumers)'/>
+                    </div>
+                    <div className="flex justify-evenly items-center flex-wrap gap-3">
+                        <div className="card border border-blue-500 p-6 rounded-2xl text-center w-full max-w-[280px] h-[300px] bg-blue-200 shadow-lg">
+                            <Typography variant='h1' className='mb-3' text='BASIC' />
+                            <Typography variant='small' text='$0.00/month' />
+                            <Button className='mx-auto my-3 bg-white !text-blue-500 border border-blue-500 min-w-[80px]' text="Edit" />
+                            <div className="w-full flex items-center justify-between py-2">
+                                <Typography variant='small' className="mb-3 font-bold text-blue-500" text='Requests' />
+                                <Typography variant='small' className="mb-3" text='500.00 / month' />
                             </div>
-                            <div className="plans-card w-[200px] text-center">
-                                {/*<ToggleButton />*/}
-                                <Typography variant='h2' text='PRO' className='text-blue-500 font-semibold mt-5'/>
-                                <Typography variant='body' className='mb-3' text='$0.00'/>
-                                <Button text='Edit' className='w-full !min-w-full flex justify-center mb-2 mx-auto'/>
-                            </div>
-                            <div className="plans-card w-[200px] text-center">
-                                {/*<ToggleButton />*/}
-                                <Typography variant='h2' text='ULTRA' className='text-blue-500 font-semibold mt-5'/>
-                                <Typography variant='body' className='mb-3' text='$0.00/month'/>
-                                <Button text='Edit' className='w-full !min-w-full flex justify-center mb-2 mx-auto'/>
-                            </div>
-                            <div className="plans-card w-[200px] text-center">
-                                {/*<ToggleButton />*/}
-                                <Typography variant='h2' text='ULTRA' className='text-blue-500 font-semibold mt-5'/>
-                                <Typography variant='body' className='mb-3' text='$0.00/month'/>
-                                <Button text='Edit' className='w-full !min-w-full flex justify-center mb-2 mx-auto'/>
+                            <div className="w-full flex items-center justify-between py-2">
+                                <Typography variant='small' className="mb-3 font-bold text-blue-500" text='Hard-limit' />
+                                <Typography variant='small' className="mb-3" text='500.00 / month' />
                             </div>
                         </div>
-                        {/*<Typography variant='body' className='mx-3.5 mb-1' text='Objects'/>*/}
-                        <div className="w-full ml-auto p-3.5 flex justify-between gap-4 border-b border-blue-500">
-                            <div className="w-full">
-                                <Typography variant='h4' text='Requests' className='text-blue-500 font-semibold'/>
-                                <Typography variant='body' className='mb-2' text='A call to any endpoint is one Request'/>
+                        <div className="card border border-blue-500 p-6 rounded-2xl text-center w-full max-w-[280px] h-[300px] bg-blue-200 shadow-lg">
+                            <Typography variant='h1' className='mb-3' text='PREMIUM' />
+                            <Typography variant='small' text='$0.00/month' />
+                            <Button className='mx-auto my-3 bg-white !text-blue-500 border border-blue-500 min-w-[80px]' text="Edit" />
+                            <div className="w-full flex items-center justify-between py-2">
+                                <Typography variant='small' className="font-bold text-blue-500" text='Requests' />
+                                <Button text='Add' />
                             </div>
-                            <div className="flex w-full gap-4">
-                                <div className="flex items-center justify-center w-[200px]">
-                                    <Typography variant='h5' text='500.00 / month' className='text-blue-500 font-normal'/>
-                                </div>
-                                <div className="flex items-center justify-center w-[200px]">
-                                    <Button icon='/icons/add.svg'/>
-                                </div>
-                                <div className="flex items-center justify-center w-[200px]">
-                                    <Button icon='/icons/add.svg'/>
-                                </div>
-                                <div className="flex items-center justify-center w-[200px]">
-                                    <Button icon='/icons/add.svg'/>
-                                </div>
+                            <div className="w-full flex items-center justify-between py-2">
+                                <Typography variant='small' className="font-bold text-blue-500" text='Hard-limit' />
+                                <Button text='Add' />
                             </div>
                         </div>
-                        <div className="w-full ml-auto p-3.5 gap-4 flex justify-between border-b border-blue-500">
-                            <div className="w-full">
-                                <Typography variant='h4' text='Elevate-free-plans-hard-limit' className='text-blue-500 font-semibold'/>
-                                <Typography variant='body' className='mb-2' text='An object which will be applied only on free plans (this object is not visible to the consumers)'/>
+                        <div className="card border border-blue-500 p-6 rounded-2xl text-center w-full max-w-[280px] h-[300px] bg-blue-200 shadow-lg">
+                            <Typography variant='h1' className='mb-3' text='PRO' />
+                            <Typography variant='small' text='$0.00/month' />
+                            <Button className='mx-auto my-3 bg-white !text-blue-500 border border-blue-500 min-w-[80px]' text="Edit" />
+                            <div className="w-full flex items-center justify-between py-2">
+                                <Typography variant='small' className="font-bold text-blue-500" text='Requests' />
+                                <Button text='Add' />
                             </div>
-                            <div className="flex w-full gap-4">
-                                <div className="flex items-center justify-center w-[200px]">
-                                    <Typography variant='h5' text='500.00 / month' className='text-blue-500 font-normal'/>
-                                </div>
-                                <div className="flex items-center justify-center w-[200px]">
-                                    <Button icon='/icons/add.svg'/>
-                                </div>
-                                <div className="flex items-center justify-center w-[200px]">
-                                    <Button icon='/icons/add.svg'/>
-                                </div>
-                                <div className="flex items-center justify-center w-[200px]">
-                                    <Button icon='/icons/add.svg'/>
-                                </div>
+                            <div className="w-full flex items-center justify-between py-2">
+                                <Typography variant='small' className="font-bold text-blue-500" text='Hard-limit' />
+                                <Button text='Add' />
                             </div>
                         </div>
-                        <Button
+                        <div className="card border border-blue-500 p-6 rounded-2xl text-center w-full max-w-[280px] h-[300px] bg-blue-200 shadow-lg">
+                            <Typography variant='h1' className='mb-3' text='ULTRA' />
+                            <Typography variant='small' text='$0.00/month' />
+                            <Button className='mx-auto my-3 bg-white !text-blue-500 border border-blue-500 min-w-[80px]' text="Edit" />
+                            <div className="w-full flex items-center justify-between py-2">
+                                <Typography variant='small' className="font-bold text-blue-500" text='Requests' />
+                                <Button text='Add' />
+                            </div>
+                            <div className="w-full flex items-center justify-between py-2">
+                                <Typography variant='small' className="font-bold text-blue-500" text='Hard-limit' />
+                                <Button text='Add' />
+                            </div>
+                        </div>
+                    </div>
+                    <Button
                             text='Add Object'
                             icon='/icons/add.svg'
-                            className='w-[80%] box-border mx-3.5 my-4 md:my-10 flex justify-center bg-blue-500 text-[#482f9e]'
+                            className='mx-3.5 my-4 md:my-10 flex justify-center'
                         />
-                        <Typography variant='body' className='mb-2 mx-3.5' text='Features'/>
+                        <Typography variant='body' className='mb-2 mx-3.5 font-bold text-blue-500' text='Features'/>
                         <div className="border-b border-blue-500 rounded-lg"/>
-                        <div className="bg-blue-200 rounded-lg mx-3.5 my-2 h-20 flex  justify-center items-center">
+                        <div className="bg-blue-200 rounded-lg my-2 h-20 flex  justify-center items-center">
                             <Typography variant='body' text='You don’t have any features yet'/>
                         </div>
                         <Button
                             text='Add Object'
                             icon='/icons/add.svg'
-                            className='box-border mx-3.5 my-5 flex justify-center bg-blue-500 text-[#482f9e]'
+                            className='mx-3.5 my-5 flex justify-center'
                         />
-                    </div>
                 </div>
             </div>
         </HubListingLayout>

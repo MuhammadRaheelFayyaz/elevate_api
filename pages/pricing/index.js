@@ -41,7 +41,7 @@ export default function Pricing() {
               />
               <Typography
                 variant="h3"
-                text="We collaborate directly with API providers to establish transparent pricing for developers. If a plan includes an average fee, the provider may request a credit card. If you no longer wish to use the API, you can unsubscribe from the plan at any time by clicking the 'unsubscribe' button under the Billing section of the RapidAPI Dashboard."
+                text="We collaborate directly with API providers to establish transparent pricing for developers. If a plan includes an average fee, the provider may request a credit card. If you no longer wish to use the API, you can unsubscribe from the plan at any time by clicking the 'unsubscribe' button under the Billing section of the ElevateAPI Dashboard."
                 className="text-left text-sm text-black pb-3"
               />
 
